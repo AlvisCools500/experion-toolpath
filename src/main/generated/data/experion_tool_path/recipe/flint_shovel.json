@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "B": {
+      "item": "minecraft:flint"
+    }
+  },
+  "pattern": [
+    " B ",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "experion_tool_path:flint_shovel"
+  }
+}

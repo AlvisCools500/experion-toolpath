@@ -1,0 +1,18 @@
+# Gradle
+/.gradle/
+/build/
+
+# Maven
+/repository/
+
+# Intellij IDEA
+/.idea/
+
+# Loom
+/run/
+
+# MacOS
+.DS_Store
+
+# Raw Asset Stuff
+/temporaries/

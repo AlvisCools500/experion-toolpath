@@ -1,0 +1,20 @@
+{
+  "values": [
+    "experion_tool_path:redstone_sword",
+    "experion_tool_path:redstone_axe",
+    "experion_tool_path:redstone_pickaxe",
+    "experion_tool_path:redstone_shovel",
+    "experion_tool_path:redstone_hoe",
+    "experion_tool_path:flint_sword",
+    "experion_tool_path:flint_axe",
+    "experion_tool_path:flint_pickaxe",
+    "experion_tool_path:flint_shovel",
+    "experion_tool_path:flint_hoe",
+    "#experion_tool_path:mod_tools/wooden_tools",
+    "#experion_tool_path:mod_tools/stone_tools",
+    "#experion_tool_path:mod_tools/iron_tools",
+    "#experion_tool_path:mod_tools/diamond_tools",
+    "#experion_tool_path:mod_tools/netherite_tools",
+    "#experion_tool_path:mod_tools/golden_tools"
+  ]
+}
