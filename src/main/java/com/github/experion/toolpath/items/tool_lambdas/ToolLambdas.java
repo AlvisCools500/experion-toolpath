@@ -1,13 +1,15 @@
 package com.github.experion.toolpath.items.tool_lambdas;
 
+import com.github.experion.toolpath.items.CustomLambdas;
 import net.minecraft.item.Item;
 import net.minecraft.registry.tag.TagKey;
 
 public class ToolLambdas {
-    OnPostMine onPostMine;
-    OnPostHit onPostHit;
-    OnUseBlock onUseBlock;
-    OnUse onUse;
+
+    TriggerLambdas lambdas;
+
+    boolean Edit_damage;
+    boolean Edit_effeciency;
 
     boolean Enable_useblock;
     boolean Enable_posthit;
@@ -18,8 +20,6 @@ public class ToolLambdas {
 
     TagKey<Item> main_tag;
 
-    ToolMainTrigger mainTrigger;
-
     RecipeLambda recipe;
 
     public ToolLambdas() {
@@ -27,9 +27,21 @@ public class ToolLambdas {
         this.Enable_posthit = false;
         this.Enable_postmine = false;
         this.Enable_use = false;
+
+        this.Edit_damage = false;
+        this.Edit_effeciency = false;
+
         this.main_tag = null;
         this.notranslate = false;
         this.recipe = null;
+        this.lambdas = null;
+
+        this.lambdas = CustomLambdas.NON_LAMBDAS;
+    }
+
+    public ToolLambdas setLambda(TriggerLambdas triggerLambdas) {
+        this.lambdas = triggerLambdas;
+        return this;
     }
 
     public ToolLambdas enableOnUseblock() {
@@ -47,33 +59,18 @@ public class ToolLambdas {
         return this;
     }
 
+    public ToolLambdas enableEditEffeciency() {
+        this.Edit_effeciency = true;
+        return this;
+    }
+
+    public ToolLambdas enableEditDamage() {
+        this.Edit_damage = true;
+        return this;
+    }
+
     public ToolLambdas enableOnUse() {
         this.Enable_use = true;
-        return this;
-    }
-
-    public ToolLambdas setOnPostMine(OnPostMine onPostMine) {
-        this.onPostMine = onPostMine;
-        return this;
-    }
-
-    public ToolLambdas setOnPostHit(OnPostHit onPostHit) {
-        this.onPostHit = onPostHit;
-        return this;
-    }
-
-    public ToolLambdas setOnUseBlock(OnUseBlock onUseBlock) {
-        this.onUseBlock = onUseBlock;
-        return this;
-    }
-
-    public ToolLambdas setOnUse(OnUse onUse) {
-        this.onUse = onUse;
-        return this;
-    }
-
-    public ToolLambdas setMainTrigger(ToolMainTrigger mainTrigger) {
-        this.mainTrigger = mainTrigger;
         return this;
     }
 
@@ -102,5 +99,9 @@ public class ToolLambdas {
 
     public RecipeLambda getRecipe() {
         return recipe;
+    }
+
+    public static ToolLambdas of() {
+        return new ToolLambdas();
     }
 }

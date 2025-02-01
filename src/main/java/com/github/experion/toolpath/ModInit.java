@@ -1,9 +1,7 @@
 package com.github.experion.toolpath;
 
-import com.github.experion.toolpath.initializer.ModItemGroups;
-import com.github.experion.toolpath.initializer.ModItems;
-import com.github.experion.toolpath.initializer.ModTools;
-import com.github.experion.toolpath.initializer.ModEvents;
+import com.github.experion.toolpath.initializer.*;
+import com.github.experion.toolpath.items.CustomLambdas;
 import com.github.experion.toolpath.items.tool_identify.ToolIdList;
 import com.github.experion.toolpath.misc.ServerMessage;
 import com.github.experion.toolpath.misc.persistent_state.ToolPathData;
@@ -21,10 +19,14 @@ public class ModInit implements ModInitializer {
   public void onInitialize() {
     ModInit.LOGGER.info("Hello, World! (Common initialize)");
 
+    CustomLambdas.init();
+
     ModItems.init();
     ModTools.init();
 
     ModItemGroups.init();
+
+    ModParticles.register();
 
     //temp();
 

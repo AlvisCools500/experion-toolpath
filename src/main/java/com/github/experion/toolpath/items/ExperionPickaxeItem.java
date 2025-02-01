@@ -5,7 +5,9 @@ import com.github.experion.toolpath.items.tool_lambdas.ToolLambdas;
 import com.github.experion.toolpath.items.tool_lambdas.ToolStaticTrigger;
 import com.github.experion.toolpath.lib.ToolLib;
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
@@ -19,11 +21,18 @@ import net.minecraft.world.World;
 
 public class ExperionPickaxeItem extends PickaxeItem implements GetLambdas {
     final ToolLambdas toolLamb;
+
     public ExperionPickaxeItem(ToolMaterial material, Settings settings, ToolLambdas toollamb) {
         super(material, settings);
         this.toolLamb = toollamb;
         ToolLib.onAdded(this, ToolLib.ToolType.PICKAXE, this.toolLamb);
     }
+
+    @Override
+    public float getMiningSpeed(ItemStack stack, BlockState state) {
+        return ToolStaticTrigger.getMiningSpeed(this.toolLamb,stack,state,super.getMiningSpeed(stack,state));
+    }
+
 
     @Override
     public ToolLambdas getLambdas() {

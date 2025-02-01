@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "experion_tool_path:item/azalea_clippings"
+  }
+}

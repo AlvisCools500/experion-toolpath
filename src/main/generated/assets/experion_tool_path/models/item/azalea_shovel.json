@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "experion_tool_path:item/redstone_axe"
+    "layer0": "experion_tool_path:item/azalea_shovel"
   }
 }

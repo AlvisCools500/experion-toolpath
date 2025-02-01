@@ -1,21 +1,21 @@
-// 1.21	2025-01-31T16:02:19.3520931	Experion Tool Path/Tags for minecraft:item
+// 1.21	2025-02-02T02:05:16.1875778	Experion Tool Path/Tags for minecraft:item
 590458bb7437b9ec8ee466c4dc71c50e4afeda07 data\experion_tool_path\tags\item\mod_tools\diamond_tools.json
-151c1b122623b666ab77e06c8decc80125c13e02 data\minecraft\tags\item\enchantable\fire_aspect.json
-b0a8a0f55acbbd9aa2538a374e5fca2f1152a48d data\minecraft\tags\item\enchantable\weapon.json
-29b9a4d6932be7cca1a750b63843367303094739 data\experion_tool_path\tags\item\toolpath_tools.json
+5a364f8f4ec9b99a48c03ce5298f0e81d84f7b3e data\minecraft\tags\item\enchantable\fire_aspect.json
+f8391dd192626c2e69524f80c68e73ce61e0b5c3 data\minecraft\tags\item\enchantable\weapon.json
+37472a05ab1754c806a245f1f9c39383bdca8878 data\experion_tool_path\tags\item\toolpath_tools.json
 15b76c214564036f2826076b8f99baa29eb22f97 data\experion_tool_path\tags\item\mod_tools\flint_tools.json
-0597fd529619603b64b5bb62e3fff4dc156d622b data\minecraft\tags\item\enchantable\mining.json
-7837cb89f632487a4eba5e6f4c43d85f724d9d28 data\minecraft\tags\item\enchantable\durability.json
-151c1b122623b666ab77e06c8decc80125c13e02 data\minecraft\tags\item\swords.json
-98ec80bf1ce783464612a39c33c8fd5970c15e1a data\minecraft\tags\item\axes.json
-28848c06f4598752613b09946492626b16b20c55 data\minecraft\tags\item\hoes.json
+4e62e86d0ae04fa0b445b3076f5812e72904bab3 data\minecraft\tags\item\enchantable\mining.json
+4483b740baba38b8fe7140213f5d6411eebf6d69 data\minecraft\tags\item\enchantable\durability.json
+5a364f8f4ec9b99a48c03ce5298f0e81d84f7b3e data\minecraft\tags\item\swords.json
+ee22da3c0796f5a0485551cd0ab566516a8506d9 data\minecraft\tags\item\axes.json
+bf6fb070c69bbf64db6b824703ee2535b91fd7f7 data\minecraft\tags\item\hoes.json
 20bb4ff7f8de81b8d3b305e812465f42cec6a2f7 data\experion_tool_path\tags\item\mod_tools\golden_tools.json
-0597fd529619603b64b5bb62e3fff4dc156d622b data\minecraft\tags\item\enchantable\mining_loot.json
-b0a8a0f55acbbd9aa2538a374e5fca2f1152a48d data\minecraft\tags\item\enchantable\sharp_weapon.json
-be8afcfc1185e0617bca9ddc1ad19136d6f2c0c9 data\minecraft\tags\item\pickaxes.json
+4e62e86d0ae04fa0b445b3076f5812e72904bab3 data\minecraft\tags\item\enchantable\mining_loot.json
+f8391dd192626c2e69524f80c68e73ce61e0b5c3 data\minecraft\tags\item\enchantable\sharp_weapon.json
+602c54ac312aa49339e28131d2b50e4a9f2adee7 data\minecraft\tags\item\pickaxes.json
 780c6ce5193d98a9fcf627088e4d8bd0318c018c data\experion_tool_path\tags\item\mod_tools\wooden_tools.json
 666e076c4c14d00fa6e57d93af2fa564fd91f168 data\experion_tool_path\tags\item\mod_tools\stone_tools.json
-5e17a14ca639d01cc7582bafb682fe93340c7b94 data\minecraft\tags\item\shovels.json
-77ffd40810271cc71efba3eca8906426523a061e data\experion_tool_path\tags\item\mod_tools\redstone_tools.json
 12823c2d98e694f267fc934085d5f181220f1e86 data\experion_tool_path\tags\item\mod_tools\iron_tools.json
+c9c97b9e2cbcbb1da40dfddf47be3ca2f0f1ef88 data\minecraft\tags\item\shovels.json
 f7607ae4d51f90db8aeaab0f4c830957370fb0a7 data\experion_tool_path\tags\item\mod_tools\netherite_tools.json
+173fbe47925348e3d4856f0b2f2635e8ff79813c data\experion_tool_path\tags\item\mod_tools\azalea_tools.json

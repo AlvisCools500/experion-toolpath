@@ -67,7 +67,13 @@ public class ToolLib {
     HOE
     */
 
-    public static Item register(String name, ToolType type, ToolMaterial material, float baseDamage, float baseSpeed, Item.Settings settings, ToolLambdas lambdas) {
+    public static Item register(String name, ToolType type, ToolMaterial material, float baseDamage, float baseSpeed, Item.Settings setting, ToolLambdas lambdas) {
+        Item.Settings settings = setting;
+
+        if (setting == null) {
+            settings = new Item.Settings();
+        }
+
         Item res = null;
 
         if (type == ToolType.SWORD) {

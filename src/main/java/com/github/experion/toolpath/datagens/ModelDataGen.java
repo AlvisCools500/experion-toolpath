@@ -25,5 +25,7 @@ public class ModelDataGen extends FabricModelProvider {
         for (Item v : TaggingList.DEFAULT_TOOLS) {
             itemModelGenerator.register(v, Models.HANDHELD);
         }
+
+        itemModelGenerator.register(ModItems.AZALEA_CLIPPINGS, Models.GENERATED);
     }
 }

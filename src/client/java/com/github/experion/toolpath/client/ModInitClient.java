@@ -1,23 +1,16 @@
 package com.github.experion.toolpath.client;
 
 import com.github.experion.toolpath.ModInit;
-import com.github.experion.toolpath.misc.ServerMessage;
-import com.github.experion.toolpath.misc.payloads.DiscoveryPayLoad;
-import com.github.experion.toolpath.misc.payloads.PathDataPayLoad;
+import com.github.experion.toolpath.client.initializer.ModClientEvents;
+import com.github.experion.toolpath.client.particles.AzaleaExplosionParticle;
+import com.github.experion.toolpath.initializer.ModParticles;
+import com.github.experion.toolpath.client.particles.AzaleaEffectParticle;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
-import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.DrawContext;
-import net.minecraft.client.gui.hud.InGameHud;
-import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.registry.Registries;
-import net.minecraft.text.Text;
-import net.minecraft.util.Formatting;
+import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
+import net.minecraft.particle.ParticleEffect;
+import net.minecraft.particle.ParticleType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.Random;
 
 public class ModInitClient implements ClientModInitializer {
   public static final Logger LOGGER = LoggerFactory.getLogger(ModInitClient.class);
@@ -26,19 +19,15 @@ public class ModInitClient implements ClientModInitializer {
   public void onInitializeClient() {
     ModInit.LOGGER.info("Hello, World! (Client initialize)");
 
-    ClientPlayNetworking.registerGlobalReceiver(PathDataPayLoad.ID, (pathDataPayLoad, context) -> {
-      ModInit.LOGGER.info("Umm i'm client i guess?");
-    });
+    ModClientEvents.register();
 
-    HudRenderCallback.EVENT.register((drawContext, renderTickCounter) -> {
-        DiscoveryTitleRenderer.renderTitle(drawContext, renderTickCounter);
-    });
+    regParti(ModParticles.AZALEA_EFFECT, AzaleaEffectParticle.Factory::new);
+    regParti(ModParticles.AZALEA_EXPLOSIVE, AzaleaExplosionParticle.Factory::new);
 
-    ClientPlayNetworking.registerGlobalReceiver(DiscoveryPayLoad.ID, (discoveryPayLoad, context) -> {
-      DiscoveryTitleRenderer.trigger(discoveryPayLoad.type(), discoveryPayLoad.item_id());
-    });
+  }
 
-
+  private static <T extends ParticleEffect> void regParti(ParticleType<T> var1, ParticleFactoryRegistry.PendingParticleFactory<T> var2) {
+      ParticleFactoryRegistry.getInstance().register(var1,var2);
   }
 
 

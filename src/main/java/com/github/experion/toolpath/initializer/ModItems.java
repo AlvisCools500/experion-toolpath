@@ -7,6 +7,7 @@ import net.minecraft.item.Item;
 public class ModItems {
 
     public static final Item TOOL_DEVELOPER = ExperionRegistery.registerItem(new ToolDeveloper(new Item.Settings()), "tool_developer");
+    public static final Item AZALEA_CLIPPINGS = ExperionRegistery.registerBasicItem("azalea_clippings",16);
 
     public static void init() {}
 }

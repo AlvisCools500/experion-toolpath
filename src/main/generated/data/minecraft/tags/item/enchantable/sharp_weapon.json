@@ -1,8 +1,8 @@
 {
   "values": [
-    "experion_tool_path:redstone_sword",
     "experion_tool_path:flint_sword",
-    "experion_tool_path:redstone_axe",
-    "experion_tool_path:flint_axe"
+    "experion_tool_path:azalea_sword",
+    "experion_tool_path:flint_axe",
+    "experion_tool_path:azalea_axe"
   ]
 }

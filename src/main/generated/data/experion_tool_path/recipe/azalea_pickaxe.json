@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "experion_tool_path:azalea_clippings"
+    },
+    "T": {
+      "item": "minecraft:wooden_pickaxe"
+    }
+  },
+  "pattern": [
+    "AAA",
+    " T "
+  ],
+  "result": {
+    "count": 1,
+    "id": "experion_tool_path:azalea_pickaxe"
+  }
+}

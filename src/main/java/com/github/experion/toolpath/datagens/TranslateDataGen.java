@@ -24,5 +24,6 @@ public class TranslateDataGen extends FabricLanguageProvider {
         }
 
         expe.translateItem(ModItems.TOOL_DEVELOPER, "Tool Developer");
+        expe.translateItem(ModItems.AZALEA_CLIPPINGS, "Azalea Clippings");
     }
 }
