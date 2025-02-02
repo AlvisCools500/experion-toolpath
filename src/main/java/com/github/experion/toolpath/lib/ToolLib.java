@@ -4,9 +4,18 @@ import com.github.experion.toolpath.initializer.TaggingList;
 import com.github.experion.toolpath.items.*;
 import com.github.experion.toolpath.items.tool_lambdas.ToolLambdas;
 import com.github.experion.toolpath.lib.Experion.ExperionRegistery;
+import net.minecraft.entity.ItemEntity;
 import net.minecraft.item.*;
+import net.minecraft.text.MutableText;
+import net.minecraft.text.Style;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.World;
+
+import java.util.Random;
+
 
 public class ToolLib {
 
@@ -104,6 +113,24 @@ public class ToolLib {
         }
 
         return ExperionRegistery.registerItem(res,name);
+    }
+
+    public static void dropItem(World world, ItemStack stack, Vec3d pos) {
+        if (!world.isClient()) {
+            ItemEntity itemEntity = new ItemEntity(world,pos.getX(),pos.getY(),pos.getZ(),stack);
+
+            world.spawnEntity(itemEntity);
+        }
+    }
+
+    public static Text getCyclingColoredText(String input, Formatting[] colors) {
+        MutableText result = Text.empty();
+        for (int i = 0; i < input.length(); i++) {
+            Formatting color = colors[i % colors.length]; // Cycle through colors
+            result.append(Text.literal(String.valueOf(input.charAt(i))).setStyle(Style.EMPTY.withColor(color)));
+        }
+
+        return result;
     }
 
 }

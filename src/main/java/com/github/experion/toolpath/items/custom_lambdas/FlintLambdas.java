@@ -175,7 +175,7 @@ public class FlintLambdas implements TriggerLambdas {
         if (toolComponent.isCorrectForDrops(state)) {
             if (stack.contains(ModDataComponents.FLINT_AMOUNTCRITICAL)) {
                 if (stack.get(ModDataComponents.FLINT_AMOUNTCRITICAL) > 0) {
-                    return multiplyBase(default_float,(float) stack.get(ModDataComponents.FLINT_AMOUNTCRITICAL));
+                    return default_float + (multiplyBase(default_float,(float) stack.get(ModDataComponents.FLINT_AMOUNTCRITICAL)) * 1.25f);
                 }
             }
         }

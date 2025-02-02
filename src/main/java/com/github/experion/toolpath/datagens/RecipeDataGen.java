@@ -1,5 +1,6 @@
 package com.github.experion.toolpath.datagens;
 
+import com.github.experion.toolpath.initializer.ModItems;
 import com.github.experion.toolpath.initializer.TaggingList;
 import com.github.experion.toolpath.items.tool_lambdas.GetLambdas;
 import com.github.experion.toolpath.items.tool_lambdas.RecipeLambda;
@@ -9,6 +10,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryWrapper;
@@ -41,7 +43,6 @@ public class RecipeDataGen extends FabricRecipeProvider {
                 .input('#', Items.IRON_PICKAXE)
                 .criterion("has_iron_pick_redstone_pickaxe", conditionsFromItem(Items.IRON_PICKAXE))
                 .offerTo(recipeExporter);*/
-
         for (Item item_result : TaggingList.DEFAULT_TOOLS) {
             ToolLambdas toolLamb = null;
 
@@ -83,5 +84,13 @@ public class RecipeDataGen extends FabricRecipeProvider {
                 }
             }
         }
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.AZALEA_PICKER)
+                .pattern("#  ")
+                .pattern("B# ")
+                .input('#', Items.STICK)
+                .input('B', Items.GLOW_BERRIES)
+                .criterion("has_glow_berries",conditionsFromItem(Items.GLOW_BERRIES))
+                .offerTo(recipeExporter);
     }
 }

@@ -19,10 +19,10 @@
     - Every ability has a chance to consume durability
     - Max Stacks is 5
     - (Azaleas) Lifesteal has cooldown
-- Flint 
+- ~~Flint~~ 
   - Pros
     - Punch on the rock to apply critical
-    - When critical applied, It has higher damage and effeciency (Better than iron)
+    - When critical applied, It has higher damage and effeciency (Better than stone, Even iron sometimes)
   - Cons
     - Guaranteed consumes durability when trying to apply critical
     - Applying critical is not guaranteed

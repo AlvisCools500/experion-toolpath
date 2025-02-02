@@ -27,5 +27,6 @@ public class ModelDataGen extends FabricModelProvider {
         }
 
         itemModelGenerator.register(ModItems.AZALEA_CLIPPINGS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AZALEA_PICKER, Models.HANDHELD);
     }
 }
