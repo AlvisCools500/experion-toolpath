@@ -21,6 +21,8 @@ public class ModInit implements ModInitializer {
 
     CustomLambdas.init();
 
+    ModDataComponents.init();
+
     ModItems.init();
     ModTools.init();
 

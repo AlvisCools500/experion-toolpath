@@ -6,15 +6,17 @@ import net.minecraft.registry.tag.TagKey;
 
 public class ToolLambdas {
 
-    TriggerLambdas lambdas;
+    public TriggerLambdas lambdas;
 
-    boolean Edit_damage;
-    boolean Edit_effeciency;
+    public boolean Edit_damage;
+    public boolean Edit_effeciency;
 
-    boolean Enable_useblock;
-    boolean Enable_posthit;
-    boolean Enable_postmine;
-    boolean Enable_use;
+    public boolean Enable_useblock;
+    public boolean Enable_posthit;
+    public boolean Enable_postmine;
+    public boolean Enable_use;
+    public boolean Enable_punchblock;
+    public boolean Enable_punchair;
 
     boolean notranslate;
 
@@ -27,6 +29,8 @@ public class ToolLambdas {
         this.Enable_posthit = false;
         this.Enable_postmine = false;
         this.Enable_use = false;
+        this.Enable_punchblock = false;
+        this.Enable_punchair = false;
 
         this.Edit_damage = false;
         this.Edit_effeciency = false;
@@ -56,6 +60,16 @@ public class ToolLambdas {
 
     public ToolLambdas enableOnPostMine() {
         this.Enable_postmine = true;
+        return this;
+    }
+
+    public ToolLambdas enablePunchBlock() {
+        this.Enable_punchblock = true;
+        return this;
+    }
+
+    public ToolLambdas enablePunchAir() {
+        this.Enable_punchair = true;
         return this;
     }
 

@@ -1,5 +1,6 @@
 package com.github.experion.toolpath.items;
 
+import com.github.experion.toolpath.ModInit;
 import com.github.experion.toolpath.items.tool_lambdas.GetLambdas;
 import com.github.experion.toolpath.items.tool_lambdas.ToolLambdas;
 import com.github.experion.toolpath.items.tool_lambdas.ToolStaticTrigger;
@@ -13,11 +14,15 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public class ExperionPickaxeItem extends PickaxeItem implements GetLambdas {
     final ToolLambdas toolLamb;
@@ -29,14 +34,30 @@ public class ExperionPickaxeItem extends PickaxeItem implements GetLambdas {
     }
 
     @Override
-    public float getMiningSpeed(ItemStack stack, BlockState state) {
-        return ToolStaticTrigger.getMiningSpeed(this.toolLamb,stack,state,super.getMiningSpeed(stack,state));
-    }
-
-
-    @Override
     public ToolLambdas getLambdas() {
         return this.toolLamb;
+    }
+
+    @Override
+    public Text getName() {
+        return this.toolLamb.lambdas.getName(super.getName());
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+        this.toolLamb.lambdas.appendTooltip(stack,context,tooltip,type);
+        super.appendTooltip(stack, context, tooltip, type);
+    }
+
+    @Override
+    public float getBonusAttackDamage(Entity target, float baseAttackDamage, DamageSource damageSource) {
+        float res = ToolStaticTrigger.getDamage(toolLamb,target,baseAttackDamage,damageSource,super.getBonusAttackDamage(target, baseAttackDamage, damageSource));
+        return res;
+    }
+
+    @Override
+    public float getMiningSpeed(ItemStack stack, BlockState state) {
+        return ToolStaticTrigger.getMiningSpeed(this.toolLamb,stack,state,super.getMiningSpeed(stack,state));
     }
 
     @Override

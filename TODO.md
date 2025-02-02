@@ -85,3 +85,8 @@
     - 2 stacks of durability is the maximum of use
     - Before dipped, The tool is weaker than vanilla one
     - Oh yeah fiery explosion might damage you (Sharpness more dangerous!!!)
+
+### Enchants
+- Durable Blessing
+  - Max Levels: 5
+  - Has a chance to stop consume durability from it's ability, Level V will completely remove it

@@ -33,4 +33,14 @@ public class ExistsLambdas {
         this.onUseBlock = true;
         return this;
     }
+
+    public ExistsLambdas EditEffeciency() {
+        this.editEffeciency = true;
+        return this;
+    }
+
+    public ExistsLambdas EditDamage() {
+        this.editDamage = true;
+        return this;
+    }
 }

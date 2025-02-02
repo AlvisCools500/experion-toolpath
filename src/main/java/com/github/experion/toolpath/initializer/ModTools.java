@@ -11,7 +11,7 @@ import net.minecraft.registry.tag.ItemTags;
 
 public class ModTools {
     // FLINT
-    public static final Item FLINT_SWORD = ToolLib.register("flint_sword", ToolLib.ToolType.SWORD, ModToolMaterials.FLINT, BaseVals.WOODEN_SWORD.getAttackDMG() + 1F, BaseVals.WOODEN_SWORD.getAttackSPEED(), null, new ToolLambdas().setLambda(CustomLambdas.FLINT_LAMBDAS).setTag(ModTags.Tools.FLINT_TOOLS)
+    public static final Item FLINT_SWORD = ToolLib.register("flint_sword", ToolLib.ToolType.SWORD, ModToolMaterials.FLINT, BaseVals.WOODEN_SWORD.getAttackDMG() + 1F, BaseVals.WOODEN_SWORD.getAttackSPEED(), null, new ToolLambdas().setLambda(CustomLambdas.FLINT_LAMBDAS).enableEditDamage().enableOnUseblock().enableOnPostHit().setTag(ModTags.Tools.FLINT_TOOLS)
             .setRecipe(RecipeLambda.create()
                     .addLine(" B ")
                     .addLine(" B ")
@@ -20,7 +20,7 @@ public class ModTools {
                     .addChar('#', Items.STICK)
                     .setItemCriterion(Items.FLINT)
             ));
-    public static final Item FLINT_AXE = ToolLib.register("flint_axe", ToolLib.ToolType.AXE, ModToolMaterials.FLINT, BaseVals.WOODEN_AXE.getAttackDMG() + 0.5F, BaseVals.WOODEN_AXE.getAttackSPEED(), null, new ToolLambdas().setLambda(CustomLambdas.FLINT_LAMBDAS).setTag(ModTags.Tools.FLINT_TOOLS)
+    public static final Item FLINT_AXE = ToolLib.register("flint_axe", ToolLib.ToolType.AXE, ModToolMaterials.FLINT, BaseVals.WOODEN_AXE.getAttackDMG() + 0.5F, BaseVals.WOODEN_AXE.getAttackSPEED(), null, new ToolLambdas().setLambda(CustomLambdas.FLINT_LAMBDAS).enableOnUseblock().enableOnPostMine().enableOnPostHit().enableEditEffeciency().enableEditDamage().setTag(ModTags.Tools.FLINT_TOOLS)
             .setRecipe(RecipeLambda.create()
                     .addLine("BB ")
                     .addLine("BP ")
@@ -30,7 +30,7 @@ public class ModTools {
                     .addChar('#', Items.STICK)
                     .setItemCriterion(Items.FLINT)
             ));
-    public static final Item FLINT_PICKAXE = ToolLib.register("flint_pickaxe", ToolLib.ToolType.PICKAXE, ModToolMaterials.FLINT, BaseVals.WOODEN_PICKAXE.getAttackDMG(), BaseVals.WOODEN_PICKAXE.getAttackSPEED(), null, new ToolLambdas().setLambda(CustomLambdas.FLINT_LAMBDAS).setTag(ModTags.Tools.FLINT_TOOLS)
+    public static final Item FLINT_PICKAXE = ToolLib.register("flint_pickaxe", ToolLib.ToolType.PICKAXE, ModToolMaterials.FLINT, BaseVals.WOODEN_PICKAXE.getAttackDMG(), BaseVals.WOODEN_PICKAXE.getAttackSPEED(), null, new ToolLambdas().setLambda(CustomLambdas.FLINT_LAMBDAS).enableOnUseblock().enableOnPostMine().enableEditEffeciency().setTag(ModTags.Tools.FLINT_TOOLS)
             .setRecipe(RecipeLambda.create()
                     .addLine("BPB")
                     .addLine(" # ")
@@ -40,7 +40,7 @@ public class ModTools {
                     .addChar('#', Items.STICK)
                     .setItemCriterion(Items.FLINT)
             ));
-    public static final Item FLINT_SHOVEL = ToolLib.register("flint_shovel", ToolLib.ToolType.SHOVEL, ModToolMaterials.FLINT, BaseVals.WOODEN_SHOVEL.getAttackDMG(), BaseVals.WOODEN_SHOVEL.getAttackSPEED(), null, new ToolLambdas().setLambda(CustomLambdas.FLINT_LAMBDAS).setTag(ModTags.Tools.FLINT_TOOLS)
+    public static final Item FLINT_SHOVEL = ToolLib.register("flint_shovel", ToolLib.ToolType.SHOVEL, ModToolMaterials.FLINT, BaseVals.WOODEN_SHOVEL.getAttackDMG(), BaseVals.WOODEN_SHOVEL.getAttackSPEED(), null, new ToolLambdas().setLambda(CustomLambdas.FLINT_LAMBDAS).enableOnUseblock().enableOnPostMine().enableEditEffeciency().setTag(ModTags.Tools.FLINT_TOOLS)
             .setRecipe(RecipeLambda.create()
                     .addLine(" B ")
                     .addLine(" # ")

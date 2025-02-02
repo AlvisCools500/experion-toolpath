@@ -21,27 +21,7 @@ public class NonLambdas implements TriggerLambdas {
     }
 
     @Override
-    public void main_trigger(ItemStack stack, World world, Vec3d vec3d, LivingEntity Player, ToolLib.TriggerType triggerType) {
-
-    }
-
-    @Override
-    public void onUseBlock(ItemUsageContext context, ActionResult actionResult) {
-
-    }
-
-    @Override
-    public void onPostHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-
-    }
-
-    @Override
-    public void onPostMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner) {
-
-    }
-
-    @Override
-    public float setEffeciency(ItemStack stack, BlockState state, float default_float) {
-        return 0;
+    public String getLambdasName() {
+        return "Non";
     }
 }

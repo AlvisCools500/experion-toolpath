@@ -1,9 +1,10 @@
 package com.github.experion.toolpath.items.tool_lambdas;
 
-import com.github.experion.toolpath.ModInit;
 import com.github.experion.toolpath.lib.ToolLib;
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
@@ -88,8 +89,17 @@ public class ToolStaticTrigger {
     public static float getMiningSpeed(ToolLambdas toolLambdas, ItemStack stack, BlockState state, float default_float) {
         if (toolLambdas.Edit_effeciency) {
             TriggerLambdas lambdas = toolLambdas.lambdas;
-            return lambdas.setEffeciency(stack,state,default_float);
+            return lambdas.setEfficiency(stack,state,default_float);
         }
+        return default_float;
+    }
+
+    public static float getDamage(ToolLambdas toolLambdas, Entity target, float baseAttackDamage, DamageSource damageSource, float default_float) {
+        if (toolLambdas.Edit_damage) {
+            TriggerLambdas lambdas = toolLambdas.lambdas;
+            return lambdas.setDamage(target,baseAttackDamage,damageSource,default_float);
+        }
+
         return default_float;
     }
 }

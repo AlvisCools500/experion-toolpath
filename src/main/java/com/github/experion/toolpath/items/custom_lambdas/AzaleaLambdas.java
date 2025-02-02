@@ -66,4 +66,9 @@ public class AzaleaLambdas implements TriggerLambdas {
             main_trigger(stack,world,target.getPos(),target, ToolLib.TriggerType.HIT);
         }
     }
+
+    @Override
+    public String getLambdasName() {
+        return "Azalea";
+    }
 }

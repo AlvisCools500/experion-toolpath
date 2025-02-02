@@ -72,4 +72,9 @@ public class RedstoneLambdas implements TriggerLambdas {
                     ToolLib.TriggerType.USE_BLOCK);
         }
     }
+
+    @Override
+    public String getLambdasName() {
+        return "Redstone";
+    }
 }
