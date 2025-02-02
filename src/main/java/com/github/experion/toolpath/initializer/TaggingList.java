@@ -14,4 +14,6 @@ public class TaggingList {
     public static List<Item> SHOVEL = new ArrayList<>();
 
     public static List<Item> AUTO_TRANSLATE = new ArrayList<>();
+
+    public static List<Item> DURABLE_ABILITY = new ArrayList<>();
 }

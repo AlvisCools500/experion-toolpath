@@ -30,6 +30,10 @@ public class ModTags {
         }
     }
 
+    public static class Misc {
+        public static final TagKey<Item> DURABLE_ABILITY = getItemKey("misc/durable_ability");
+    }
+
     public static TagKey<Item> getItemKey(String path) {
         return TagKey.of(RegistryKeys.ITEM, Identifier.of(ModInit.ID,path));
     }

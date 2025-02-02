@@ -1,11 +1,20 @@
 package com.github.experion.toolpath.lib;
 
+import com.github.experion.toolpath.ModInit;
+import com.github.experion.toolpath.initializer.ModEnchantments;
 import com.github.experion.toolpath.initializer.TaggingList;
 import com.github.experion.toolpath.items.*;
 import com.github.experion.toolpath.items.tool_lambdas.ToolLambdas;
 import com.github.experion.toolpath.lib.Experion.ExperionRegistery;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.item.*;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
@@ -13,17 +22,25 @@ import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Random;
 
 
 public class ToolLib {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(ToolLib.class);
+
     public static void onAdded(Item toolItem, ToolType type, ToolLambdas toolLambdas) {
         TaggingList.DEFAULT_TOOLS.add(toolItem);
 
         if (!toolLambdas.isNotTranslate()) {
             TaggingList.AUTO_TRANSLATE.add(toolItem);
+        }
+
+        if (toolLambdas.durableAbility) {
+            TaggingList.DURABLE_ABILITY.add(toolItem);
         }
 
         if (type == ToolType.SWORD) {
@@ -131,6 +148,38 @@ public class ToolLib {
         }
 
         return result;
+    }
+
+    public static void DamageToolAbility(ItemStack stack, int amount, ServerWorld serverWorld, ServerPlayerEntity player) {
+        boolean candamage = true;
+
+        RegistryEntry<Enchantment> DurableEntry = serverWorld.getRegistryManager().getWrapperOrThrow(RegistryKeys.ENCHANTMENT).getOrThrow(ModEnchantments.DURABLE_BLESSING_KEY);
+
+        if (DurableEntry != null) {
+            int level = EnchantmentHelper.getLevel(DurableEntry,stack);
+
+            if (level > 0) {
+                if (level < 5) {
+                    Random rand = new Random();
+
+                    ModInit.LOGGER.info("LVL: " + level);
+
+                    if (rand.nextInt(0,level) != 0) {
+                        candamage = false;
+                    }else {
+                        LOGGER.info("FAIL TO BLESS");
+                    }
+                }else {
+                    candamage = false;
+                }
+            }
+        }
+
+        if (candamage) {
+            stack.damage(amount,serverWorld,player,(item) -> player.sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND));
+        }else {
+            LOGGER.info("BLESSED");
+        }
     }
 
 }

@@ -23,69 +23,15 @@ public class ModInit implements ModInitializer {
 
     ModDataComponents.init();
 
+    ModEnchantments.init();
     ModItems.init();
     ModTools.init();
 
     ModItemGroups.init();
 
     ModParticles.register();
-
-    //temp();
-
     ModEvents.init();
 
     ServerMessage.connect();
   }
-
-  public static void temp(ToolPathData state) {
-    Random rand = new Random();
-
-    for (int am_plr = 1; am_plr <= 5; am_plr++) {
-      UUID uuid = UUID.randomUUID();
-      for (int itype = 1; itype <= 5; itype++) {
-        for (int a = 1; a <= 5; a++) {
-          state.putMap(uuid, itype, rand.nextInt(1,99));
-        }
-
-      }
-    }
-  }
-
-  /*public static ToolPathData.ToolPathMap temp(ToolPathData state) {
-    Random rand = new Random();
-
-    ToolPathData.ToolPathMap map = new ToolPathData.ToolPathMap();
-
-    for (int am_plr = 1; am_plr <= 5; am_plr++) {
-      HashMap<Integer, List<Integer>> tooltype_map = new HashMap<>();
-
-      for (int itype = 1; itype <= 5; itype++) {
-        List<Integer> MyList = new ArrayList<>();
-
-        for (int a = 1; a <= 5; a++) {
-          MyList.add(rand.nextInt(1,99));
-        }
-
-        tooltype_map.put(itype,MyList);
-      }
-
-      map.put(UUID.randomUUID(),tooltype_map);
-    }
-
-    /*
-    NbtCompound nbt = ToolPathData.convertToNbt(map);
-    ToolPathData.ToolPathMap remap = ToolPathData.convertToMap(nbt);
-
-    for (UUID uuid : remap.keySet()) {
-      ModInit.LOGGER.info("ENTER PLAYER " + uuid);
-
-      for (int tooltype : remap.get(uuid).keySet()) {
-        ModInit.LOGGER.info("ENTER TOOL TYPE " + tooltype);
-
-        for (int toolid : remap.get(uuid).get(tooltype)) {
-          ModInit.LOGGER.info("ID " + toolid);
-        }
-      }
-    }
-  }*/
 }

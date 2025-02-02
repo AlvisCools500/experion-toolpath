@@ -140,6 +140,10 @@ public class ItemTagsDataGen extends FabricTagProvider<Item> {
                 .addTag(ModTags.Tools.GOLDEN_TOOLS)
         ;
 
+        for (Item v : TaggingList.DURABLE_ABILITY) {
+            getOrCreateTagBuilder(ModTags.Misc.DURABLE_ABILITY).add(v);
+        }
+
     }
 
 

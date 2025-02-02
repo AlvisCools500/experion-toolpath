@@ -18,6 +18,8 @@ public class ToolLambdas {
     public boolean Enable_punchblock;
     public boolean Enable_punchair;
 
+    public boolean durableAbility;
+
     boolean notranslate;
 
     TagKey<Item> main_tag;
@@ -39,6 +41,7 @@ public class ToolLambdas {
         this.notranslate = false;
         this.recipe = null;
         this.lambdas = null;
+        this.durableAbility = false;
 
         this.lambdas = CustomLambdas.NON_LAMBDAS;
     }
@@ -95,6 +98,11 @@ public class ToolLambdas {
 
     public ToolLambdas disableTranslate() {
         this.notranslate = true;
+        return this;
+    }
+
+    public ToolLambdas DurableAbility() {
+        this.durableAbility = true;
         return this;
     }
 

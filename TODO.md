@@ -49,6 +49,29 @@
   - Cons
     - Durability lower than Iron tool due to converted when it breaks
     - Gilded has multiple variants (Either good or bad)
+- Experions (End-Game)
+  - Pros
+    - Has leveling system (Killing, Mining, Depends on the tool)
+    - Higher level might stronger than netherite
+    - Cosmetics+++ (At some level)
+    - Every level up will grants you random reward (Higher level will better reward)
+    - "This makes you feel you're plaing Minecraft RPG server right now-"
+    - (Pickaxe Ability: Hammered) Ability to mine 3x1 blocks for temporary
+    - (Pickaxe Ability: Greed XP) Mining block that has Experience will adds extra to it
+    - (Pickaxe Ability: X-Ray) That's right, You can X-Ray with this tool without hacking
+    - (Efficiency Ability: Haster) gives haste, That's simple 
+    - (Sword Ability: RAGE) If you have low health (Below 50%), It adds damage
+    - (Sword Ability: Execution) If the target has low health (Below 50%), It adds damage
+    - (Sword Ability: Vampiric) Guaranteed every kill get lifesteal
+    - (Sword Ability: Planet) You summoned big planet that looked familiar then it'll explode (Wont hurt the player and blocks too)
+  - Cons
+    - It starts at low Efficiency, Damage, And Even Mining Level. All of them AS A STONE, YES YOU HEARD THAT RIGHT. START AS A STONE.
+    - Leveling might be too long (Just like grinding in RPG)
+    - No, It's still has durability same as Diamond NOT Netherite
+    - "Wait I cant enchant it??" it needs at some level to unlock the ability.
+  - Mids
+    - The XP leveling depends on the Block Mining Level and Hardness (Amount Max Healths for sword)
+    - The Leveling is infinite but increasing stat stops at Level 50
 
 ### Modified Tools
 - Iron
@@ -87,6 +110,6 @@
     - Oh yeah fiery explosion might damage you (Sharpness more dangerous!!!)
 
 ### Enchants
-- Durable Blessing
+- ~~Durable Blessing~~
   - Max Levels: 5
   - Has a chance to stop consume durability from it's ability, Level V will completely remove it

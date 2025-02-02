@@ -25,5 +25,6 @@ public class TranslateDataGen extends FabricLanguageProvider {
 
         expe.translateItem(ModItems.TOOL_DEVELOPER, "Tool Developer");
         expe.translateItem(ModItems.AZALEA_CLIPPINGS, "Azalea Clippings");
+        translationBuilder.add("enchantment.experion_tool_path.durable_blessing", "Durable Blessing");
     }
 }

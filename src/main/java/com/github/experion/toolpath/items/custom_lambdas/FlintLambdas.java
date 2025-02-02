@@ -6,6 +6,7 @@ import com.github.experion.toolpath.initializer.ModTags;
 import com.github.experion.toolpath.items.tool_identify.ToolIdList;
 import com.github.experion.toolpath.items.tool_lambdas.ExistsLambdas;
 import com.github.experion.toolpath.items.tool_lambdas.TriggerLambdas;
+import com.github.experion.toolpath.lib.ToolLib;
 import net.minecraft.block.BlockState;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.ToolComponent;
@@ -51,6 +52,7 @@ public class FlintLambdas implements TriggerLambdas {
             int amount = stack.get(ModDataComponents.FLINT_AMOUNTCRITICAL);
 
             ServerPlayerEntity plr = (ServerPlayerEntity) player;
+            ServerWorld serverWorld = (ServerWorld) world;
 
             if (amount > 0) {
                 stack.set(ModDataComponents.FLINT_AMOUNTCRITICAL,Math.max(0,amount - 1));
@@ -59,7 +61,8 @@ public class FlintLambdas implements TriggerLambdas {
                     world.playSound(null,new BlockPos((int) player.getPos().x, (int) player.getPos().y, (int) player.getPos().z),SoundEvents.BLOCK_BASALT_BREAK,SoundCategory.PLAYERS);
                 }
 
-                stack.damage(1,(ServerWorld) world,plr,(item) -> plr.sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND));
+                ToolLib.DamageToolAbility(stack,1,serverWorld,plr);
+
             }
         }
     }
@@ -102,7 +105,7 @@ public class FlintLambdas implements TriggerLambdas {
 
                     ServerWorld serverWorld = (ServerWorld) world;
 
-                    stack.damage(1,(ServerWorld) serverWorld,(ServerPlayerEntity) puncher,(item) -> puncher.sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND));
+                    ToolLib.DamageToolAbility(stack,1,serverWorld,(ServerPlayerEntity) puncher);
 
                     raycastitemparticle(serverWorld, puncher, stack);
 
@@ -185,7 +188,6 @@ public class FlintLambdas implements TriggerLambdas {
 
     @Override
     public float setDamage(Entity target, float baseAttackDamage, DamageSource damageSource, float default_float) {
-
         ItemStack stack = damageSource.getWeaponStack();
 
         if (!stack.isEmpty()) {
