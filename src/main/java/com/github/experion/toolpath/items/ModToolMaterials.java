@@ -1,5 +1,7 @@
 package com.github.experion.toolpath.items;
 
+import com.github.experion.toolpath.initializer.ModItems;
+import com.github.experion.toolpath.initializer.ModTags;
 import com.github.experion.toolpath.lib.MatsVals;
 import com.github.experion.toolpath.lib.ToolVals;
 import com.google.common.base.Suppliers;
@@ -14,55 +16,10 @@ import net.minecraft.registry.tag.TagKey;
 import java.util.Objects;
 import java.util.function.Supplier;
 
-public enum ModToolMaterials implements ToolMaterial {
-    AZALEA(BlockTags.INCORRECT_FOR_WOODEN_TOOL, 60, 2.5F, 0.5F, 25, () -> Ingredient.fromTag(ItemTags.PLANKS)),
-    FLINT(BlockTags.INCORRECT_FOR_WOODEN_TOOL, 75, 3.0F, 0.75F, 20, () -> Ingredient.ofItems(Items.FLINT)),
-    REDSTONE(BlockTags.INCORRECT_FOR_IRON_TOOL, 350, 6.9F, 2.5F, 9, () -> Ingredient.ofItems(Items.REDSTONE));
+public class ModToolMaterials {
+    public static final ToolMaterial AZALEA = new ToolMaterial(BlockTags.INCORRECT_FOR_WOODEN_TOOL, 60, 2.5F, 0.5F, 25, ModTags.Materials.AZALEA);
+    public static final ToolMaterial FLINT = new ToolMaterial(BlockTags.INCORRECT_FOR_WOODEN_TOOL, 75, 3.0F, 0.75F, 20, ModTags.Materials.FLINT);
+    public static final ToolMaterial COPPER = new ToolMaterial(BlockTags.INCORRECT_FOR_STONE_TOOL, 200, 5.5F, 2F, 19, ModTags.Materials.COPPER);
+    public static final ToolMaterial REDSTONE = new ToolMaterial(BlockTags.INCORRECT_FOR_IRON_TOOL, 350, 6.9F, 2.5F, 9, ModTags.Materials.REDSTONE);
 
-    private final TagKey<Block> inverseTag;
-    private final int itemDurability;
-    private final float miningSpeed;
-    private final float attackDamage;
-    private final int enchantability;
-    private final Supplier<Ingredient> repairIngredient;
-
-    private ModToolMaterials(final TagKey<Block> inverseTag, final int itemDurability, final float miningSpeed, final float attackDamage, final int enchantability, final Supplier<Ingredient> repairIngredient) {
-        this.inverseTag = inverseTag;
-        this.itemDurability = itemDurability;
-        this.miningSpeed = miningSpeed;
-        this.attackDamage = attackDamage;
-        this.enchantability = enchantability;
-        Objects.requireNonNull(repairIngredient);
-        this.repairIngredient = Suppliers.memoize(repairIngredient::get);
-    }
-
-    @Override
-    public int getDurability() {
-        return this.itemDurability;
-    }
-
-    @Override
-    public float getMiningSpeedMultiplier() {
-        return this.miningSpeed;
-    }
-
-    @Override
-    public float getAttackDamage() {
-        return this.attackDamage;
-    }
-
-    @Override
-    public TagKey<Block> getInverseTag() {
-        return this.inverseTag;
-    }
-
-    @Override
-    public int getEnchantability() {
-        return this.enchantability;
-    }
-
-    @Override
-    public Ingredient getRepairIngredient() {
-        return (Ingredient)this.repairIngredient.get();
-    }
 }

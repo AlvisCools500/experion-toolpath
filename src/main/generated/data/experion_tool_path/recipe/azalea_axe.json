@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "A": {
-      "item": "experion_tool_path:azalea_clippings"
-    },
-    "T": {
-      "item": "minecraft:wooden_axe"
-    }
+    "A": "experion_tool_path:azalea_clippings",
+    "T": "minecraft:wooden_axe"
   },
   "pattern": [
     "AA ",

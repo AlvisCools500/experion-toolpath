@@ -3,11 +3,7 @@
   "package": "com.github.experion.toolpath.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "MyMixin",
-    "RecipeManagerMixin",
-    "EntityDataStoreMixin",
-    "CraftScreenMixin",
-    "CraftResultSlotMixin"
+    "EntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

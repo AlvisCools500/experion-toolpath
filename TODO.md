@@ -21,7 +21,7 @@
     - (Azaleas) Lifesteal has cooldown
 - ~~Flint~~ 
   - Pros
-    - Punch on the rock to apply critical
+    - Punch on the rock to apply critical [X] changed to shift + right click 
     - When critical applied, It has higher damage and effeciency (Better than stone, Even iron sometimes)
   - Cons
     - Guaranteed consumes durability when trying to apply critical
@@ -37,6 +37,11 @@
     - The only good time to use this when thunder rain
     - Oh yea remember Copper blocks has rust? Yeah this also have it-
     - If thundered, You might want to tell your friend to not close by you or else they get electrocuted-
+- Steel
+  - Pros
+    - Stronger than iron of course
+  - Cons
+    - No special abilities
 - Gilded Iron
   - Pros
     - Cosmetics, Lookin drippy
@@ -49,7 +54,15 @@
   - Cons
     - Durability lower than Iron tool due to converted when it breaks
     - Gilded has multiple variants (Either good or bad)
-- Experions (End-Game)
+- VampirSteel
+  - Pros
+    - Mining and Kill have a chance to lifesteal
+    - Lifesteal is not only for player but durability too
+    - Stronger than iron
+- Redginite
+
+### (End-Game)
+- Experions 
   - Pros
     - Has leveling system (Killing, Mining, Depends on the tool)
     - Higher level might stronger than netherite
@@ -63,7 +76,8 @@
     - (Sword Ability: RAGE) If you have low health (Below 50%), It adds damage
     - (Sword Ability: Execution) If the target has low health (Below 50%), It adds damage
     - (Sword Ability: Vampiric) Guaranteed every kill get lifesteal
-    - (Sword Ability: Planet) You summoned big planet that looked familiar then it'll explode (Wont hurt the player and blocks too)
+    - (Sword Ability: Planet) You summoned big saturn that looked familiar then it'll explode (Wont harm the players and blocks too)
+    - (Hoe) Farm with this tool has a chance to spawn XP Orb
   - Cons
     - It starts at low Efficiency, Damage, And Even Mining Level. All of them AS A STONE, YES YOU HEARD THAT RIGHT. START AS A STONE.
     - Leveling might be too long (Just like grinding in RPG)

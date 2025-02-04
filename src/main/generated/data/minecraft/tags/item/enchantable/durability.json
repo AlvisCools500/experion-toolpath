@@ -9,6 +9,7 @@
     "experion_tool_path:azalea_axe",
     "experion_tool_path:azalea_pickaxe",
     "experion_tool_path:azalea_shovel",
-    "experion_tool_path:azalea_hoe"
+    "experion_tool_path:azalea_hoe",
+    "experion_tool_path:copper_pickaxe"
   ]
 }

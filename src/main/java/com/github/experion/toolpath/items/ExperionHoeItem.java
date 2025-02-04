@@ -6,7 +6,6 @@ import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
@@ -14,8 +13,6 @@ import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -24,8 +21,8 @@ import java.util.List;
 public class ExperionHoeItem extends HoeItem implements GetLambdas {
     final ToolLambdas toolLamb;
 
-    public ExperionHoeItem(ToolMaterial material, Settings settings, ToolLambdas toolLambdas) {
-        super(material, settings);
+    public ExperionHoeItem(ToolMaterial material, Settings settings, ToolLambdas toolLambdas, float dmg, float speed) {
+        super(material, dmg, speed, settings);
         this.toolLamb = toolLambdas;
         ToolLib.onAdded(this,ToolLib.ToolType.HOE, this.toolLamb);
     }
@@ -37,8 +34,8 @@ public class ExperionHoeItem extends HoeItem implements GetLambdas {
     }
 
     @Override
-    public Text getName() {
-        return this.toolLamb.lambdas.getName(super.getName());
+    public Text getName(ItemStack stack) {
+        return this.toolLamb.lambdas.getName(super.getName(stack), stack);
     }
 
     @Override
@@ -69,10 +66,5 @@ public class ExperionHoeItem extends HoeItem implements GetLambdas {
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
         return ToolStaticTrigger.OnUseBlock(this.toolLamb,context,super.useOnBlock(context));
-    }
-
-    @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        return ToolStaticTrigger.OnUse(toolLamb,world,user,hand,super.use(world, user, hand));
     }
 }

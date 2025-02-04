@@ -103,6 +103,16 @@ public class ModTools {
                     .setItemCriterion(ModItems.AZALEA_CLIPPINGS)
     ));
 
+    //COPPER
+    public static final Item COPPER_PICKAXE = ToolLib.register("copper_pickaxe", ToolLib.ToolType.PICKAXE, ModToolMaterials.COPPER, BaseVals.IRON_PICKAXE.getAttackSPEED(), BaseVals.IRON_PICKAXE.getAttackSPEED(), null, new ToolLambdas().enableEditEffeciency().enableOnPostMine().GetThundered().DisableDefaultModel().enableEditTexture().setLambda(CustomLambdas.COPPER_LAMBDAS).setTag(ModTags.Tools.COPPER_TOOLS).setRecipe(
+            RecipeLambda.create()
+                    .addLine("BBB")
+                    .addLine(" # ")
+                    .addLine(" # ")
+                    .addChar('B',Items.COPPER_INGOT)
+                    .addChar('#',Items.STICK)
+                    .setItemCriterion(Items.COPPER_INGOT)
+    ));
 
     public static void init() {}
 }

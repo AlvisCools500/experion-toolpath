@@ -1,7 +1,6 @@
-package com.github.experion.toolpath.datagens;
+package com.github.experion.toolpath.client.datagens;
 
 import com.github.experion.toolpath.initializer.ModItems;
-import com.github.experion.toolpath.initializer.ModTools;
 import com.github.experion.toolpath.initializer.TaggingList;
 import com.github.experion.toolpath.lib.Experion.ExperionTranslatable;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -23,8 +22,12 @@ public class TranslateDataGen extends FabricLanguageProvider {
             expe.translateItem(v, "?");
         }
 
-        expe.translateItem(ModItems.TOOL_DEVELOPER, "Tool Developer");
         expe.translateItem(ModItems.AZALEA_CLIPPINGS, "Azalea Clippings");
         translationBuilder.add("enchantment.experion_tool_path.durable_blessing", "Durable Blessing");
+    }
+
+    @Override
+    public String getName() {
+        return "ExperionTranslateGen";
     }
 }

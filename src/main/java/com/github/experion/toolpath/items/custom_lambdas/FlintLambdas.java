@@ -119,6 +119,17 @@ public class FlintLambdas implements TriggerLambdas {
     }
 
     @Override
+    public Text getName(Text def, ItemStack stack) {
+        if (stack.contains(ModDataComponents.FLINT_AMOUNTCRITICAL)) {
+            if (stack.get(ModDataComponents.FLINT_AMOUNTCRITICAL) > 0) {
+                return Text.literal("CRITICAL ").formatted(Formatting.BOLD).formatted(Formatting.YELLOW).append(def);
+            }
+        }
+
+        return def;
+    }
+
+    @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType type) {
 
         int tooltype = ToolIdList.getToolType(stack.getItem());

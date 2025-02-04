@@ -5,12 +5,9 @@ import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
@@ -70,20 +67,6 @@ public class ToolStaticTrigger {
             print("No OnUseBlock");
         }
         return action;
-    }
-
-    public static TypedActionResult<ItemStack> OnUse(ToolLambdas toolLamb, World world, PlayerEntity user, Hand hand, TypedActionResult<ItemStack> typedActionResult) {
-        TypedActionResult<ItemStack> res = typedActionResult;
-        if (toolLamb.Enable_use) {
-            if (toolLamb.lambdas.exists().onUse) {
-                res = toolLamb.lambdas.onUse(world,user,hand);
-            }else {
-                mainTrig(toolLamb,user.getStackInHand(hand),world,user.getPos(),user, ToolLib.TriggerType.USE);
-            }
-        }else {
-            print("No OnUse");
-        }
-        return res;
     }
 
     public static float getMiningSpeed(ToolLambdas toolLambdas, ItemStack stack, BlockState state, float default_float) {

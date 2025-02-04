@@ -18,7 +18,6 @@ import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -27,8 +26,8 @@ import java.util.List;
 public class ExperionShovelItem extends ShovelItem implements GetLambdas {
     final ToolLambdas toolLamb;
 
-    public ExperionShovelItem(ToolMaterial material, Settings settings, ToolLambdas toollamb) {
-        super(material, settings);
+    public ExperionShovelItem(ToolMaterial material, Settings settings, ToolLambdas toollamb, float dmg, float speed) {
+        super(material, dmg, speed, settings);
         this.toolLamb = toollamb;
         ToolLib.onAdded(this, ToolLib.ToolType.SHOVEL,this.toolLamb);
     }
@@ -40,8 +39,8 @@ public class ExperionShovelItem extends ShovelItem implements GetLambdas {
     }
 
     @Override
-    public Text getName() {
-        return this.toolLamb.lambdas.getName(super.getName());
+    public Text getName(ItemStack stack) {
+        return this.toolLamb.lambdas.getName(super.getName(stack), stack);
     }
 
     @Override
@@ -75,8 +74,4 @@ public class ExperionShovelItem extends ShovelItem implements GetLambdas {
         return ToolStaticTrigger.OnUseBlock(this.toolLamb,context,super.useOnBlock(context));
     }
 
-    @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        return ToolStaticTrigger.OnUse(toolLamb,world,user,hand,super.use(world, user, hand));
-    }
 }

@@ -10,6 +10,7 @@ public class ToolLambdas {
 
     public boolean Edit_damage;
     public boolean Edit_effeciency;
+    public boolean Edit_texture;
 
     public boolean Enable_useblock;
     public boolean Enable_posthit;
@@ -18,7 +19,10 @@ public class ToolLambdas {
     public boolean Enable_punchblock;
     public boolean Enable_punchair;
 
+    public boolean defaultModel;
     public boolean durableAbility;
+
+    public boolean getThundered;
 
     boolean notranslate;
 
@@ -33,6 +37,9 @@ public class ToolLambdas {
         this.Enable_use = false;
         this.Enable_punchblock = false;
         this.Enable_punchair = false;
+        this.Edit_texture = false;
+
+        this.getThundered = false;
 
         this.Edit_damage = false;
         this.Edit_effeciency = false;
@@ -42,6 +49,7 @@ public class ToolLambdas {
         this.recipe = null;
         this.lambdas = null;
         this.durableAbility = false;
+        this.defaultModel = true;
 
         this.lambdas = CustomLambdas.NON_LAMBDAS;
     }
@@ -86,6 +94,16 @@ public class ToolLambdas {
         return this;
     }
 
+    public ToolLambdas enableEditTexture() {
+        this.Edit_texture = true;
+        return this;
+    }
+
+    public ToolLambdas GetThundered() {
+        this.getThundered = true;
+        return this;
+    }
+
     public ToolLambdas enableOnUse() {
         this.Enable_use = true;
         return this;
@@ -103,6 +121,11 @@ public class ToolLambdas {
 
     public ToolLambdas DurableAbility() {
         this.durableAbility = true;
+        return this;
+    }
+
+    public ToolLambdas DisableDefaultModel() {
+        this.defaultModel = false;
         return this;
     }
 

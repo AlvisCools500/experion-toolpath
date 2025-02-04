@@ -1,8 +1,6 @@
 package com.github.experion.toolpath.items;
 
-import com.github.experion.toolpath.ModInit;
 import com.github.experion.toolpath.items.tool_lambdas.GetLambdas;
-import com.github.experion.toolpath.items.tool_lambdas.OnPostHit;
 import com.github.experion.toolpath.items.tool_lambdas.ToolLambdas;
 import com.github.experion.toolpath.items.tool_lambdas.ToolStaticTrigger;
 import com.github.experion.toolpath.lib.ToolLib;
@@ -10,13 +8,10 @@ import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -25,8 +20,8 @@ import java.util.List;
 public class ExperionSwordItem extends SwordItem implements GetLambdas {
     final ToolLambdas toolLamb;
 
-    public ExperionSwordItem(ToolMaterial material, Item.Settings settings, ToolLambdas toolLambdas) {
-        super(material, settings);
+    public ExperionSwordItem(ToolMaterial material, Item.Settings settings, ToolLambdas toolLambdas, float dmg, float speed) {
+        super(material, dmg, speed, settings);
         this.toolLamb = toolLambdas;
         ToolLib.onAdded(this, ToolLib.ToolType.SWORD,this.toolLamb);
     }
@@ -37,8 +32,8 @@ public class ExperionSwordItem extends SwordItem implements GetLambdas {
     }
 
     @Override
-    public Text getName() {
-        return this.toolLamb.lambdas.getName(super.getName());
+    public Text getName(ItemStack stack) {
+        return this.toolLamb.lambdas.getName(super.getName(stack), stack);
     }
 
     @Override
@@ -72,8 +67,5 @@ public class ExperionSwordItem extends SwordItem implements GetLambdas {
         return ToolStaticTrigger.OnUseBlock(this.toolLamb,context,super.useOnBlock(context));
     }
 
-    @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        return ToolStaticTrigger.OnUse(toolLamb,world,user,hand,super.use(world, user, hand));
-    }
+
 }

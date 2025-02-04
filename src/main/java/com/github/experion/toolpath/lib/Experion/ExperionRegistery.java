@@ -6,6 +6,8 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,12 +36,16 @@ public class ExperionRegistery {
         return ModInit.ID + ":" + res;
     }
 
-    public static Item registerBasicItem(String name, Integer stack) {
-        return registerItem(new Item(new Item.Settings().maxCount(stack)), name);
+    public static RegistryKey<Item> keyItem(String name) {
+        return RegistryKey.of(RegistryKeys.ITEM, ExperionRegistery.newId(name));
     }
 
-    public static Item registerItem(Item item, String name) {
-        return Registry.register(Registries.ITEM, newId(name), item);
+    public static Item registerBasicItem(String name, Integer stack) {
+        return registerItem(new Item(new Item.Settings().maxCount(stack).registryKey(keyItem(name))), name);
+    }
+
+    public static Item registerItem(Item item, String value) {
+        return Registry.register(Registries.ITEM, keyItem(value), item);
     }
 
     public static Block registerBlock(Block block, String name, boolean blockItem, boolean defaultDrop) {

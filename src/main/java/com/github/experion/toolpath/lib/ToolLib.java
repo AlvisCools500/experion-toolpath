@@ -39,8 +39,16 @@ public class ToolLib {
             TaggingList.AUTO_TRANSLATE.add(toolItem);
         }
 
+        if (toolLambdas.defaultModel) {
+            TaggingList.DEFAULT_MODEL.add(toolItem);
+        }
+
         if (toolLambdas.durableAbility) {
             TaggingList.DURABLE_ABILITY.add(toolItem);
+        }
+
+        if (toolLambdas.Edit_texture) {
+            TaggingList.EDIT_TEXTURE.add(toolItem);
         }
 
         if (type == ToolType.SWORD) {
@@ -103,30 +111,15 @@ public class ToolLib {
         Item res = null;
 
         if (type == ToolType.SWORD) {
-            res = new ExperionSwordItem(material,
-                    settings.attributeModifiers(SwordItem.createAttributeModifiers(material,(int) baseDamage,baseSpeed)),
-                    lambdas
-            );
+            res = new ExperionSwordItem(material,settings.registryKey(ExperionRegistery.keyItem(name)),lambdas,baseDamage,baseSpeed);
         }else if (type == ToolType.AXE) {
-            res = new ExperionAxeItem(material,
-                    settings.attributeModifiers(AxeItem.createAttributeModifiers(material,baseDamage,baseSpeed)),
-                    lambdas
-            );
+            res = new ExperionAxeItem(material,settings.registryKey(ExperionRegistery.keyItem(name)),lambdas,baseDamage,baseSpeed);
         }else if (type == ToolType.PICKAXE) {
-            res = new ExperionPickaxeItem(material,
-                    settings.attributeModifiers(PickaxeItem.createAttributeModifiers(material,baseDamage,baseSpeed)),
-                    lambdas
-            );
+            res = new ExperionPickaxeItem(material,settings.registryKey(ExperionRegistery.keyItem(name)),lambdas,baseDamage,baseSpeed);
         }else if (type == ToolType.SHOVEL) {
-            res = new ExperionShovelItem(material,
-                    settings.attributeModifiers(ShovelItem.createAttributeModifiers(material,baseDamage,baseSpeed)),
-                    lambdas
-            );
+            res = new ExperionShovelItem(material,settings.registryKey(ExperionRegistery.keyItem(name)),lambdas,baseDamage,baseSpeed);
         }else if (type == ToolType.HOE) {
-            res = new ExperionHoeItem(material,
-                    settings.attributeModifiers(HoeItem.createAttributeModifiers(material,baseDamage,baseSpeed)),
-                    lambdas
-            );
+            res = new ExperionHoeItem(material,settings.registryKey(ExperionRegistery.keyItem(name)),lambdas,baseDamage,baseSpeed);
         }
 
         return ExperionRegistery.registerItem(res,name);
@@ -153,7 +146,7 @@ public class ToolLib {
     public static void DamageToolAbility(ItemStack stack, int amount, ServerWorld serverWorld, ServerPlayerEntity player) {
         boolean candamage = true;
 
-        RegistryEntry<Enchantment> DurableEntry = serverWorld.getRegistryManager().getWrapperOrThrow(RegistryKeys.ENCHANTMENT).getOrThrow(ModEnchantments.DURABLE_BLESSING_KEY);
+        RegistryEntry<Enchantment> DurableEntry = serverWorld.getRegistryManager().getOrThrow(RegistryKeys.ENCHANTMENT).getOrThrow(ModEnchantments.DURABLE_BLESSING_KEY);
 
         if (DurableEntry != null) {
             int level = EnchantmentHelper.getLevel(DurableEntry,stack);

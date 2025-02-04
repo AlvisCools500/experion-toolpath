@@ -1,4 +1,4 @@
-package com.github.experion.toolpath.datagens;
+package com.github.experion.toolpath.client.datagens;
 
 import com.github.experion.toolpath.initializer.ModEnchantments;
 import com.github.experion.toolpath.initializer.ModTags;
@@ -10,7 +10,6 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -23,7 +22,7 @@ public class EnchantmentsDataGen extends FabricDynamicRegistryProvider {
     protected void configure(RegistryWrapper.WrapperLookup registries, Entries entries) {
         register(entries, ModEnchantments.DURABLE_BLESSING_KEY,Enchantment.builder(
                 Enchantment.definition(
-                        registries.getWrapperOrThrow(RegistryKeys.ITEM).getOrThrow(ModTags.Misc.DURABLE_ABILITY),
+                        registries.getOrThrow(RegistryKeys.ITEM).getOrThrow(ModTags.Misc.DURABLE_ABILITY),
                         10,
                         5,
                         Enchantment.leveledCost(3,10),

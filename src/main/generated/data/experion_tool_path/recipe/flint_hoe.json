@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "B": {
-      "item": "minecraft:flint"
-    },
-    "P": {
-      "tag": "minecraft:planks"
-    }
+    "#": "minecraft:stick",
+    "B": "minecraft:flint",
+    "P": "#minecraft:planks"
   },
   "pattern": [
     "BP ",

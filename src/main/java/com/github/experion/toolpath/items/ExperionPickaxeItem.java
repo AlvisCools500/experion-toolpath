@@ -1,6 +1,5 @@
 package com.github.experion.toolpath.items;
 
-import com.github.experion.toolpath.ModInit;
 import com.github.experion.toolpath.items.tool_lambdas.GetLambdas;
 import com.github.experion.toolpath.items.tool_lambdas.ToolLambdas;
 import com.github.experion.toolpath.items.tool_lambdas.ToolStaticTrigger;
@@ -9,7 +8,6 @@ import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.PickaxeItem;
@@ -17,8 +15,6 @@ import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -27,8 +23,8 @@ import java.util.List;
 public class ExperionPickaxeItem extends PickaxeItem implements GetLambdas {
     final ToolLambdas toolLamb;
 
-    public ExperionPickaxeItem(ToolMaterial material, Settings settings, ToolLambdas toollamb) {
-        super(material, settings);
+    public ExperionPickaxeItem(ToolMaterial material, Settings settings, ToolLambdas toollamb, float dmg, float speed) {
+        super(material, dmg, speed, settings);
         this.toolLamb = toollamb;
         ToolLib.onAdded(this, ToolLib.ToolType.PICKAXE, this.toolLamb);
     }
@@ -39,8 +35,13 @@ public class ExperionPickaxeItem extends PickaxeItem implements GetLambdas {
     }
 
     @Override
-    public Text getName() {
-        return this.toolLamb.lambdas.getName(super.getName());
+    public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
+        super.inventoryTick(stack, world, entity, slot, selected);
+    }
+
+    @Override
+    public Text getName(ItemStack stack) {
+        return this.toolLamb.lambdas.getName(super.getName(stack), stack);
     }
 
     @Override
@@ -77,10 +78,5 @@ public class ExperionPickaxeItem extends PickaxeItem implements GetLambdas {
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
         return ToolStaticTrigger.OnUseBlock(this.toolLamb,context,super.useOnBlock(context));
-    }
-
-    @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        return ToolStaticTrigger.OnUse(toolLamb,world,user,hand,super.use(world, user, hand));
     }
 }

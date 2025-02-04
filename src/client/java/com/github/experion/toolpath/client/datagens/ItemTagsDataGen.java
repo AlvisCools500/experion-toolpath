@@ -1,25 +1,19 @@
-package com.github.experion.toolpath.datagens;
+package com.github.experion.toolpath.client.datagens;
 
-import com.github.experion.toolpath.ModInit;
-import com.github.experion.toolpath.initializer.ModItems;
 import com.github.experion.toolpath.initializer.ModTags;
-import com.github.experion.toolpath.initializer.ModTools;
 import com.github.experion.toolpath.initializer.TaggingList;
 import com.github.experion.toolpath.items.tool_lambdas.GetLambdas;
 import com.github.experion.toolpath.items.tool_lambdas.ToolLambdas;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.EnchantmentTags;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
-import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ItemTagsDataGen extends FabricTagProvider<Item> {
@@ -50,8 +44,6 @@ public class ItemTagsDataGen extends FabricTagProvider<Item> {
             if (myLamb.getMain_tag() != null) {
                 getOrCreateTagBuilder(myLamb.getMain_tag()).add(v);
             }
-
-
         }
 
         for (Item v : TaggingList.SWORD) { // SWORD

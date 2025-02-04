@@ -5,10 +5,10 @@ import com.mojang.serialization.Codec;
 import net.minecraft.component.ComponentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.util.dynamic.Codecs;
 
 public class ModDataComponents {
     public static final ComponentType<Integer> FLINT_AMOUNTCRITICAL = register("flint_amountcritical", Codec.INT);
+    public static final ComponentType<Integer> COPPER_STATUS = register("copper_status", Codec.INT);
 
     public static void init() {}
 

@@ -15,7 +15,7 @@ public class EasyParticle {
     }
 
     public static DustParticleEffect getColoredDust(float red, float green, float blue, float scale) {
-        return new DustParticleEffect(new Vector3f(red,green,blue), scale);
+        return new DustParticleEffect(255, scale);
     }
 
     public static void SummonSpreadedParticle(ServerWorld world, Vec3d pos, Vec3d velocity3, int Amount, ParticleEffect effect) {

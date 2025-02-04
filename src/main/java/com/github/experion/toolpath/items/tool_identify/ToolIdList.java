@@ -9,11 +9,13 @@ import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.registry.entry.RegistryEntryList;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Optional;
 
 public class ToolIdList {
     private static HashMap<String, ToolGetter> ToolMap = new HashMap<>();
@@ -24,7 +26,8 @@ public class ToolIdList {
     public static final ToolIdentifier WOODEN_TOOLS = new ToolIdentifier(toolID.WOODEN,ModTags.Tools.WOODEN_TOOLS, -1);
     public static final ToolIdentifier FLINT_TOOLS = new ToolIdentifier(toolID.FLINT, ModTags.Tools.FLINT_TOOLS, toolID.WOODEN);
     public static final ToolIdentifier STONE_TOOLS = new ToolIdentifier(toolID.STONE,ModTags.Tools.STONE_TOOLS, toolID.FLINT);
-    public static final ToolIdentifier IRON_TOOLS = new ToolIdentifier(toolID.IRON,ModTags.Tools.IRON_TOOLS, toolID.STONE);
+    public static final ToolIdentifier COPPER_TOOLS = new ToolIdentifier(toolID.COPPER,ModTags.Tools.COPPER_TOOLS, toolID.STONE);
+    public static final ToolIdentifier IRON_TOOLS = new ToolIdentifier(toolID.IRON,ModTags.Tools.IRON_TOOLS, toolID.COPPER);
 
     public static ToolIdentifier getIdentifier(int numid) {
         return IDList.get(numid);
@@ -79,10 +82,9 @@ public class ToolIdList {
         if (!TagList.contains(tag)) {
             TagList.add(tag);
 
-            RegistryEntryList<Item> itemList = Registries.ITEM.getEntryList(tag).orElse(null);
-
-            if (itemList != null) {
-                for (RegistryEntry<Item> a : itemList) {
+            Optional<RegistryEntryList.Named<Item>> itemList = Registries.ITEM.getOptional(ModTags.TOOLPATH_TOOLS);
+            itemList.ifPresent(items -> {
+                for (RegistryEntry<Item> a : items) {
                     Item item = a.value();
                     int tooltype = getToolType(item);
 
@@ -94,9 +96,7 @@ public class ToolIdList {
                         ModInit.LOGGER.warn("ToolType Fail?");
                     }
                 }
-            }else {
-                ModInit.LOGGER.warn("oh no fail to iterate?");
-            }
+            });
         }
     }
 
@@ -123,6 +123,10 @@ public class ToolIdList {
         public static final int STEEL = 25;
         public static final int GILDED_IRON = 28;
         public static final int AZALEA = 29;
+        public static final int COPPER = 23;
+
+        // Coming soon
+        public static final int EXPERIONS = 69;
 
         public static final HashMap<Integer, TagKey<Item>> list = new HashMap<>(){{
             put(WOODEN, ModTags.Tools.WOODEN_TOOLS);

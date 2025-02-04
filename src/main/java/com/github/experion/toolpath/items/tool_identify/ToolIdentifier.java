@@ -1,6 +1,7 @@
 package com.github.experion.toolpath.items.tool_identify;
 
 import com.github.experion.toolpath.ModInit;
+import com.github.experion.toolpath.initializer.ModTags;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.entry.RegistryEntry;
@@ -9,6 +10,7 @@ import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
 import java.util.HashMap;
+import java.util.Optional;
 
 public class ToolIdentifier {
     private final TagKey<Item> main;
@@ -25,10 +27,10 @@ public class ToolIdentifier {
         ToolIdList.tryAddID(this);
 
         this.ToolIDs = new HashMap<>(){{
-            RegistryEntryList<Item> itemList = Registries.ITEM.getEntryList(main).orElse(null);
+            Optional<RegistryEntryList.Named<Item>> itemList = Registries.ITEM.getOptional(main);
 
-            if (itemList != null) {
-                for (RegistryEntry<Item> a : itemList) {
+            itemList.ifPresent(list -> {
+                for (RegistryEntry<Item> a : list) {
                     Item item = a.value();
                     Identifier id = Registries.ITEM.getId(item);
 
@@ -37,10 +39,8 @@ public class ToolIdentifier {
                     if (tooltype != -1) {
                         put(tooltype, id.getNamespace() + ":" + id.getPath());
                     }
-
-
                 }
-            }
+            });
         }};
 
 

@@ -26,10 +26,10 @@ public class ModItemGroups {
                 g.add(ModTools.AZALEA_SHOVEL);
                 g.add(ModTools.AZALEA_HOE);
 
+                g.add(ModTools.COPPER_PICKAXE);
+
                 g.add(ModItems.AZALEA_PICKER);
                 g.add(ModItems.AZALEA_CLIPPINGS);
-
-                g.add(ModItems.TOOL_DEVELOPER);
             })
             .build()
     );

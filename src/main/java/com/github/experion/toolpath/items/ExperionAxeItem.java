@@ -17,8 +17,6 @@ import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -27,8 +25,8 @@ import java.util.List;
 public class ExperionAxeItem extends AxeItem implements GetLambdas {
     final ToolLambdas toolLamb;
 
-    public ExperionAxeItem(ToolMaterial material, Settings settings, ToolLambdas toollamb) {
-        super(material, settings);
+    public ExperionAxeItem(ToolMaterial material, Settings settings, ToolLambdas toollamb, float dmg, float speed) {
+        super(material, dmg, speed, settings);
         this.toolLamb = toollamb;
         ToolLib.onAdded(this, ToolLib.ToolType.AXE, this.toolLamb);
     }
@@ -39,8 +37,8 @@ public class ExperionAxeItem extends AxeItem implements GetLambdas {
     }
 
     @Override
-    public Text getName() {
-        return this.toolLamb.lambdas.getName(super.getName());
+    public Text getName(ItemStack stack) {
+        return this.toolLamb.lambdas.getName(super.getName(stack), stack);
     }
 
     @Override
@@ -74,10 +72,6 @@ public class ExperionAxeItem extends AxeItem implements GetLambdas {
         return ToolStaticTrigger.OnUseBlock(this.toolLamb,context,super.useOnBlock(context));
     }
 
-    @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        return ToolStaticTrigger.OnUse(toolLamb,world,user,hand,super.use(world, user, hand));
-    }
 
 
 }

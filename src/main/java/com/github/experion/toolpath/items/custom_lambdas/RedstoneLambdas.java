@@ -1,32 +1,23 @@
 package com.github.experion.toolpath.items.custom_lambdas;
 
 import com.github.experion.toolpath.ModInit;
-import com.github.experion.toolpath.items.tool_lambdas.ExistsLambdas;
 import com.github.experion.toolpath.items.tool_lambdas.TriggerLambdas;
 import com.github.experion.toolpath.lib.EasyParticle;
 import com.github.experion.toolpath.lib.ToolLib;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.RedstoneWireBlock;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.particle.DustParticleEffect;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 public class RedstoneLambdas implements TriggerLambdas {
     // SCRAPPED TOOL BUT MAY ADD LATER WHEN I CAN
-
-    @Override
-    public TypedActionResult<ItemStack> onUse(World world, PlayerEntity user, Hand hand) {
-        return null;
-    }
 
     @Override
     public void main_trigger(ItemStack stack, World world, Vec3d pos, LivingEntity Player, ToolLib.TriggerType triggerType) {
