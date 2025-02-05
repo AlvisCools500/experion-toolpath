@@ -1,19 +1,19 @@
 {
   "values": [
-    "experion_tool_path:flint_sword",
-    "experion_tool_path:flint_axe",
-    "experion_tool_path:flint_pickaxe",
-    "experion_tool_path:flint_shovel",
-    "experion_tool_path:flint_hoe",
-    "experion_tool_path:azalea_sword",
-    "experion_tool_path:azalea_axe",
-    "experion_tool_path:azalea_pickaxe",
-    "experion_tool_path:azalea_shovel",
-    "experion_tool_path:azalea_hoe",
-    "experion_tool_path:copper_sword",
-    "experion_tool_path:copper_axe",
-    "experion_tool_path:copper_pickaxe",
-    "experion_tool_path:copper_shovel",
-    "experion_tool_path:copper_hoe"
+    "experion_tools:flint_sword",
+    "experion_tools:flint_axe",
+    "experion_tools:flint_pickaxe",
+    "experion_tools:flint_shovel",
+    "experion_tools:flint_hoe",
+    "experion_tools:azalea_sword",
+    "experion_tools:azalea_axe",
+    "experion_tools:azalea_pickaxe",
+    "experion_tools:azalea_shovel",
+    "experion_tools:azalea_hoe",
+    "experion_tools:copper_sword",
+    "experion_tools:copper_axe",
+    "experion_tools:copper_pickaxe",
+    "experion_tools:copper_shovel",
+    "experion_tools:copper_hoe"
   ]
 }

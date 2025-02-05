@@ -27,7 +27,7 @@
     - Guaranteed consumes durability when trying to apply critical
     - Applying critical is not guaranteed
     - Player might be too lazy to find rock to apply it
-- Copper
+- ~~Copper~~
   - Pros
     - When player got thundered, ~~It wont hurt but instead~~ it will boost the copper tools
     - Thundered will be permanent for this tool (can be removed by using ink)
@@ -54,11 +54,13 @@
   - Cons
     - Durability lower than Iron tool due to converted when it breaks
     - Gilded has multiple variants (Either good or bad)
-- VampirSteel
+- Vampire Steel
   - Pros
     - Mining and Kill have a chance to lifesteal
     - Lifesteal is not only for player but durability too
     - Stronger than iron
+  - Cons
+    - Weaker when sun is up
 
 ### (End-Game)
 - Experions 

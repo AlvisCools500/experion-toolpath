@@ -1,0 +1,23 @@
+// 1.21.4	-999999999-01-01T00:00:00	Experion Tools/Tags for minecraft:item
+5e76ff1759bad466881955ae8fd19da6448eba47 data/experion_tools/tags/item/misc/durable_ability.json
+59ee739c0971a702c51e7d0f456f215a81461e7d data/experion_tools/tags/item/mod_tools/azalea_tools.json
+079af1026f371caf82e30833b9ccf221ae3f1da5 data/experion_tools/tags/item/mod_tools/copper_tools.json
+590458bb7437b9ec8ee466c4dc71c50e4afeda07 data/experion_tools/tags/item/mod_tools/diamond_tools.json
+d7eb3e451c3ab24f1d2f7bcb26b5b6f0954d6015 data/experion_tools/tags/item/mod_tools/flint_tools.json
+20bb4ff7f8de81b8d3b305e812465f42cec6a2f7 data/experion_tools/tags/item/mod_tools/golden_tools.json
+12823c2d98e694f267fc934085d5f181220f1e86 data/experion_tools/tags/item/mod_tools/iron_tools.json
+f7607ae4d51f90db8aeaab0f4c830957370fb0a7 data/experion_tools/tags/item/mod_tools/netherite_tools.json
+666e076c4c14d00fa6e57d93af2fa564fd91f168 data/experion_tools/tags/item/mod_tools/stone_tools.json
+780c6ce5193d98a9fcf627088e4d8bd0318c018c data/experion_tools/tags/item/mod_tools/wooden_tools.json
+5495a47ff564a8853045f6e04e0a2115d67dd802 data/experion_tools/tags/item/toolpath_tools.json
+b271023f6d730c4279acdc07e356361cead17b5c data/minecraft/tags/item/axes.json
+7c02de2929c76c189c148e207f0813e730f737c0 data/minecraft/tags/item/enchantable/durability.json
+632d8d57e19f50e9268144357675c0ae4eb587c8 data/minecraft/tags/item/enchantable/fire_aspect.json
+cd3cb32e737cbb2d44a86a763419bfaf6140dbf1 data/minecraft/tags/item/enchantable/mining.json
+cd3cb32e737cbb2d44a86a763419bfaf6140dbf1 data/minecraft/tags/item/enchantable/mining_loot.json
+6d5dd71502a23a9590d50c67d391c090bbcd4145 data/minecraft/tags/item/enchantable/sharp_weapon.json
+6d5dd71502a23a9590d50c67d391c090bbcd4145 data/minecraft/tags/item/enchantable/weapon.json
+6a1177f9e5e9bfe182e7a7b3f7aa8722be325be4 data/minecraft/tags/item/hoes.json
+0738f813d846253472a0d2d33e63648df96c6272 data/minecraft/tags/item/pickaxes.json
+b9e27c3252b4e2700a6f5241e94a65c75205f34a data/minecraft/tags/item/shovels.json
+632d8d57e19f50e9268144357675c0ae4eb587c8 data/minecraft/tags/item/swords.json

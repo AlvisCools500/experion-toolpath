@@ -2,18 +2,18 @@
   "schemaVersion": 1,
   "id": "%mod_id%",
   "version": "%version%",
-  "name": "Experion Tool Path",
+  "name": "Experion Tools",
   "authors": ["Experion Planet"],
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.github.experion.toolpath.ModInit"
+      "com.github.experion.tools.ModInit"
     ],
     "client": [
-      "com.github.experion.toolpath.client.ModInitClient"
+      "com.github.experion.tools.client.ModInitClient"
     ],
     "fabric-datagen": [
-      "com.github.experion.toolpath.client.ModDataGenerator"
+      "com.github.experion.tools.client.ModDataGenerator"
     ]
   },
   "mixins": [

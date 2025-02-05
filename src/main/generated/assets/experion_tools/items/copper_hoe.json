@@ -1,0 +1,29 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "entries": [
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "experion_tools:item/copper_hoe"
+        },
+        "threshold": 1.0
+      },
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "experion_tools:item/copper_hoe_oxidized"
+        },
+        "threshold": 2.0
+      },
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "experion_tools:item/copper_hoe_thundered"
+        },
+        "threshold": 3.0
+      }
+    ],
+    "property": "experion_tools:tool_status"
+  }
+}

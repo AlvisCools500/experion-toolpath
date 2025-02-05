@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "minecraft:stick",
+    "B": "minecraft:flint",
+    "P": "#minecraft:planks"
+  },
+  "pattern": [
+    "BP ",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "experion_tools:flint_hoe"
+  }
+}

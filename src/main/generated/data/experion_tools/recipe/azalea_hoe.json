@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": "experion_tools:azalea_clippings",
+    "T": "minecraft:wooden_hoe"
+  },
+  "pattern": [
+    "AA ",
+    " T "
+  ],
+  "result": {
+    "count": 1,
+    "id": "experion_tools:azalea_hoe"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_azalea_clippings": {
+      "conditions": {
+        "items": [
+          {
+            "items": "experion_tools:azalea_clippings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "experion_tools:azalea_sword"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_azalea_clippings"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "experion_tools:azalea_sword"
+    ]
+  }
+}

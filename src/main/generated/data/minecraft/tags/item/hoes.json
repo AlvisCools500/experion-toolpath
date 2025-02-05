@@ -1,7 +1,7 @@
 {
   "values": [
-    "experion_tool_path:flint_hoe",
-    "experion_tool_path:azalea_hoe",
-    "experion_tool_path:copper_hoe"
+    "experion_tools:flint_hoe",
+    "experion_tools:azalea_hoe",
+    "experion_tools:copper_hoe"
   ]
 }

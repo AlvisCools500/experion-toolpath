@@ -1,0 +1,20 @@
+{
+  "anvil_cost": 7,
+  "description": {
+    "translate": "enchantment.experion_tools.durable_blessing"
+  },
+  "max_cost": {
+    "base": 5,
+    "per_level_above_first": 15
+  },
+  "max_level": 5,
+  "min_cost": {
+    "base": 3,
+    "per_level_above_first": 10
+  },
+  "slots": [
+    "mainhand"
+  ],
+  "supported_items": "#experion_tools:misc/durable_ability",
+  "weight": 10
+}
