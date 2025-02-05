@@ -11,7 +11,7 @@ import net.minecraft.registry.tag.ItemTags;
 
 public class ModTools {
     // FLINT
-    public static final Item FLINT_SWORD = ToolLib.register("flint_sword", ToolLib.ToolType.SWORD, ModToolMaterials.FLINT, BaseVals.WOODEN_SWORD.getAttackDMG() + 1F, BaseVals.WOODEN_SWORD.getAttackSPEED(), null, new ToolLambdas().setLambda(CustomLambdas.FLINT_LAMBDAS).enableEditDamage().enableOnUseblock().enableOnPostHit().DurableAbility().setTag(ModTags.Tools.FLINT_TOOLS)
+    public static final Item FLINT_SWORD = ToolLib.register("flint_sword", ToolLib.ToolType.SWORD, ModToolMaterials.FLINT, BaseVals.WOODEN_SWORD.getAttackDMG() + 1F, BaseVals.WOODEN_SWORD.getAttackSPEED(), null, new ToolLambdas().setLambda(CustomLambdas.FLINT_LAMBDAS).EnableEditDamage().EnableOnUseblock().EnableOnPostHit().DurableAbility().setTag(ModTags.Tools.FLINT_TOOLS)
             .setRecipe(RecipeLambda.create()
                     .addLine(" B ")
                     .addLine(" B ")
@@ -20,7 +20,7 @@ public class ModTools {
                     .addChar('#', Items.STICK)
                     .setItemCriterion(Items.FLINT)
             ));
-    public static final Item FLINT_AXE = ToolLib.register("flint_axe", ToolLib.ToolType.AXE, ModToolMaterials.FLINT, BaseVals.WOODEN_AXE.getAttackDMG() + 0.5F, BaseVals.WOODEN_AXE.getAttackSPEED(), null, new ToolLambdas().setLambda(CustomLambdas.FLINT_LAMBDAS).enableOnUseblock().enableOnPostMine().enableOnPostHit().enableEditEffeciency().enableEditDamage().DurableAbility().setTag(ModTags.Tools.FLINT_TOOLS)
+    public static final Item FLINT_AXE = ToolLib.register("flint_axe", ToolLib.ToolType.AXE, ModToolMaterials.FLINT, BaseVals.WOODEN_AXE.getAttackDMG() + 0.5F, BaseVals.WOODEN_AXE.getAttackSPEED(), null, new ToolLambdas().setLambda(CustomLambdas.FLINT_LAMBDAS).EnableOnUseblock().EnableOnPostMine().EnableOnPostHit().EnableEditEffeciency().EnableEditDamage().DurableAbility().setTag(ModTags.Tools.FLINT_TOOLS)
             .setRecipe(RecipeLambda.create()
                     .addLine("BB ")
                     .addLine("BP ")
@@ -30,7 +30,7 @@ public class ModTools {
                     .addChar('#', Items.STICK)
                     .setItemCriterion(Items.FLINT)
             ));
-    public static final Item FLINT_PICKAXE = ToolLib.register("flint_pickaxe", ToolLib.ToolType.PICKAXE, ModToolMaterials.FLINT, BaseVals.WOODEN_PICKAXE.getAttackDMG(), BaseVals.WOODEN_PICKAXE.getAttackSPEED(), null, new ToolLambdas().setLambda(CustomLambdas.FLINT_LAMBDAS).enableOnUseblock().enableOnPostMine().enableEditEffeciency().DurableAbility().setTag(ModTags.Tools.FLINT_TOOLS)
+    public static final Item FLINT_PICKAXE = ToolLib.register("flint_pickaxe", ToolLib.ToolType.PICKAXE, ModToolMaterials.FLINT, BaseVals.WOODEN_PICKAXE.getAttackDMG(), BaseVals.WOODEN_PICKAXE.getAttackSPEED(), null, new ToolLambdas().setLambda(CustomLambdas.FLINT_LAMBDAS).EnableOnUseblock().EnableOnPostMine().EnableEditEffeciency().DurableAbility().setTag(ModTags.Tools.FLINT_TOOLS)
             .setRecipe(RecipeLambda.create()
                     .addLine("BPB")
                     .addLine(" # ")
@@ -40,7 +40,7 @@ public class ModTools {
                     .addChar('#', Items.STICK)
                     .setItemCriterion(Items.FLINT)
             ));
-    public static final Item FLINT_SHOVEL = ToolLib.register("flint_shovel", ToolLib.ToolType.SHOVEL, ModToolMaterials.FLINT, BaseVals.WOODEN_SHOVEL.getAttackDMG(), BaseVals.WOODEN_SHOVEL.getAttackSPEED(), null, new ToolLambdas().setLambda(CustomLambdas.FLINT_LAMBDAS).enableOnUseblock().enableOnPostMine().enableEditEffeciency().DurableAbility().setTag(ModTags.Tools.FLINT_TOOLS)
+    public static final Item FLINT_SHOVEL = ToolLib.register("flint_shovel", ToolLib.ToolType.SHOVEL, ModToolMaterials.FLINT, BaseVals.WOODEN_SHOVEL.getAttackDMG(), BaseVals.WOODEN_SHOVEL.getAttackSPEED(), null, new ToolLambdas().setLambda(CustomLambdas.FLINT_LAMBDAS).EnableOnUseblock().EnableOnPostMine().EnableEditEffeciency().DurableAbility().setTag(ModTags.Tools.FLINT_TOOLS)
             .setRecipe(RecipeLambda.create()
                     .addLine(" B ")
                     .addLine(" # ")
@@ -61,7 +61,7 @@ public class ModTools {
             ));
 
     // AZALEA
-    public static final Item AZALEA_SWORD = ToolLib.register("azalea_sword", ToolLib.ToolType.SWORD, ModToolMaterials.AZALEA, BaseVals.WOODEN_SWORD.getAttackDMG(),BaseVals.WOODEN_SWORD.getAttackSPEED(),null, new ToolLambdas().setLambda(CustomLambdas.AZALEA_LAMBDAS).setTag(ModTags.Tools.AZALEA_TOOLS).enableOnPostMine().enableOnPostHit().setRecipe(
+    public static final Item AZALEA_SWORD = ToolLib.register("azalea_sword", ToolLib.ToolType.SWORD, ModToolMaterials.AZALEA, BaseVals.WOODEN_SWORD.getAttackDMG(),BaseVals.WOODEN_SWORD.getAttackSPEED(),null, new ToolLambdas().setLambda(CustomLambdas.AZALEA_LAMBDAS).setTag(ModTags.Tools.AZALEA_TOOLS).EnableOnPostMine().EnableOnPostHit().setRecipe(
             RecipeLambda.create()
                     .addLine(" A ")
                     .addLine(" A ")
@@ -70,7 +70,7 @@ public class ModTools {
                     .addChar('T',Items.WOODEN_SWORD)
                     .setItemCriterion(ModItems.AZALEA_CLIPPINGS)
     ));
-    public static final Item AZALEA_AXE = ToolLib.register("azalea_axe", ToolLib.ToolType.AXE, ModToolMaterials.AZALEA, BaseVals.WOODEN_AXE.getAttackDMG(),BaseVals.WOODEN_AXE.getAttackSPEED(),null, new ToolLambdas().setLambda(CustomLambdas.AZALEA_LAMBDAS).setTag(ModTags.Tools.AZALEA_TOOLS).enableOnPostMine().enableOnPostHit().setRecipe(
+    public static final Item AZALEA_AXE = ToolLib.register("azalea_axe", ToolLib.ToolType.AXE, ModToolMaterials.AZALEA, BaseVals.WOODEN_AXE.getAttackDMG(),BaseVals.WOODEN_AXE.getAttackSPEED(),null, new ToolLambdas().setLambda(CustomLambdas.AZALEA_LAMBDAS).setTag(ModTags.Tools.AZALEA_TOOLS).EnableOnPostMine().EnableOnPostHit().setRecipe(
             RecipeLambda.create()
                     .addLine("AA ")
                     .addLine("AT ")
@@ -78,7 +78,7 @@ public class ModTools {
                     .addChar('T',Items.WOODEN_AXE)
                     .setItemCriterion(ModItems.AZALEA_CLIPPINGS)
     ));
-    public static final Item AZALEA_PICKAXE = ToolLib.register("azalea_pickaxe", ToolLib.ToolType.PICKAXE, ModToolMaterials.AZALEA, BaseVals.WOODEN_PICKAXE.getAttackDMG(),BaseVals.WOODEN_PICKAXE.getAttackSPEED(),null, new ToolLambdas().setLambda(CustomLambdas.AZALEA_LAMBDAS).setTag(ModTags.Tools.AZALEA_TOOLS).enableOnPostMine().enableOnPostHit().setRecipe(
+    public static final Item AZALEA_PICKAXE = ToolLib.register("azalea_pickaxe", ToolLib.ToolType.PICKAXE, ModToolMaterials.AZALEA, BaseVals.WOODEN_PICKAXE.getAttackDMG(),BaseVals.WOODEN_PICKAXE.getAttackSPEED(),null, new ToolLambdas().setLambda(CustomLambdas.AZALEA_LAMBDAS).setTag(ModTags.Tools.AZALEA_TOOLS).EnableOnPostMine().EnableOnPostHit().setRecipe(
             RecipeLambda.create()
                     .addLine("AAA")
                     .addLine(" T ")
@@ -86,7 +86,7 @@ public class ModTools {
                     .addChar('T',Items.WOODEN_PICKAXE)
                     .setItemCriterion(ModItems.AZALEA_CLIPPINGS)
     ));
-    public static final Item AZALEA_SHOVEL = ToolLib.register("azalea_shovel", ToolLib.ToolType.SHOVEL, ModToolMaterials.AZALEA, BaseVals.WOODEN_SHOVEL.getAttackDMG(),BaseVals.WOODEN_SHOVEL.getAttackSPEED(),null, new ToolLambdas().setLambda(CustomLambdas.AZALEA_LAMBDAS).setTag(ModTags.Tools.AZALEA_TOOLS).enableOnPostMine().enableOnPostHit().setRecipe(
+    public static final Item AZALEA_SHOVEL = ToolLib.register("azalea_shovel", ToolLib.ToolType.SHOVEL, ModToolMaterials.AZALEA, BaseVals.WOODEN_SHOVEL.getAttackDMG(),BaseVals.WOODEN_SHOVEL.getAttackSPEED(),null, new ToolLambdas().setLambda(CustomLambdas.AZALEA_LAMBDAS).setTag(ModTags.Tools.AZALEA_TOOLS).EnableOnPostMine().EnableOnPostHit().setRecipe(
             RecipeLambda.create()
                     .addLine(" A ")
                     .addLine(" T ")
@@ -94,7 +94,7 @@ public class ModTools {
                     .addChar('T',Items.WOODEN_SHOVEL)
                     .setItemCriterion(ModItems.AZALEA_CLIPPINGS)
     ));
-    public static final Item AZALEA_HOE = ToolLib.register("azalea_hoe", ToolLib.ToolType.HOE, ModToolMaterials.AZALEA, BaseVals.WOODEN_HOE.getAttackDMG(),BaseVals.WOODEN_HOE.getAttackSPEED(),null, new ToolLambdas().setLambda(CustomLambdas.AZALEA_LAMBDAS).setTag(ModTags.Tools.AZALEA_TOOLS).enableOnPostMine().enableOnPostHit().setRecipe(
+    public static final Item AZALEA_HOE = ToolLib.register("azalea_hoe", ToolLib.ToolType.HOE, ModToolMaterials.AZALEA, BaseVals.WOODEN_HOE.getAttackDMG(),BaseVals.WOODEN_HOE.getAttackSPEED(),null, new ToolLambdas().setLambda(CustomLambdas.AZALEA_LAMBDAS).setTag(ModTags.Tools.AZALEA_TOOLS).EnableOnPostMine().EnableOnPostHit().setRecipe(
             RecipeLambda.create()
                     .addLine("AA ")
                     .addLine(" T ")
@@ -104,9 +104,49 @@ public class ModTools {
     ));
 
     //COPPER
-    public static final Item COPPER_PICKAXE = ToolLib.register("copper_pickaxe", ToolLib.ToolType.PICKAXE, ModToolMaterials.COPPER, BaseVals.IRON_PICKAXE.getAttackSPEED(), BaseVals.IRON_PICKAXE.getAttackSPEED(), null, new ToolLambdas().enableEditEffeciency().enableOnPostMine().GetThundered().DisableDefaultModel().enableEditTexture().setLambda(CustomLambdas.COPPER_LAMBDAS).setTag(ModTags.Tools.COPPER_TOOLS).setRecipe(
+    public static final Item COPPER_SWORD = ToolLib.register("copper_sword", ToolLib.ToolType.SWORD, ModToolMaterials.COPPER, BaseVals.IRON_SWORD.getAttackDMG(), BaseVals.IRON_SWORD.getAttackSPEED(), null, ToolLambdas.of().EnableEditDamage().EnableOnPostHit().EnableInventoryTick().GetThundered().DisableDefaultModel().EnableOnUse().setLambda(CustomLambdas.COPPER_LAMBDAS).setTag(ModTags.Tools.COPPER_TOOLS).setRecipe(
+            RecipeLambda.create()
+                    .addLine(" B ")
+                    .addLine(" B ")
+                    .addLine(" # ")
+                    .addChar('B',Items.COPPER_INGOT)
+                    .addChar('#',Items.STICK)
+                    .setItemCriterion(Items.COPPER_INGOT)
+    ));
+
+    public static final Item COPPER_AXE = ToolLib.register("copper_axe", ToolLib.ToolType.AXE, ModToolMaterials.COPPER, BaseVals.IRON_AXE.getAttackDMG(), BaseVals.IRON_AXE.getAttackSPEED(), null, new ToolLambdas().EnableEditDamage().EnableOnPostHit().EnableEditEffeciency().EnableOnPostMine().GetThundered().DisableDefaultModel().EnableInventoryTick().EnableOnUse().setLambda(CustomLambdas.COPPER_LAMBDAS).setTag(ModTags.Tools.COPPER_TOOLS).setRecipe(
+            RecipeLambda.create()
+                    .addLine("BB ")
+                    .addLine("B# ")
+                    .addLine(" # ")
+                    .addChar('B',Items.COPPER_INGOT)
+                    .addChar('#',Items.STICK)
+                    .setItemCriterion(Items.COPPER_INGOT)
+    ));
+
+    public static final Item COPPER_PICKAXE = ToolLib.register("copper_pickaxe", ToolLib.ToolType.PICKAXE, ModToolMaterials.COPPER, BaseVals.IRON_PICKAXE.getAttackDMG(), BaseVals.IRON_PICKAXE.getAttackSPEED(), null, new ToolLambdas().EnableEditEffeciency().EnableOnPostMine().GetThundered().DisableDefaultModel().EnableInventoryTick().EnableOnUse().setLambda(CustomLambdas.COPPER_LAMBDAS).setTag(ModTags.Tools.COPPER_TOOLS).setRecipe(
             RecipeLambda.create()
                     .addLine("BBB")
+                    .addLine(" # ")
+                    .addLine(" # ")
+                    .addChar('B',Items.COPPER_INGOT)
+                    .addChar('#',Items.STICK)
+                    .setItemCriterion(Items.COPPER_INGOT)
+    ));
+
+    public static final Item COPPER_SHOVEL = ToolLib.register("copper_shovel", ToolLib.ToolType.SHOVEL, ModToolMaterials.COPPER, BaseVals.IRON_SHOVEL.getAttackDMG(), BaseVals.IRON_SHOVEL.getAttackSPEED(), null, new ToolLambdas().EnableEditEffeciency().EnableOnPostMine().GetThundered().DisableDefaultModel().EnableInventoryTick().EnableOnUse().setLambda(CustomLambdas.COPPER_LAMBDAS).setTag(ModTags.Tools.COPPER_TOOLS).setRecipe(
+            RecipeLambda.create()
+                    .addLine(" B ")
+                    .addLine(" # ")
+                    .addLine(" # ")
+                    .addChar('B',Items.COPPER_INGOT)
+                    .addChar('#',Items.STICK)
+                    .setItemCriterion(Items.COPPER_INGOT)
+    ));
+
+    public static final Item COPPER_HOE = ToolLib.register("copper_hoe", ToolLib.ToolType.HOE, ModToolMaterials.COPPER, BaseVals.IRON_HOE.getAttackDMG(), BaseVals.IRON_HOE.getAttackSPEED(), null, new ToolLambdas().GetThundered().DisableDefaultModel().EnableInventoryTick().EnableOnUse().EnableOnUseblock().setLambda(CustomLambdas.COPPER_LAMBDAS).setTag(ModTags.Tools.COPPER_TOOLS).setRecipe(
+            RecipeLambda.create()
+                    .addLine("BB ")
                     .addLine(" # ")
                     .addLine(" # ")
                     .addChar('B',Items.COPPER_INGOT)

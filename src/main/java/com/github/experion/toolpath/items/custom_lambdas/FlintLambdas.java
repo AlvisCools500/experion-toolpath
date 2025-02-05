@@ -44,7 +44,7 @@ public class FlintLambdas implements TriggerLambdas {
 
     @Override
     public ExistsLambdas exists() {
-        return new ExistsLambdas().PostHit().PostMine().UseBlock().EditEffeciency().EditDamage();
+        return new ExistsLambdas().PostHit().PostMine().UseBlock();
     }
 
     private void decrease_critical(ItemStack stack, World world, LivingEntity player) {
@@ -75,7 +75,7 @@ public class FlintLambdas implements TriggerLambdas {
     }
 
     @Override
-    public void onUseBlock(ItemUsageContext context, ActionResult actionResult) {
+    public ActionResult onUseBlock(ItemUsageContext context, ActionResult actionResult) {
         World world = context.getWorld();
         ItemStack stack = context.getStack();
         BlockPos pos = context.getBlockPos();
@@ -109,20 +109,22 @@ public class FlintLambdas implements TriggerLambdas {
 
                     raycastitemparticle(serverWorld, puncher, stack);
 
-                    puncher.swingHand(Hand.MAIN_HAND);
+                    return ActionResult.SUCCESS;
                 } else {
-                    puncher.swingHand(Hand.MAIN_HAND);
+                    return ActionResult.SUCCESS;
                 }
 
             }
         }
+
+        return actionResult;
     }
 
     @Override
     public Text getName(Text def, ItemStack stack) {
         if (stack.contains(ModDataComponents.FLINT_AMOUNTCRITICAL)) {
             if (stack.get(ModDataComponents.FLINT_AMOUNTCRITICAL) > 0) {
-                return Text.literal("CRITICAL ").formatted(Formatting.BOLD).formatted(Formatting.YELLOW).append(def);
+                return Text.literal("CRITICAL ").formatted(Formatting.BOLD).formatted(Formatting.YELLOW).append(Text.empty().formatted(Formatting.RESET)).append(def);
             }
         }
 
@@ -157,10 +159,10 @@ public class FlintLambdas implements TriggerLambdas {
 
                 tooltip.add(Text.literal("[-] 2x durability use").formatted(Formatting.RED));
             }else {
-                tooltip.add(Text.literal("Try crouch and right click on the rocks").formatted(Formatting.GRAY).formatted(Formatting.ITALIC));
+                tooltip.add(Text.literal("Try crouch and right click on the rocks").formatted(Formatting.GRAY));
             }
         }else {
-            tooltip.add(Text.literal("This hoe has no special ability for flint").formatted(Formatting.GRAY).formatted(Formatting.ITALIC));
+            tooltip.add(Text.literal("This hoe has no special ability for flint").formatted(Formatting.GRAY));
         }
 
 
@@ -209,7 +211,7 @@ public class FlintLambdas implements TriggerLambdas {
             }
         }
 
-        return default_float;
+        return baseAttackDamage;
     }
 
     @Override

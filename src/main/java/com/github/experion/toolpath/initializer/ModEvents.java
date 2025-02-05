@@ -8,7 +8,6 @@ import com.github.experion.toolpath.misc.persistent_state.ToolPathData;
 import com.github.experion.toolpath.misc.persistent_state.ToolPathDataManager;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
-import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
@@ -40,7 +39,7 @@ public class ModEvents {
                     if (item instanceof GetLambdas) {
                         ToolLambdas toolLambdas = ((GetLambdas) item).getLambdas();
 
-                        if (toolLambdas.Enable_punchblock) {
+                        if (toolLambdas.enable_punchblock) {
                             toolLambdas.lambdas.onPunchBlock(stack,world,blockPos,playerEntity);
                         }
                     }else {

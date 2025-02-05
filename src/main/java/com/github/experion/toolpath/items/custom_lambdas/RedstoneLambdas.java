@@ -55,13 +55,15 @@ public class RedstoneLambdas implements TriggerLambdas {
     }
 
     @Override
-    public void onUseBlock(ItemUsageContext context, ActionResult actionResult) {
+    public ActionResult onUseBlock(ItemUsageContext context, ActionResult actionResult) {
         if (actionResult == ActionResult.SUCCESS) {
             main_trigger(context.getStack(),context.getWorld(),
                     ToolLib.BlockPos_To_Vec3d(context.getBlockPos()).add(0,0.5,0),
                     context.getPlayer(),
                     ToolLib.TriggerType.USE_BLOCK);
         }
+
+        return actionResult;
     }
 
     @Override

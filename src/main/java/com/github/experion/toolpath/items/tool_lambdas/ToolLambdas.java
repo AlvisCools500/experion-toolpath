@@ -8,16 +8,18 @@ public class ToolLambdas {
 
     public TriggerLambdas lambdas;
 
-    public boolean Edit_damage;
-    public boolean Edit_effeciency;
-    public boolean Edit_texture;
+    public boolean edit_damage;
+    public boolean edit_effeciency;
+    public boolean edit_texture;
 
-    public boolean Enable_useblock;
-    public boolean Enable_posthit;
-    public boolean Enable_postmine;
-    public boolean Enable_use;
-    public boolean Enable_punchblock;
-    public boolean Enable_punchair;
+    public boolean enable_useblock;
+    public boolean enable_posthit;
+    public boolean enable_postmine;
+    public boolean enable_use;
+    public boolean enable_punchblock;
+    public boolean enable_punchair;
+    public boolean enable_usagetick;
+    public boolean enable_inventorytick;
 
     public boolean defaultModel;
     public boolean durableAbility;
@@ -31,18 +33,19 @@ public class ToolLambdas {
     RecipeLambda recipe;
 
     public ToolLambdas() {
-        this.Enable_useblock = false;
-        this.Enable_posthit = false;
-        this.Enable_postmine = false;
-        this.Enable_use = false;
-        this.Enable_punchblock = false;
-        this.Enable_punchair = false;
-        this.Edit_texture = false;
+        this.enable_useblock = false;
+        this.enable_posthit = false;
+        this.enable_postmine = false;
+        this.enable_use = false;
+        this.enable_punchblock = false;
+        this.enable_punchair = false;
+        this.edit_texture = false;
+        this.enable_usagetick = false;
 
         this.getThundered = false;
 
-        this.Edit_damage = false;
-        this.Edit_effeciency = false;
+        this.edit_damage = false;
+        this.edit_effeciency = false;
 
         this.main_tag = null;
         this.notranslate = false;
@@ -50,6 +53,7 @@ public class ToolLambdas {
         this.lambdas = null;
         this.durableAbility = false;
         this.defaultModel = true;
+        this.enable_inventorytick = false;
 
         this.lambdas = CustomLambdas.NON_LAMBDAS;
     }
@@ -59,43 +63,48 @@ public class ToolLambdas {
         return this;
     }
 
-    public ToolLambdas enableOnUseblock() {
-        this.Enable_useblock = true;
+    public ToolLambdas EnableOnUseblock() {
+        this.enable_useblock = true;
         return this;
     }
 
-    public ToolLambdas enableOnPostHit() {
-        this.Enable_posthit = true;
+    public ToolLambdas EnableOnPostHit() {
+        this.enable_posthit = true;
         return this;
     }
 
-    public ToolLambdas enableOnPostMine() {
-        this.Enable_postmine = true;
+    public ToolLambdas EnableOnPostMine() {
+        this.enable_postmine = true;
         return this;
     }
 
-    public ToolLambdas enablePunchBlock() {
-        this.Enable_punchblock = true;
+    public ToolLambdas EnablePunchBlock() {
+        this.enable_punchblock = true;
         return this;
     }
 
-    public ToolLambdas enablePunchAir() {
-        this.Enable_punchair = true;
+    public ToolLambdas EnablePunchAir() {
+        this.enable_punchair = true;
         return this;
     }
 
-    public ToolLambdas enableEditEffeciency() {
-        this.Edit_effeciency = true;
+    public ToolLambdas EnableEditEffeciency() {
+        this.edit_effeciency = true;
         return this;
     }
 
-    public ToolLambdas enableEditDamage() {
-        this.Edit_damage = true;
+    public ToolLambdas EnableEditDamage() {
+        this.edit_damage = true;
         return this;
     }
 
-    public ToolLambdas enableEditTexture() {
-        this.Edit_texture = true;
+    public ToolLambdas EnableEditTexture() {
+        this.edit_texture = true;
+        return this;
+    }
+
+    public ToolLambdas EnableUsageTick() {
+        this.enable_usagetick = true;
         return this;
     }
 
@@ -104,8 +113,13 @@ public class ToolLambdas {
         return this;
     }
 
-    public ToolLambdas enableOnUse() {
-        this.Enable_use = true;
+    public ToolLambdas EnableOnUse() {
+        this.enable_use = true;
+        return this;
+    }
+
+    public ToolLambdas EnableInventoryTick() {
+        this.enable_inventorytick = true;
         return this;
     }
 

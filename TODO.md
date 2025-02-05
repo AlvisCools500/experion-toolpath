@@ -29,7 +29,7 @@
     - Player might be too lazy to find rock to apply it
 - Copper
   - Pros
-    - When player got thundered, It wont hurt but instead it will boost the copper tools
+    - When player got thundered, ~~It wont hurt but instead~~ it will boost the copper tools
     - Thundered will be permanent for this tool (can be removed by using ink)
     - Has chain damage (if thundered)
     - Has chain mining (if thundered)
@@ -59,7 +59,6 @@
     - Mining and Kill have a chance to lifesteal
     - Lifesteal is not only for player but durability too
     - Stronger than iron
-- Redginite
 
 ### (End-Game)
 - Experions 
@@ -127,3 +126,10 @@
 - ~~Durable Blessing~~
   - Max Levels: 5
   - Has a chance to stop consume durability from it's ability, Level V will completely remove it
+
+## Other Tasks
+- GeckoLib because of me (Experions Tool)
+- Criticaled Flint Tool Texture
+- Polish Copper Tool
+  - Copper Thundered Animation
+  - Copper Thundered Chain Effect

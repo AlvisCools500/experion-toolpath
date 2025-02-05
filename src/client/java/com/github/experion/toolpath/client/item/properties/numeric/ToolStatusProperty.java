@@ -8,18 +8,14 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import org.jetbrains.annotations.Nullable;
 
-public class CopperToolStatusProperty implements NumericProperty {
-    public static final MapCodec<CopperToolStatusProperty> CODEC = MapCodec.unit(CopperToolStatusProperty::new);
+public class ToolStatusProperty implements NumericProperty {
+    public static final MapCodec<ToolStatusProperty> CODEC = MapCodec.unit(ToolStatusProperty::new);
 
     @Override
     public float getValue(ItemStack stack, @Nullable ClientWorld world, @Nullable LivingEntity holder, int seed) {
-        if (stack.contains(ModDataComponents.COPPER_STATUS)) {
-            int status = stack.get(ModDataComponents.COPPER_STATUS);
-            if (status == 2) {
-                return 2.0f;
-            } else if (status == 3) {
-                return 3.0f;
-            }
+        if (stack.contains(ModDataComponents.TOOL_STATUS)) {
+            int status = stack.get(ModDataComponents.TOOL_STATUS);
+            return Math.max((float) stack.get(ModDataComponents.TOOL_STATUS), 1.0f);
         }
         return 1.0f;
     }

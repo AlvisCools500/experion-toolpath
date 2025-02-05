@@ -5,6 +5,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
@@ -13,6 +14,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
@@ -29,11 +31,12 @@ public interface TriggerLambdas {
 
     default void main_trigger(ItemStack stack, World world, Vec3d pos, LivingEntity Player, ToolLib.TriggerType triggerType) {};
 
-    default void onUseBlock(ItemUsageContext context, ActionResult actionResult) {}
+    default ActionResult onUseBlock(ItemUsageContext context, ActionResult actionResult) {return actionResult;}
     default void onPostHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {}
     default void onPostMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner) {}
     default void onPunchBlock(ItemStack stack, World world, BlockPos pos, LivingEntity puncher) {}
     default void onPunchAir(ItemStack stack, World world, LivingEntity puncher) {}
+    default ActionResult onUse(World world, PlayerEntity user, Hand hand, ActionResult actionResult) {return actionResult;}
 
     default void onThundered(ItemStack stack, ServerWorld world, ServerPlayerEntity player) {}
 
@@ -43,7 +46,8 @@ public interface TriggerLambdas {
     default float setEfficiency(ItemStack stack, BlockState state, float default_float) {return default_float;};
     default float setDamage(Entity target, float baseAttackDamage, DamageSource damageSource, float default_float) {return default_float;}
 
-    default Identifier setTexture(ItemStack stack) {return null;}
+    default void usagetick(World world, LivingEntity user, ItemStack stack, int remainingUseTicks) {}
+    default void inventroytick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {}
 
     String getLambdasName();
 }

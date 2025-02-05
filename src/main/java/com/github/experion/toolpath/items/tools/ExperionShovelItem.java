@@ -1,4 +1,4 @@
-package com.github.experion.toolpath.items;
+package com.github.experion.toolpath.items.tools;
 
 import com.github.experion.toolpath.items.tool_lambdas.GetLambdas;
 import com.github.experion.toolpath.items.tool_lambdas.ToolLambdas;
@@ -8,26 +8,29 @@ import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
-import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.ShovelItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 import java.util.List;
 
-public class ExperionPickaxeItem extends PickaxeItem implements GetLambdas {
+public class ExperionShovelItem extends ShovelItem implements GetLambdas {
     final ToolLambdas toolLamb;
 
-    public ExperionPickaxeItem(ToolMaterial material, Settings settings, ToolLambdas toollamb, float dmg, float speed) {
+    public ExperionShovelItem(ToolMaterial material, Settings settings, ToolLambdas toollamb, float dmg, float speed) {
         super(material, dmg, speed, settings);
         this.toolLamb = toollamb;
-        ToolLib.onAdded(this, ToolLib.ToolType.PICKAXE, this.toolLamb);
+        ToolLib.onAdded(this, ToolLib.ToolType.SHOVEL,this.toolLamb);
     }
+
 
     @Override
     public ToolLambdas getLambdas() {
@@ -35,8 +38,22 @@ public class ExperionPickaxeItem extends PickaxeItem implements GetLambdas {
     }
 
     @Override
+    public ActionResult use(World world, PlayerEntity user, Hand hand) {
+        return ToolStaticTrigger.OnUse(toolLamb,world,user,hand,super.use(world, user, hand));
+    }
+
+    @Override
+    public void usageTick(World world, LivingEntity user, ItemStack stack, int remainingUseTicks) {
+        if (toolLamb.enable_usagetick) {
+            ToolStaticTrigger.usageTick(toolLamb,world,user,stack,remainingUseTicks);
+        }
+    }
+
+    @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-        super.inventoryTick(stack, world, entity, slot, selected);
+        if (toolLamb.enable_inventorytick) {
+            toolLamb.lambdas.inventroytick(stack,world,entity,slot,selected);
+        }
     }
 
     @Override
@@ -57,11 +74,6 @@ public class ExperionPickaxeItem extends PickaxeItem implements GetLambdas {
     }
 
     @Override
-    public float getMiningSpeed(ItemStack stack, BlockState state) {
-        return ToolStaticTrigger.getMiningSpeed(this.toolLamb,stack,state,super.getMiningSpeed(stack,state));
-    }
-
-    @Override
     public boolean postMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner) {
         super.postMine(stack,world,state,pos,miner);
         ToolStaticTrigger.PostMine(this.toolLamb,stack,world,state,pos,miner);
@@ -79,4 +91,5 @@ public class ExperionPickaxeItem extends PickaxeItem implements GetLambdas {
     public ActionResult useOnBlock(ItemUsageContext context) {
         return ToolStaticTrigger.OnUseBlock(this.toolLamb,context,super.useOnBlock(context));
     }
+
 }

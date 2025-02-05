@@ -1,6 +1,7 @@
 {
   "values": [
     "experion_tool_path:flint_shovel",
-    "experion_tool_path:azalea_shovel"
+    "experion_tool_path:azalea_shovel",
+    "experion_tool_path:copper_shovel"
   ]
 }

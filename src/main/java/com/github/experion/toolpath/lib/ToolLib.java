@@ -3,8 +3,8 @@ package com.github.experion.toolpath.lib;
 import com.github.experion.toolpath.ModInit;
 import com.github.experion.toolpath.initializer.ModEnchantments;
 import com.github.experion.toolpath.initializer.TaggingList;
-import com.github.experion.toolpath.items.*;
 import com.github.experion.toolpath.items.tool_lambdas.ToolLambdas;
+import com.github.experion.toolpath.items.tools.*;
 import com.github.experion.toolpath.lib.Experion.ExperionRegistery;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -47,7 +47,7 @@ public class ToolLib {
             TaggingList.DURABLE_ABILITY.add(toolItem);
         }
 
-        if (toolLambdas.Edit_texture) {
+        if (toolLambdas.edit_texture) {
             TaggingList.EDIT_TEXTURE.add(toolItem);
         }
 

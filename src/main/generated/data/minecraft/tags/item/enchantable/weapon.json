@@ -2,7 +2,9 @@
   "values": [
     "experion_tool_path:flint_sword",
     "experion_tool_path:azalea_sword",
+    "experion_tool_path:copper_sword",
     "experion_tool_path:flint_axe",
-    "experion_tool_path:azalea_axe"
+    "experion_tool_path:azalea_axe",
+    "experion_tool_path:copper_axe"
   ]
 }

@@ -10,6 +10,10 @@
     "experion_tool_path:azalea_pickaxe",
     "experion_tool_path:azalea_shovel",
     "experion_tool_path:azalea_hoe",
-    "experion_tool_path:copper_pickaxe"
+    "experion_tool_path:copper_sword",
+    "experion_tool_path:copper_axe",
+    "experion_tool_path:copper_pickaxe",
+    "experion_tool_path:copper_shovel",
+    "experion_tool_path:copper_hoe"
   ]
 }
