@@ -154,6 +154,12 @@ public class ModTools {
                     .setItemCriterion(Items.COPPER_INGOT)
     ));
 
+    public static final Item STEEL_SWORD = ToolLib.register("steel_sword", ToolLib.ToolType.SWORD, ModToolMaterials.STEEL, 5, -3.2f, null, ToolLambdas.of().setTag(ModTags.Tools.STEEL_TOOLS).setRecipe(RecipeLambda.sword().addChar('A',ModItems.STEEL_INGOT).addChar('#',Items.STICK).setItemCriterion(ModItems.STEEL_INGOT)));
+    public static final Item STEEL_AXE = ToolLib.register("steel_axe", ToolLib.ToolType.AXE, ModToolMaterials.STEEL, 7.0f, -3.5f, null, ToolLambdas.of().setTag(ModTags.Tools.STEEL_TOOLS).setRecipe(RecipeLambda.axe().addChar('A',ModItems.STEEL_INGOT).addChar('#',Items.STICK).setItemCriterion(ModItems.STEEL_INGOT)));
+    public static final Item STEEL_PICKAXE = ToolLib.register("steel_pickaxe", ToolLib.ToolType.PICKAXE, ModToolMaterials.STEEL, 2.0F, -3F, null, ToolLambdas.of().setTag(ModTags.Tools.STEEL_TOOLS).setRecipe(RecipeLambda.pickaxe().addChar('A',ModItems.STEEL_INGOT).addChar('#',Items.STICK).setItemCriterion(ModItems.STEEL_INGOT)));
+    public static final Item STEEL_SHOVEL = ToolLib.register("steel_shovel", ToolLib.ToolType.SHOVEL, ModToolMaterials.STEEL, 2F, -3.3F, null, ToolLambdas.of().setTag(ModTags.Tools.STEEL_TOOLS).setRecipe(RecipeLambda.shovel().addChar('A',ModItems.STEEL_INGOT).addChar('#',Items.STICK).setItemCriterion(ModItems.STEEL_INGOT)));
+    public static final Item STEEL_HOE = ToolLib.register("steel_hoe", ToolLib.ToolType.HOE, ModToolMaterials.STEEL, -2.0F, -2.5F, null, ToolLambdas.of().setTag(ModTags.Tools.STEEL_TOOLS).setRecipe(RecipeLambda.hoe().addChar('A',ModItems.STEEL_INGOT).addChar('#',Items.STICK).setItemCriterion(ModItems.STEEL_INGOT)));
+
     public static void init() {}
 }
 

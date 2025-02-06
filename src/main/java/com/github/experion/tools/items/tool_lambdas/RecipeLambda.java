@@ -77,4 +77,41 @@ public class RecipeLambda {
     public static RecipeLambda create() {
         return new RecipeLambda();
     }
+    public static RecipeLambda sword() {
+        return new RecipeLambda()
+                .addLine(" A ")
+                .addLine(" A ")
+                .addLine(" # ")
+                ;
+    }
+    public static RecipeLambda axe() {
+        return new RecipeLambda()
+                .addLine("AA ")
+                .addLine("A# ")
+                .addLine(" # ")
+                ;
+    }
+    public static RecipeLambda pickaxe() {
+        return new RecipeLambda()
+                .addLine("AAA")
+                .addLine(" # ")
+                .addLine(" # ")
+                ;
+    }
+    public static RecipeLambda shovel() {
+        return new RecipeLambda()
+                .addLine(" A ")
+                .addLine(" # ")
+                .addLine(" # ")
+                ;
+    }
+
+    public static RecipeLambda hoe() {
+        return new RecipeLambda()
+                .addLine("AA ")
+                .addLine(" # ")
+                .addLine(" # ")
+                ;
+    }
+
 }

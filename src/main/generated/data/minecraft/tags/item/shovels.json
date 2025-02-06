@@ -2,6 +2,7 @@
   "values": [
     "experion_tools:flint_shovel",
     "experion_tools:azalea_shovel",
-    "experion_tools:copper_shovel"
+    "experion_tools:copper_shovel",
+    "experion_tools:steel_shovel"
   ]
 }

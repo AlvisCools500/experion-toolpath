@@ -62,8 +62,8 @@ public class CopperLambdas implements TriggerLambdas {
         stack.set(ModDataComponents.TOOL_STATUS, 1);
         stack.set(ModDataComponents.TOOL_LONGTICK, clock);
 
-        //long resclock = world.getRandom().nextBetween(9000,12000);
-        long resclock = world.getRandom().nextBetween(40,100);
+        long resclock = world.getRandom().nextBetween(9000,12000);
+        //long resclock = world.getRandom().nextBetween(40,100);
 
         stack.set(ModDataComponents.TOOL_NEXTTICK, resclock);
 

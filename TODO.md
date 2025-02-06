@@ -37,11 +37,12 @@
     - The only good time to use this when thunder rain
     - Oh yea remember Copper blocks has rust? Yeah this also have it-
     - If thundered, You might want to tell your friend to not close by you or else they get electrocuted-
-- Steel
+- ~~Steel~~
   - Pros
     - Stronger than iron of course
   - Cons
     - No special abilities
+    - Heavier
 - Gilded Iron
   - Pros
     - Cosmetics, Lookin drippy
@@ -54,6 +55,7 @@
   - Cons
     - Durability lower than Iron tool due to converted when it breaks
     - Gilded has multiple variants (Either good or bad)
+    - Cannot be enchanted with Silk Touch
 - Vampire Steel
   - Pros
     - Mining and Kill have a chance to lifesteal
@@ -61,6 +63,43 @@
     - Stronger than iron
   - Cons
     - Weaker when sun is up
+    - 2x durability use when sun is up
+    - Lifestealing might be random choice either for the player or it's own tool (durability)
+- Obsidian
+  - Pros
+    - Extremely stronger than Diamond, Even Netherite
+    - Immune to lava
+    - Stronger Knockback
+    - If you try swing the sword, It will impact the Area of Damage.
+    - When item breaks, It wont dissapear but instead it will became cracked tool
+  - Cons
+    - EXTREMELY HEAVY AKA SLOWER
+    - Cannot be enchanted with Unbreaking and Mending
+- Emeraldian
+  - Pros
+    - Increase Luck
+    - Extra damage to Pillagers
+    - Mining any ore has a chance to drop emerald
+    - Killing pillagers, Stacks the luck effect to the tool
+    - Cosmetics fr++++
+  - Mids
+    - Stronger than Diamond but Weaker than Netherite
+  - Cons
+    - Cannot be enchanted with silk touch and even mending (Yeah this tool is greedy, They want you to fix it with BLOCK OF EMERALD)
+    - If you try kill villager with this tool, You'll get hurt and the pickaxe also decreases the durability ALOT
+
+### Non Full Set Tools
+- Combo Tool (Axe & Pickaxe only)
+  - Pros
+    - It is faster than netherite
+    - Increases fortune
+    - Good for mining obsidian (Even... Bedro-)
+  - Mids
+    - Unlike normal tool that break block normally, If you punch the block with this thing it will pop up a particle where you supposed to hit them until the block is break
+    - Trying to mine stones only? Goodluck with that. No I recommend use this for mining ores
+    - If you really did the combo thing, It will chain mining
+  - Cons
+    - If you suck at aim hitbox, Might be slower than iron
 
 ### (End-Game)
 - Experions 

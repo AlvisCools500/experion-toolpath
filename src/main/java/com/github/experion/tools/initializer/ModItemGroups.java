@@ -14,17 +14,17 @@ public class ModItemGroups {
             .icon(() -> new ItemStack(ModTools.AZALEA_PICKAXE))
             .displayName(Text.literal("Experion Tool Path"))
             .entries((enabledfeatures, g) -> {
-                g.add(ModTools.FLINT_SWORD);
-                g.add(ModTools.FLINT_AXE);
-                g.add(ModTools.FLINT_PICKAXE);
-                g.add(ModTools.FLINT_SHOVEL);
-                g.add(ModTools.FLINT_HOE);
-
                 g.add(ModTools.AZALEA_SWORD);
                 g.add(ModTools.AZALEA_AXE);
                 g.add(ModTools.AZALEA_PICKAXE);
                 g.add(ModTools.AZALEA_SHOVEL);
                 g.add(ModTools.AZALEA_HOE);
+
+                g.add(ModTools.FLINT_SWORD);
+                g.add(ModTools.FLINT_AXE);
+                g.add(ModTools.FLINT_PICKAXE);
+                g.add(ModTools.FLINT_SHOVEL);
+                g.add(ModTools.FLINT_HOE);
 
                 g.add(ModTools.COPPER_SWORD);
                 g.add(ModTools.COPPER_AXE);
@@ -32,8 +32,16 @@ public class ModItemGroups {
                 g.add(ModTools.COPPER_SHOVEL);
                 g.add(ModTools.COPPER_HOE);
 
+                g.add(ModTools.STEEL_SWORD);
+                g.add(ModTools.STEEL_AXE);
+                g.add(ModTools.STEEL_PICKAXE);
+                g.add(ModTools.STEEL_SHOVEL);
+                g.add(ModTools.STEEL_HOE);
+
                 g.add(ModItems.AZALEA_PICKER);
                 g.add(ModItems.AZALEA_CLIPPINGS);
+
+                g.add(ModItems.STEEL_INGOT);
             })
             .build()
     );

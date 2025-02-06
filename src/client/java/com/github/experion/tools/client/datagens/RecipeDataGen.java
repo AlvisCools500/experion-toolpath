@@ -1,5 +1,7 @@
 package com.github.experion.tools.client.datagens;
 
+import com.github.experion.tools.ModInit;
+import com.github.experion.tools.initializer.ModItems;
 import com.github.experion.tools.initializer.TaggingList;
 import com.github.experion.tools.items.tool_lambdas.GetLambdas;
 import com.github.experion.tools.items.tool_lambdas.RecipeLambda;
@@ -10,11 +12,13 @@ import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.data.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class RecipeDataGen extends FabricRecipeProvider {
@@ -38,6 +42,10 @@ public class RecipeDataGen extends FabricRecipeProvider {
                         autogen(recipeLambda, v);
                     }
                 }
+
+                offerSmelting(List.of(Items.IRON_INGOT),RecipeCategory.MISC, ModItems.STEEL_INGOT, 1.0f, 200, "smelt_steel");
+                offerBlasting(List.of(Items.IRON_INGOT),RecipeCategory.MISC, ModItems.STEEL_INGOT, 1.0f, 100, "blasting_steel");
+
             }
 
             private void autogen(RecipeLambda recipeLambda, Item v) {

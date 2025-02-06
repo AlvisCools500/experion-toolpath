@@ -17,7 +17,6 @@ public class ModTags {
         public static final TagKey<Item> REDSTONE_TOOLS = getToolKey( "redstone_tools");
         public static final TagKey<Item> GILDED_IRON_TOOLS = getToolKey( "gilded_tools");
         public static final TagKey<Item> VAMPIRE_STEEL_TOOLS = getToolKey("vampire_steel_tools");
-        public static final TagKey<Item> SHADOW_STEEL_TOOLS = getToolKey("shadow_steel_tools");
 
         public static final TagKey<Item> WOODEN_TOOLS = getToolKey("wooden_tools");
         public static final TagKey<Item> STONE_TOOLS = getToolKey("stone_tools");
@@ -36,6 +35,7 @@ public class ModTags {
         public static final TagKey<Item> FLINT = getMatsKey("flint");
         public static final TagKey<Item> REDSTONE = getMatsKey("redstone");
         public static final TagKey<Item> COPPER = getMatsKey("copper");
+        public static final TagKey<Item> STEEL = getMatsKey("steel");
 
         private static TagKey<Item> getMatsKey(String path) {
             return getItemKey("materials/" + path + "_tool_materials");

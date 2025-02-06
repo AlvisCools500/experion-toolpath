@@ -3,8 +3,10 @@
     "experion_tools:flint_sword",
     "experion_tools:azalea_sword",
     "experion_tools:copper_sword",
+    "experion_tools:steel_sword",
     "experion_tools:flint_axe",
     "experion_tools:azalea_axe",
-    "experion_tools:copper_axe"
+    "experion_tools:copper_axe",
+    "experion_tools:steel_axe"
   ]
 }
