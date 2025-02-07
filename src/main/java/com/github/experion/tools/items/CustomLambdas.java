@@ -9,6 +9,7 @@ public class CustomLambdas {
     public static final TriggerLambdas FLINT_LAMBDAS = new FlintLambdas();
     public static final TriggerLambdas AZALEA_LAMBDAS = new AzaleaLambdas();
     public static final TriggerLambdas COPPER_LAMBDAS = new CopperLambdas();
+    public static final TriggerLambdas VAMPIRE_STEEL_LAMBDAS = new VampireSteelLambdas();
 
     public static final TriggerLambdas REDSTONE_LAMBDAS = new RedstoneLambdas();
 

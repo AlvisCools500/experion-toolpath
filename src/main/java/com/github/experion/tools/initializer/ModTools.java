@@ -160,6 +160,9 @@ public class ModTools {
     public static final Item STEEL_SHOVEL = ToolLib.register("steel_shovel", ToolLib.ToolType.SHOVEL, ModToolMaterials.STEEL, 2F, -3.3F, null, ToolLambdas.of().setTag(ModTags.Tools.STEEL_TOOLS).setRecipe(RecipeLambda.shovel().addChar('A',ModItems.STEEL_INGOT).addChar('#',Items.STICK).setItemCriterion(ModItems.STEEL_INGOT)));
     public static final Item STEEL_HOE = ToolLib.register("steel_hoe", ToolLib.ToolType.HOE, ModToolMaterials.STEEL, -2.0F, -2.5F, null, ToolLambdas.of().setTag(ModTags.Tools.STEEL_TOOLS).setRecipe(RecipeLambda.hoe().addChar('A',ModItems.STEEL_INGOT).addChar('#',Items.STICK).setItemCriterion(ModItems.STEEL_INGOT)));
 
+    public static final Item VAMPIRE_STEEL_SWORD = ToolLib.register("vampire_steel_sword", ToolLib.ToolType.SWORD, ModToolMaterials.VAMPIRE_STEEL, 4, -2.5F, null, ToolLambdas.of().setTag(ModTags.Tools.VAMPIRE_STEEL_TOOLS).setLambda(CustomLambdas.VAMPIRE_STEEL_LAMBDAS).EnableEditDamage().EnableOnPostHit().setRecipe(RecipeLambda.sword().addChar('A',ModItems.VAMPIRE_STEEL_INGOT).addChar('#',Items.REDSTONE)));
+    public static final Item VAMPIRE_STEEL_PICKAXE = ToolLib.register("vampire_steel_pickaxe", ToolLib.ToolType.PICKAXE, ModToolMaterials.VAMPIRE_STEEL, 1.5F, -3F, null, ToolLambdas.of().setTag(ModTags.Tools.VAMPIRE_STEEL_TOOLS).setLambda(CustomLambdas.VAMPIRE_STEEL_LAMBDAS).EnableEditEffeciency().EnableOnPostMine().setRecipe(RecipeLambda.pickaxe().addChar('A',ModItems.VAMPIRE_STEEL_INGOT).addChar('#',Items.REDSTONE)));
+
     public static void init() {}
 }
 

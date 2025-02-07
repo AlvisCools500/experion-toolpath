@@ -32,6 +32,7 @@ public class ModelDataGen extends FabricModelProvider {
         itemModelGenerator.register(ModItems.AZALEA_PICKER, Models.HANDHELD);
 
         itemModelGenerator.register(ModItems.STEEL_INGOT,Models.GENERATED);
+        itemModelGenerator.register(ModItems.VAMPIRE_STEEL_INGOT,Models.GENERATED);
 
         for (Item v : List.of(ModTools.COPPER_SWORD,ModTools.COPPER_SHOVEL,ModTools.COPPER_AXE,ModTools.COPPER_PICKAXE,ModTools.COPPER_HOE)) {
             copper_generate(itemModelGenerator,v);

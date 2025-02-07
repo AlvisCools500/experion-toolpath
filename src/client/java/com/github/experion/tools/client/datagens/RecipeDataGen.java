@@ -46,6 +46,15 @@ public class RecipeDataGen extends FabricRecipeProvider {
                 offerSmelting(List.of(Items.IRON_INGOT),RecipeCategory.MISC, ModItems.STEEL_INGOT, 1.0f, 200, "smelt_steel");
                 offerBlasting(List.of(Items.IRON_INGOT),RecipeCategory.MISC, ModItems.STEEL_INGOT, 1.0f, 100, "blasting_steel");
 
+                createShaped(RecipeCategory.MISC, ModItems.VAMPIRE_STEEL_INGOT)
+                        .pattern("B# ")
+                        .pattern("D# ")
+                        .input('B',ModItems.STEEL_INGOT)
+                        .input('D',Items.DIAMOND)
+                        .input('#',Items.REDSTONE_BLOCK)
+                        .criterion("has_steel_ingot_vampire",conditionsFromItem(ModItems.STEEL_INGOT))
+                        .offerTo(recipeExporter);
+
             }
 
             private void autogen(RecipeLambda recipeLambda, Item v) {

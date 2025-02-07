@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:redstone_block",
+    "B": "experion_tools:steel_ingot",
+    "D": "minecraft:diamond"
+  },
+  "pattern": [
+    "B# ",
+    "D# "
+  ],
+  "result": {
+    "count": 1,
+    "id": "experion_tools:vampire_steel_ingot"
+  }
+}

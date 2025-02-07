@@ -21,5 +21,8 @@
   "item.experion_tools.steel_ingot": "Steel Ingot",
   "item.experion_tools.steel_pickaxe": "Steel Pickaxe",
   "item.experion_tools.steel_shovel": "Steel Shovel",
-  "item.experion_tools.steel_sword": "Steel Sword"
+  "item.experion_tools.steel_sword": "Steel Sword",
+  "item.experion_tools.vampire_steel_ingot": "Vampire Steel Ingot",
+  "item.experion_tools.vampire_steel_pickaxe": "Vampire Steel Pickaxe",
+  "item.experion_tools.vampire_steel_sword": "Vampire Steel Sword"
 }

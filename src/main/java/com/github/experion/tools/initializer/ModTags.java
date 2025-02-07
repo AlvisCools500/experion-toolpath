@@ -36,6 +36,7 @@ public class ModTags {
         public static final TagKey<Item> REDSTONE = getMatsKey("redstone");
         public static final TagKey<Item> COPPER = getMatsKey("copper");
         public static final TagKey<Item> STEEL = getMatsKey("steel");
+        public static final TagKey<Item> VAMPIRE_STEEL = getMatsKey("vampire_steel");
 
         private static TagKey<Item> getMatsKey(String path) {
             return getItemKey("materials/" + path + "_tool_materials");

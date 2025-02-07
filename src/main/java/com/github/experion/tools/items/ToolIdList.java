@@ -28,6 +28,16 @@ public class ToolIdList {
         return -1;
     }
 
+    public static boolean correctTool(Item item, int... a) {
+        for (int v : a) {
+            if (v == getToolType(item)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public static class tooltypeid {
         public static final int SWORD = 1;
         public static final int AXE = 2;
@@ -35,7 +45,6 @@ public class ToolIdList {
         public static final int SHOVEL = 4;
         public static final int HOE = 5;
     }
-
 
     public static class toolID {
         public static final int WOODEN = 1;

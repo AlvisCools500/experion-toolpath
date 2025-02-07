@@ -5,6 +5,8 @@ import com.github.experion.tools.initializer.ModDataComponents;
 import com.github.experion.tools.items.ToolIdList;
 import com.github.experion.tools.items.tool_lambdas.ExistsLambdas;
 import com.github.experion.tools.items.tool_lambdas.TriggerLambdas;
+import com.github.experion.tools.lib.ToolAppend;
+import com.github.experion.tools.lib.ToolTypes;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -83,38 +85,34 @@ public class CopperLambdas implements TriggerLambdas {
     @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType type) {
         if (check_status(stack) == 1) {
-            tooltip.add(Text.literal("Try holding this while thunderstorm (left hand works too)").formatted(Formatting.DARK_GRAY).formatted(Formatting.ITALIC));
+            tooltip.add(Text.literal("Try holding this while thunderstorm").formatted(Formatting.DARK_GRAY).formatted(Formatting.ITALIC));
+            tooltip.add(Text.literal("(left hand works too)").formatted(Formatting.DARK_GRAY).formatted(Formatting.ITALIC));
         }
 
         if (check_status(stack) == 2) {
             tooltip.add(Text.literal("Why the hell this tool has oxidization too?!").formatted(Formatting.DARK_GRAY).formatted(Formatting.ITALIC));
-            tooltip.add(Text.literal("Put axe on left hand then right click this tool").formatted(Formatting.GRAY));
-            tooltip.add(Text.literal("Put Honeycomb on left hand for stopping oxidization").formatted(Formatting.GRAY));
-
-            tooltip.add(Text.literal("[-] Weaker than before").formatted(Formatting.RED));
+            ToolAppend.of(stack.getItem())
+                    .line("Put axe on left hand then right click", ToolAppend.TYPE.HINT)
+                    .line("Put Honeycomb for stopping oxidization", ToolAppend.TYPE.HINT)
+                    .line("Weaker than before", ToolAppend.TYPE.NEGATIVE);
         }
 
         if (check_status(stack) == 3) {
-            tooltip.add(Text.literal("You might wanna tell your friend").formatted(Formatting.GRAY));
-            tooltip.add(Text.literal("to not close by you or else...").formatted(Formatting.GRAY));
+            tooltip.add(Text.literal("You might wanna tell your friend").formatted(Formatting.DARK_GRAY).formatted(Formatting.ITALIC));
+            tooltip.add(Text.literal("to not close by you or else...").formatted(Formatting.DARK_GRAY).formatted(Formatting.ITALIC));
             tooltip.add(Text.literal("THUNDERED").formatted(Formatting.BOLD));
-            if (ToolIdList.getToolType(stack.getItem()) == ToolIdList.tooltypeid.SWORD) {
-                tooltip.add(Text.literal("[+] Chain Damage").formatted(Formatting.LIGHT_PURPLE));
-            }
 
-            if (ToolIdList.getToolType(stack.getItem()) != ToolIdList.tooltypeid.HOE && ToolIdList.getToolType(stack.getItem()) != ToolIdList.tooltypeid.SWORD) {
-                tooltip.add(Text.literal("[+] Chain Mining").formatted(Formatting.LIGHT_PURPLE));
-            }
-
-            if (ToolIdList.getToolType(stack.getItem()) == ToolIdList.tooltypeid.HOE) {
-                tooltip.add(Text.literal("[+] Chain Farm").formatted(Formatting.LIGHT_PURPLE));
-            }
-
+            ToolAppend.of(stack.getItem())
+                    .line("Chain Damage", ToolAppend.TYPE.INSANE, ToolTypes.SWORD)
+                    .line("Chain Mining", ToolAppend.TYPE.INSANE, true, ToolTypes.MINEABLE_TOOLS)
+                    .line("Chain Farming", ToolAppend.TYPE.INSANE, ToolTypes.HOE)
+                    .offer(tooltip);
         }else {
             if (isWaxed(stack)) {
                 tooltip.add(Text.literal("Waxed").formatted(Formatting.YELLOW));
             }
         }
+
 
 
     }

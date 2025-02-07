@@ -126,6 +126,18 @@
   - Mids
     - The XP leveling depends on the Block Mining Level and Hardness (Amount Max Healths for sword)
     - The Leveling is infinite but increasing stat stops at Level 50
+- Corrupted Pumpkin
+  - Pros
+    - Minecraft Dungeon's Corrupted Pumpkin Related
+    - When you try enable the ability, You need to right click it quickly to activate it
+    - Cosmetics Effect boo++++++++
+    - (Universal Ability) Increases efficiency
+    - (Pickaxe Ability) When it triggers (With Shift), It explode around it
+    - (Pickaxe Ability) When it triggers (Without Shift), It'll x-ray the ores
+    - Faster than Netherite
+  - Cons
+    - If you hold these tool for too long, You're getting anxious effect. Stop holding them or else you'll get possesed
+    - Drop only from 1 exclusive mob. Corrupted Zombie
 
 ### Modified Tools
 - Iron

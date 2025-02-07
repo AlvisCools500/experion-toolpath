@@ -38,10 +38,14 @@ public class ModItemGroups {
                 g.add(ModTools.STEEL_SHOVEL);
                 g.add(ModTools.STEEL_HOE);
 
+                g.add(ModTools.VAMPIRE_STEEL_SWORD);
+                g.add(ModTools.VAMPIRE_STEEL_PICKAXE);
+
                 g.add(ModItems.AZALEA_PICKER);
                 g.add(ModItems.AZALEA_CLIPPINGS);
 
                 g.add(ModItems.STEEL_INGOT);
+                g.add(ModItems.VAMPIRE_STEEL_INGOT);
             })
             .build()
     );

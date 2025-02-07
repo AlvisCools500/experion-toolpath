@@ -19,7 +19,7 @@ import org.slf4j.LoggerFactory;
 
 public class ToolStaticTrigger {
     private static final Logger LOGGER = LoggerFactory.getLogger(ToolStaticTrigger.class);
-    private static final boolean CanLog = true;
+    private static final boolean CanLog = false;
 
     private static void print(String str) {
         if (CanLog) {

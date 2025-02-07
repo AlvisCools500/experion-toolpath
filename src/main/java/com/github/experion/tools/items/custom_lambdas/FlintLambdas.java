@@ -5,7 +5,9 @@ import com.github.experion.tools.initializer.ModDataComponents;
 import com.github.experion.tools.items.ToolIdList;
 import com.github.experion.tools.items.tool_lambdas.ExistsLambdas;
 import com.github.experion.tools.items.tool_lambdas.TriggerLambdas;
+import com.github.experion.tools.lib.ToolAppend;
 import com.github.experion.tools.lib.ToolLib;
+import com.github.experion.tools.lib.ToolTypes;
 import net.minecraft.block.BlockState;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.ToolComponent;
@@ -77,16 +79,19 @@ public class FlintLambdas implements TriggerLambdas {
         PlayerEntity puncher = context.getPlayer();
 
         if (puncher.isSneaking()) {
-            boolean criticalable = true;
+            boolean criticalable = false;
 
-            if (stack.contains(ModDataComponents.FLINT_AMOUNTCRITICAL)) {
-                if (stack.get(ModDataComponents.FLINT_AMOUNTCRITICAL) > 0 && world.getBlockState(pos).isIn(BlockTags.PICKAXE_MINEABLE)) {
-                    criticalable = false;
+            if (world.getBlockState(pos).isIn(BlockTags.PICKAXE_MINEABLE)) {
+                criticalable = true;
+                if (stack.contains(ModDataComponents.FLINT_AMOUNTCRITICAL)) {
+                    if (stack.get(ModDataComponents.FLINT_AMOUNTCRITICAL) > 0) {
+                        criticalable = false;
+                    }
                 }
             }
 
+
             if (criticalable) {
-                ModInit.LOGGER.info("CRITICAL");
                 if (!world.isClient) {
                     Random rand = new Random();
 
@@ -119,7 +124,7 @@ public class FlintLambdas implements TriggerLambdas {
     public Text getName(Text def, ItemStack stack) {
         if (stack.contains(ModDataComponents.FLINT_AMOUNTCRITICAL)) {
             if (stack.get(ModDataComponents.FLINT_AMOUNTCRITICAL) > 0) {
-                return Text.literal("CRITICAL ").formatted(Formatting.BOLD).formatted(Formatting.YELLOW).append(Text.empty().formatted(Formatting.RESET)).append(def);
+                return Text.literal("CRITICAL").formatted(Formatting.BOLD).formatted(Formatting.YELLOW).append(Text.literal(" ").formatted(Formatting.RESET)).append(def);
             }
         }
 
@@ -139,25 +144,18 @@ public class FlintLambdas implements TriggerLambdas {
             }
 
             if (amount > 0) {
+
+                ToolAppend.of(stack.getItem())
+                        .line("Increases Damage", ToolAppend.TYPE.POSITIVE, true, List.of(ToolTypes.SWORD, ToolTypes.AXE))
+                        .line("Increases Efficiency", ToolAppend.TYPE.POSITIVE, true, List.of(ToolTypes.AXE, ToolTypes.SHOVEL, ToolTypes.PICKAXE))
+                        .line("Higher Critical, Higher Damage & Efficiency!", ToolAppend.TYPE.POSITIVE)
+                        .line("2x durability use", ToolAppend.TYPE.NEGATIVE)
+                        .offer(tooltip);
+
                 tooltip.add(Text.literal("Criticals: " + amount).formatted(Formatting.YELLOW));
-
-                if (tooltype != ToolIdList.tooltypeid.SWORD) {
-                    tooltip.add(Text.literal("[+] Increases Efficiency").formatted(Formatting.GREEN));
-                }
-
-                if (tooltype == ToolIdList.tooltypeid.SWORD || tooltype == ToolIdList.tooltypeid.AXE) {
-                    tooltip.add(Text.literal("[+] Increases Damage").formatted(Formatting.GREEN));
-
-                }
-
-                tooltip.add(Text.literal("[+] Higher Critical, Higher Damage & Efficiency!").formatted(Formatting.GREEN));
-
-                tooltip.add(Text.literal("[-] 2x durability use").formatted(Formatting.RED));
             }else {
-                tooltip.add(Text.literal("Try crouch and right click on the rocks").formatted(Formatting.GRAY));
+                tooltip.add(Text.literal("? Crouch and right click on the rocks").formatted(Formatting.GRAY));
             }
-        }else {
-            tooltip.add(Text.literal("This hoe has no special ability for flint").formatted(Formatting.GRAY));
         }
 
 

@@ -13,6 +13,10 @@ public class ModDataComponents {
     public static final ComponentType<Long> TOOL_NEXTTICK = register("tool_nextoxidize", Codec.LONG);
     public static final ComponentType<Boolean> WAXED = register("waxed", Codec.BOOL);
 
+    public static final ComponentType<Integer> TOOL_COUNTER_FIRST = register("tool_counter_first", Codec.INT);
+    public static final ComponentType<Integer> TOOL_COUNTER_SECOND = register("tool_counter_second", Codec.INT);
+    public static final ComponentType<Integer> TOOL_COUNTER_THIRD = register("tool_counter_third", Codec.INT);
+
     public static void init() {}
 
     private static <T> ComponentType<T> register(String name, Codec<T> cod) {
