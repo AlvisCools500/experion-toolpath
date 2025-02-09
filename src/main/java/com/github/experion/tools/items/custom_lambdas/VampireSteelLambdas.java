@@ -2,6 +2,7 @@ package com.github.experion.tools.items.custom_lambdas;
 
 import com.github.experion.tools.ModInit;
 import com.github.experion.tools.initializer.ModDataComponents;
+import com.github.experion.tools.initializer.ModParticles;
 import com.github.experion.tools.items.ToolIdList;
 import com.github.experion.tools.items.tool_lambdas.ExistsLambdas;
 import com.github.experion.tools.items.tool_lambdas.TriggerLambdas;
@@ -79,16 +80,15 @@ public class VampireSteelLambdas implements TriggerLambdas {
 
             stack.setDamage(Math.max(stack.getDamage() - res, 0));
         }else {
-            holder.addStatusEffect(new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 1, 2));
+            holder.heal(1.0f);
+            world.playSound(null, holder.getX(),holder.getY(),holder.getZ(), SoundEvents.ENTITY_WITCH_DRINK, SoundCategory.PLAYERS);
+            serverWorld.spawnParticles(ModParticles.LIFESTEALED, holder.getX(), holder.getY() + 0, holder.getZ(), 5, 0.5,0.2,0.5,0);
         }
 
-        serverWorld.spawnParticles(ParticleTypes.HEART, holder.getX(), holder.getY() + 0.5, holder.getZ(), 5, 0.5,0,0.5,0);
-
-        world.playSound(null, holder.getX(),holder.getY(),holder.getZ(), SoundEvents.ENTITY_WITCH_DRINK, SoundCategory.PLAYERS);
     }
 
     @Override
-    public void onPostMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner) {
+    public void onPostMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner, boolean succes) {
         if (!world.isClient()) {
             if (!stack.contains(LIFESTEAL_MAX)) {
                 setMax(stack);
@@ -124,6 +124,7 @@ public class VampireSteelLambdas implements TriggerLambdas {
                 .line("Night, increases Damage and Efficiency", ToolAppend.TYPE.POSITIVE)
                 .line("Guaranteed lifesteal every kill", ToolAppend.TYPE.POSITIVE, true, ToolTypes.MINEABLE_TOOLS)
                 .line("Chance to fill up the lifesteal", ToolAppend.TYPE.POSITIVE, true, List.of(ToolTypes.SWORD, ToolTypes.HOE))
+                .line("Not only lifesteal health but also durability too (Random Choice)", ToolAppend.TYPE.MIDS)
                 .line("If lifesteal full, Gives health", ToolAppend.TYPE.POSITIVE, true, List.of(ToolTypes.SWORD, ToolTypes.HOE))
                 .offer(tooltip);
 

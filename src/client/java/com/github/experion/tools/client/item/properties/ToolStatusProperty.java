@@ -1,4 +1,4 @@
-package com.github.experion.tools.client.item.properties.numeric;
+package com.github.experion.tools.client.item.properties;
 
 import com.github.experion.tools.initializer.ModDataComponents;
 import com.mojang.serialization.MapCodec;

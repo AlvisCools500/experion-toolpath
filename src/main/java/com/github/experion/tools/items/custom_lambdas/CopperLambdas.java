@@ -31,6 +31,7 @@ import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -123,9 +124,7 @@ public class CopperLambdas implements TriggerLambdas {
             return baseAttackDamage - (baseAttackDamage * 0.5f);
         }
 
-
-
-        return baseAttackDamage;
+        return default_float;
     }
 
     @Override
@@ -138,7 +137,7 @@ public class CopperLambdas implements TriggerLambdas {
     }
 
     @Override
-    public void onPostMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner) {
+    public void onPostMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner, boolean succes) {
         if (!world.isClient) {
             if (check_status(stack) == 3) {
                 Block main = state.getBlock();
@@ -168,6 +167,40 @@ public class CopperLambdas implements TriggerLambdas {
         }
     }
 
+    private void ElectricHit(List<LivingEntity> eletrocuted, LivingEntity target, LivingEntity attacker) {
+        World world = attacker.getWorld();
+
+        Vec3d pos = target.getPos();
+        int range = 1;
+        Box area = new Box(pos.subtract(range,range,range), pos.add(range,range,range));
+
+        List<LivingEntity> entities = world.getEntitiesByClass(LivingEntity.class, area, (v) -> !(v instanceof PlayerEntity));
+        List<LivingEntity> targetlist = new ArrayList<>();
+
+        if (!entities.isEmpty()) {
+            for (LivingEntity v : entities) {
+                v.damage((ServerWorld) world, world.getDamageSources().thorns(attacker),(float) world.getRandom().nextBetween(1,3));
+
+                if (!eletrocuted.contains(v)) {
+                    targetlist.add(v);
+                    eletrocuted.add(v);
+                }
+            }
+        }
+
+        if (eletrocuted.size() < 10) {
+            if (!targetlist.isEmpty()) {
+                for (LivingEntity v : targetlist) {
+                    ElectricHit(eletrocuted, v, attacker);
+                }
+            }
+        }else {
+            ModInit.LOGGER.info("OK STOP");
+        }
+
+
+    }
+
     @Override
     public void onPostHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         World world = attacker.getWorld();
@@ -176,17 +209,9 @@ public class CopperLambdas implements TriggerLambdas {
 
         if (!world.isClient()) {
             if (check_status(stack) == 3) {
-                Vec3d pos = target.getPos();
-                int range = 2;
-                Box area = new Box(pos.subtract(range,range,range), pos.add(range,range,range));
+                List<LivingEntity> electrocuted = new ArrayList<>();
 
-                List<Entity> entities = world.getEntitiesByClass(Entity.class, area, (v) -> !(v instanceof PlayerEntity));
-
-                if (!entities.isEmpty()) {
-                    for (Entity v : entities) {
-                        v.damage((ServerWorld) world, world.getDamageSources().thorns(attacker),5.0f);
-                    }
-                }
+                ElectricHit(electrocuted,target,attacker);
             }
 
         }
@@ -283,24 +308,6 @@ public class CopperLambdas implements TriggerLambdas {
                             lightning.refreshPositionAfterTeleport(entity.getPos());
                             ((ServerWorld) world).spawnEntity(lightning);
                         }
-                    }
-                }
-            }
-        }
-
-        if (check_status(stack) == 3) {
-            if (ClockNow % 40 == 0) {
-                Vec3d pos = entity.getPos();
-
-                int range = 2;
-
-                Box area = new Box(pos.subtract(range,range,range), pos.add(range,range,range));
-
-                List<Entity> entities = world.getEntitiesByClass(Entity.class, area, (v) -> !(v instanceof PlayerEntity));
-
-                if (!entities.isEmpty()) {
-                    for (Entity v : entities) {
-                        v.damage((ServerWorld) world, world.getDamageSources().thorns(entity),2.5f);
                     }
                 }
             }

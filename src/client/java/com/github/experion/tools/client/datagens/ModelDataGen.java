@@ -1,6 +1,6 @@
 package com.github.experion.tools.client.datagens;
 
-import com.github.experion.tools.client.item.properties.numeric.ToolStatusProperty;
+import com.github.experion.tools.client.item.properties.ToolStatusProperty;
 import com.github.experion.tools.initializer.ModItems;
 import com.github.experion.tools.initializer.ModTools;
 import com.github.experion.tools.initializer.TaggingList;

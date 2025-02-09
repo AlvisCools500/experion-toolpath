@@ -9,9 +9,13 @@ import net.minecraft.registry.Registry;
 public class ModParticles {
     public static final SimpleParticleType AZALEA_EFFECT = FabricParticleTypes.simple();
     public static final SimpleParticleType AZALEA_EXPLOSIVE = FabricParticleTypes.simple();
+    public static final SimpleParticleType LIFESTEALED = FabricParticleTypes.simple();
+    public static final SimpleParticleType GILDED_SHINE = FabricParticleTypes.simple();
 
     public static void register() {
         Registry.register(Registries.PARTICLE_TYPE, ExperionRegistery.newId("azalea_effect"), AZALEA_EFFECT);
-        Registry.register(Registries.PARTICLE_TYPE,ExperionRegistery.newId("azalea_explosion"),AZALEA_EXPLOSIVE);
+        Registry.register(Registries.PARTICLE_TYPE, ExperionRegistery.newId("azalea_explosion"), AZALEA_EXPLOSIVE);
+        Registry.register(Registries.PARTICLE_TYPE, ExperionRegistery.newId("lifestealed"), LIFESTEALED);
+        Registry.register(Registries.PARTICLE_TYPE, ExperionRegistery.newId("gilded_shine"), GILDED_SHINE);
     }
 }

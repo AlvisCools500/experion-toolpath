@@ -3,6 +3,8 @@
     "experion_tools:flint_hoe",
     "experion_tools:azalea_hoe",
     "experion_tools:copper_hoe",
-    "experion_tools:steel_hoe"
+    "experion_tools:steel_hoe",
+    "experion_tools:vampire_steel_hoe",
+    "experion_tools:gilded_iron_hoe"
   ]
 }

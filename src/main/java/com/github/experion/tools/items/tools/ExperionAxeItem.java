@@ -74,11 +74,10 @@ public class ExperionAxeItem extends AxeItem implements GetLambdas {
 
     @Override
     public boolean postMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner) {
-        super.postMine(stack,world,state,pos,miner);
-        ToolStaticTrigger.PostMine(this.toolLamb,stack,world,state,pos,miner);
-        return true;
+        boolean bool = super.postMine(stack,world,state,pos,miner);
+        ToolStaticTrigger.PostMine(this.toolLamb,stack,world,state,pos,miner, bool);
+        return bool;
     }
-
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         super.postHit(stack,target,attacker);

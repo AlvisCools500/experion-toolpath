@@ -1,6 +1,9 @@
 {
   "values": [
     "experion_tools:vampire_steel_sword",
-    "experion_tools:vampire_steel_pickaxe"
+    "experion_tools:vampire_steel_axe",
+    "experion_tools:vampire_steel_pickaxe",
+    "experion_tools:vampire_steel_shovel",
+    "experion_tools:vampire_steel_hoe"
   ]
 }

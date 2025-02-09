@@ -162,7 +162,7 @@ public class FlintLambdas implements TriggerLambdas {
     }
 
     @Override
-    public void onPostMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner) {
+    public void onPostMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner, boolean succes) {
         if (!world.isClient) {
             decrease_critical(stack, world, miner);
         }

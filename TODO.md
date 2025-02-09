@@ -43,28 +43,34 @@
   - Cons
     - No special abilities
     - Heavier
-- Gilded Iron
+- ~~Gilded Iron~~
   - Pros
     - Cosmetics, Lookin drippy
     - Mining Ores has a chance to drop its own nuggets (included diamond)
     - When it breaks, It will converted into iron tool but halved durability
-    - Has a chance to gain Gilded effect from breaking blocks or hitting
-    - (Gilded) Loves gold- I mean increases gold fortune
-    - (Gilded) 20% damage to Piglins and Hoglins
-    - Gilded can be removed by punch on the rock
+    - Loves gold- I mean increases gold fortune
+    - 20% damage to Piglins and Hoglins
   - Cons
     - Durability lower than Iron tool due to converted when it breaks
-    - Gilded has multiple variants (Either good or bad)
     - Cannot be enchanted with Silk Touch
-- Vampire Steel
+- ~~Vampire Steel~~
   - Pros
     - Mining and Kill have a chance to lifesteal
     - Lifesteal is not only for player but durability too
     - Stronger than iron
+    - Every tool type is a weapon (including hoe)
   - Cons
     - Weaker when sun is up
     - 2x durability use when sun is up
     - Lifestealing might be random choice either for the player or it's own tool (durability)
+- Frosted Steel
+  - Pros
+    - (Attacks) applies slowness to target
+    - Mining in cold biome slightly faster
+    - Attack in cold biome increases more damage
+    - Normal Attack is higher than Vampire Steel (Image combine with cold boost)
+  - Cons
+    - If you use these in nether, It will use 4x Durability and the tool probably 2x weaker
 - Obsidian
   - Pros
     - Extremely stronger than Diamond, Even Netherite
@@ -88,7 +94,7 @@
     - Cannot be enchanted with silk touch and even mending (Yeah this tool is greedy, They want you to fix it with BLOCK OF EMERALD)
     - If you try kill villager with this tool, You'll get hurt and the pickaxe also decreases the durability ALOT
 
-### Non Full Set Tools
+### Overpowered edition (Seperate mod)
 - Combo Tool (Axe & Pickaxe only)
   - Pros
     - It is faster than netherite
@@ -100,22 +106,20 @@
     - If you really did the combo thing, It will chain mining
   - Cons
     - If you suck at aim hitbox, Might be slower than iron
-
-### (End-Game)
 - Experions 
   - Pros
     - Has leveling system (Killing, Mining, Depends on the tool)
     - Higher level might stronger than netherite
     - Cosmetics+++ (At some level)
     - Every level up will grants you random reward (Higher level will better reward)
-    - "This makes you feel you're plaing Minecraft RPG server right now-"
+    - "This makes you feel you're playing Minecraft RPG server right now-"
     - (Pickaxe Ability: Hammered) Ability to mine 3x1 blocks for temporary
     - (Pickaxe Ability: Greed XP) Mining block that has Experience will adds extra to it
     - (Pickaxe Ability: X-Ray) That's right, You can X-Ray with this tool without hacking
     - (Efficiency Ability: Haster) gives haste, That's simple 
     - (Sword Ability: RAGE) If you have low health (Below 50%), It adds damage
     - (Sword Ability: Execution) If the target has low health (Below 50%), It adds damage
-    - (Sword Ability: Vampiric) Guaranteed every kill get lifesteal
+    - (Sword Ability: Vampire) Guaranteed every kill get lifesteal
     - (Sword Ability: Planet) You summoned big saturn that looked familiar then it'll explode (Wont harm the players and blocks too)
     - (Hoe) Farm with this tool has a chance to spawn XP Orb
   - Cons
@@ -148,10 +152,12 @@
     - (Sword) Has a chance to break the shield like axe
     - Has a chance to not consume durability (triggers cosmetic effect)
     - (Hoe) Farming has a chance to drop more (Fortune)
+  - Mids
+    - (Pickaxe) Can mining above mining level and it's faster but 5x durability use
   - Cons
     - Jack of all trades? Mastered skill doesnt exi-
     - When fortuned, It will guaranteed consume durability
-    - (Sword) Decreases 5% damage for every missing armor (bad idea for easy difficulty)
+    - (Sword) Decreases 1% damage for every missing armor (bad idea for easy difficulty)
     - (Sword) when break shield, It will consume durability
     - Yeah everything you do with this tool will consume durability itself, That's why I called it Jack of all trades
 - Diamond
@@ -184,5 +190,5 @@
 - GeckoLib because of me (Experions Tool)
 - Criticaled Flint Tool Texture
 - Polish Copper Tool
-  - Copper Thundered Animation
+  - ~~Copper Thundered Animation~~
   - Copper Thundered Chain Effect

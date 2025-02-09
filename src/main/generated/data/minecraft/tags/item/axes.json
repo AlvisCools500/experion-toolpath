@@ -3,6 +3,8 @@
     "experion_tools:flint_axe",
     "experion_tools:azalea_axe",
     "experion_tools:copper_axe",
-    "experion_tools:steel_axe"
+    "experion_tools:steel_axe",
+    "experion_tools:vampire_steel_axe",
+    "experion_tools:gilded_iron_axe"
   ]
 }

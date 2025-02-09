@@ -32,6 +32,12 @@ public class ModItemGroups {
                 g.add(ModTools.COPPER_SHOVEL);
                 g.add(ModTools.COPPER_HOE);
 
+                g.add(ModTools.GILDED_IRON_SWORD);
+                g.add(ModTools.GILDED_IRON_AXE);
+                g.add(ModTools.GILDED_IRON_PICKAXE);
+                g.add(ModTools.GILDED_IRON_SHOVEL);
+                g.add(ModTools.GILDED_IRON_HOE);
+
                 g.add(ModTools.STEEL_SWORD);
                 g.add(ModTools.STEEL_AXE);
                 g.add(ModTools.STEEL_PICKAXE);
@@ -39,7 +45,10 @@ public class ModItemGroups {
                 g.add(ModTools.STEEL_HOE);
 
                 g.add(ModTools.VAMPIRE_STEEL_SWORD);
+                g.add(ModTools.VAMPIRE_STEEL_AXE);
                 g.add(ModTools.VAMPIRE_STEEL_PICKAXE);
+                g.add(ModTools.VAMPIRE_STEEL_SHOVEL);
+                g.add(ModTools.VAMPIRE_STEEL_HOE);
 
                 g.add(ModItems.AZALEA_PICKER);
                 g.add(ModItems.AZALEA_CLIPPINGS);

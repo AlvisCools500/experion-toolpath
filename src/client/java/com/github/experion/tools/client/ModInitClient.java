@@ -4,6 +4,8 @@ import com.github.experion.tools.ModInit;
 import com.github.experion.tools.client.initializer.ModClientEvents;
 import com.github.experion.tools.client.initializer.ModItemProperties;
 import com.github.experion.tools.client.particles.AzaleaExplosionParticle;
+import com.github.experion.tools.client.particles.LifestealParticle;
+import com.github.experion.tools.client.particles.ShiningParticle;
 import com.github.experion.tools.initializer.ModParticles;
 import com.github.experion.tools.client.particles.AzaleaEffectParticle;
 import net.fabricmc.api.ClientModInitializer;
@@ -25,6 +27,8 @@ public class ModInitClient implements ClientModInitializer {
 
     regParti(ModParticles.AZALEA_EFFECT, AzaleaEffectParticle.Factory::new);
     regParti(ModParticles.AZALEA_EXPLOSIVE, AzaleaExplosionParticle.Factory::new);
+    regParti(ModParticles.LIFESTEALED, LifestealParticle.Factory::new);
+    regParti(ModParticles.GILDED_SHINE, ShiningParticle.Factory::new);
   }
 
   private static <T extends ParticleEffect> void regParti(ParticleType<T> var1, ParticleFactoryRegistry.PendingParticleFactory<T> var2) {

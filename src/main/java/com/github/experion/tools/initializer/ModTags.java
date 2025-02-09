@@ -1,8 +1,11 @@
 package com.github.experion.tools.initializer;
 
 import com.github.experion.tools.ModInit;
+import jdk.javadoc.doclet.Taglet;
+import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.EntityTypeTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
@@ -45,6 +48,11 @@ public class ModTags {
 
     public static class Misc {
         public static final TagKey<Item> DURABLE_ABILITY = getItemKey("misc/durable_ability");
+        public static final TagKey<EntityType<?>> PIGLINS = getEntityKey("piglins");
+    }
+
+    public static TagKey<EntityType<?>> getEntityKey(String path) {
+        return TagKey.of(RegistryKeys.ENTITY_TYPE,Identifier.of(ModInit.ID,path));
     }
 
     public static TagKey<Item> getItemKey(String path) {

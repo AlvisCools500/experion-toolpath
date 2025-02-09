@@ -32,7 +32,7 @@ public interface TriggerLambdas {
 
     default ActionResult onUseBlock(ItemUsageContext context, ActionResult actionResult) {return actionResult;}
     default void onPostHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {}
-    default void onPostMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner) {}
+    default void onPostMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner, boolean success) {}
     default void onPunchBlock(ItemStack stack, World world, BlockPos pos, LivingEntity puncher) {}
     default void onPunchAir(ItemStack stack, World world, LivingEntity puncher) {}
     default ActionResult onUse(World world, PlayerEntity user, Hand hand, ActionResult actionResult) {return actionResult;}

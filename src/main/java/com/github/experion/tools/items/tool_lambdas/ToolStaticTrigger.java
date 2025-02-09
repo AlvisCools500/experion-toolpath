@@ -31,11 +31,11 @@ public class ToolStaticTrigger {
         toolLamb.lambdas.main_trigger(stack,world,vec3d,Player,triggerType);
     }
 
-    public static void PostMine(ToolLambdas toolLamb, ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner) {
+    public static void PostMine(ToolLambdas toolLamb, ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner, boolean success) {
         if (toolLamb.enable_postmine) {
             if (toolLamb.lambdas.exists().onPostMine) {
                 print("Triggering PostMine");
-                toolLamb.lambdas.onPostMine(stack,world,state,pos,miner);
+                toolLamb.lambdas.onPostMine(stack,world,state,pos,miner,success);
             }else {
                 mainTrig(toolLamb,stack, world, ToolLib.BlockPos_To_Vec3d(pos), miner, ToolLib.TriggerType.MINE_BLOCK);
                 print("Null PostMine");
