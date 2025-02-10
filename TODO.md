@@ -1,5 +1,5 @@
 
-### Modded Tools
+### Overworld Tools
 - Azalea
   - Pros
     - Right click sword for Leap Strike (Pushes the mobs)
@@ -63,7 +63,7 @@
     - Weaker when sun is up
     - 2x durability use when sun is up
     - Lifestealing might be random choice either for the player or it's own tool (durability)
-- Frosted Steel
+- ~~Frosted Steel~~
   - Pros
     - (Attacks) applies slowness to target
     - Mining in cold biome slightly faster
@@ -72,28 +72,46 @@
   - Cons
     - If you use these in nether, It will use 4x Durability and the tool probably 2x weaker
     - Vampire Steel is easier to craft than this because you must find ice first.
+
+### Nether Tools
 - Obsidian
   - Pros
     - Extremely stronger than Diamond, Even Netherite
-    - Immune to lava
+    - Immune to fire/lava
     - Stronger Knockback
     - If you try swing the sword, It will impact the Area of Damage.
     - When item breaks, It wont dissapear but instead it will became cracked tool
   - Cons
     - EXTREMELY HEAVY AKA SLOWER
     - Cannot be enchanted with Unbreaking and Mending
-- Emeraldian
+- Soul Steel
   - Pros
-    - Increase Luck
-    - Extra damage to Pillagers
-    - Mining any ore has a chance to drop emerald
-    - Killing pillagers, Stacks the luck effect to the tool
-    - Cosmetics fr++++
+    - Killing mobs fills up the SOUL in the tools (Works for mineable tools too)
+    - Gives possesed status effect to entity at max amount of SOUL
+    - You can get Possesed Potion Effect by using Hoe
+    - Hoe is useful because you can fill soul to other Soul Steel tools by right click on Soul Sands
   - Mids
-    - Stronger than Diamond but Weaker than Netherite
+    - When Attacking (Not kill but hit) or Mined, It decreases the SOUL.
+    - The higher soul is, The higher damage & efficiency
+    - Possesed Status Effect: Every tick your body will move itself, Even punching. Even worse, It can also kill yourself...
+    - Possesed Status Effect: You can get killed easily by mobs or even just CACTUS
   - Cons
-    - Cannot be enchanted with silk touch and even mending (Yeah this tool is greedy, They want you to fix it with BLOCK OF EMERALD)
-    - If you try kill villager with this tool, You'll get hurt and the pickaxe also decreases the durability ALOT
+    - If you hold these on hand for too long, You'll the one who will get POSSESSED.
+- Blazing Magma
+  - Pros
+    - Immune to fire/lava
+    - Set the enemy on fire when hit
+    - Good for mining netherite
+  - Cons
+    - if you carry these to overworld, It will become basalt looking tool and don't use it or else it will break instantly
+
+### End Tools
+- Void Touch
+  - Pros
+    - Mining and Killing increases VOID (Stacks)
+    - Higher Void, Higher damage & efficiency
+  - Cons
+    - Below netherite
 
 ### Overpowered edition (Seperate mod)
 - Combo Tool (Axe & Pickaxe only)
@@ -156,7 +174,6 @@
   - Mids
     - (Pickaxe) Can mining above mining level and it's faster but 5x durability use
   - Cons
-    - Jack of all trades? Mastered skill doesnt exi-
     - When fortuned, It will guaranteed consume durability
     - (Sword) Decreases 1% damage for every missing armor (bad idea for easy difficulty)
     - (Sword) when break shield, It will consume durability
@@ -180,7 +197,6 @@
     - Dipped is only for 1 minute
     - 2 stacks of durability is the maximum of use
     - Before dipped, The tool is weaker than vanilla one
-    - Oh yeah fiery explosion might damage you (Sharpness more dangerous!!!)
 
 ### Enchants
 - ~~Durable Blessing~~
