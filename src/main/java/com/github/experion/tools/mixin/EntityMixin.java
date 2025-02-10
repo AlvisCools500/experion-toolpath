@@ -1,8 +1,8 @@
 package com.github.experion.tools.mixin;
 
-import com.github.experion.tools.items.tool_lambdas.GetLambdas;
-import com.github.experion.tools.items.tool_lambdas.ToolLambdas;
-import com.github.experion.tools.items.tool_lambdas.TriggerLambdas;
+import com.github.experion.tools.item.tool_lambdas.GetLambdas;
+import com.github.experion.tools.item.tool_lambdas.ToolLambdas;
+import com.github.experion.tools.item.tool_lambdas.TriggerLambdas;
 import com.github.experion.tools.lib.ImplyData;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LightningEntity;

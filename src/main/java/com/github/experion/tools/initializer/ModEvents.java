@@ -1,7 +1,7 @@
 package com.github.experion.tools.initializer;
 
-import com.github.experion.tools.items.tool_lambdas.GetLambdas;
-import com.github.experion.tools.items.tool_lambdas.ToolLambdas;
+import com.github.experion.tools.item.tool_lambdas.GetLambdas;
+import com.github.experion.tools.item.tool_lambdas.ToolLambdas;
 import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

@@ -1,7 +1,7 @@
 package com.github.experion.tools;
 
 import com.github.experion.tools.initializer.*;
-import com.github.experion.tools.items.CustomLambdas;
+import com.github.experion.tools.item.CustomLambdas;
 import com.github.experion.tools.misc.ServerMessage;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -22,6 +22,7 @@ public class ModInit implements ModInitializer {
     ModEnchantments.init();
     ModItems.init();
     ModTools.init();
+    ModStatusEffects.init();
 
     ModItemGroups.init();
 

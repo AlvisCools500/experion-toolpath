@@ -1,11 +1,11 @@
 package com.github.experion.tools.client.datagens;
 
-import com.github.experion.tools.ModInit;
 import com.github.experion.tools.initializer.ModItems;
+import com.github.experion.tools.initializer.ModTags;
 import com.github.experion.tools.initializer.TaggingList;
-import com.github.experion.tools.items.tool_lambdas.GetLambdas;
-import com.github.experion.tools.items.tool_lambdas.RecipeLambda;
-import com.github.experion.tools.items.tool_lambdas.ToolLambdas;
+import com.github.experion.tools.item.tool_lambdas.GetLambdas;
+import com.github.experion.tools.item.tool_lambdas.RecipeLambda;
+import com.github.experion.tools.item.tool_lambdas.ToolLambdas;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.recipe.RecipeExporter;
@@ -53,6 +53,15 @@ public class RecipeDataGen extends FabricRecipeProvider {
                         .input('D',Items.DIAMOND)
                         .input('#',Items.REDSTONE_BLOCK)
                         .criterion("has_steel_ingot_vampire",conditionsFromItem(ModItems.STEEL_INGOT))
+                        .offerTo(recipeExporter);
+
+                createShaped(RecipeCategory.MISC,ModItems.FROSTED_STEEL_INGOT)
+                        .pattern("B# ")
+                        .pattern("D# ")
+                        .input('B',ModItems.STEEL_INGOT)
+                        .input('D',Items.DIAMOND)
+                        .input('#', ModTags.Materials.ICE_BLOCKS)
+                        .criterion("has_steel_ingot_frosted",conditionsFromItem(ModItems.STEEL_INGOT))
                         .offerTo(recipeExporter);
 
             }

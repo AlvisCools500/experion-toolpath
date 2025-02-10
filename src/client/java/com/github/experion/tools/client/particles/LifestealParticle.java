@@ -1,6 +1,6 @@
 package com.github.experion.tools.client.particles;
 
-import com.github.experion.tools.items.EasingService;
+import com.github.experion.tools.item.EasingService;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.particle.*;

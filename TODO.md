@@ -71,6 +71,7 @@
     - Normal Attack is higher than Vampire Steel (Image combine with cold boost)
   - Cons
     - If you use these in nether, It will use 4x Durability and the tool probably 2x weaker
+    - Vampire Steel is easier to craft than this because you must find ice first.
 - Obsidian
   - Pros
     - Extremely stronger than Diamond, Even Netherite
@@ -187,8 +188,6 @@
   - Has a chance to stop consume durability from it's ability, Level V will completely remove it
 
 ## Other Tasks
-- GeckoLib because of me (Experions Tool)
-- Criticaled Flint Tool Texture
 - Polish Copper Tool
   - ~~Copper Thundered Animation~~
   - Copper Thundered Chain Effect

@@ -10,5 +10,5 @@ public class ToolTypes {
     public static final int HOE = 5;
 
     public static final List<Integer> MINEABLE_TOOLS = List.of(AXE,PICKAXE,SHOVEL);
-    public static final List<Integer> ATTACKABLE_TOOLS = List.of(SWORD,PICKAXE);
+    public static final List<Integer> ATTACKABLE_TOOLS = List.of(SWORD,AXE);
 }

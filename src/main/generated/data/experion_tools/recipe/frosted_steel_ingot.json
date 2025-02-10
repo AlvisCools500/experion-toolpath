@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "#experion_tools:materials/ice_blocks_tool_materials",
+    "B": "experion_tools:steel_ingot",
+    "D": "minecraft:diamond"
+  },
+  "pattern": [
+    "B# ",
+    "D# "
+  ],
+  "result": {
+    "count": 1,
+    "id": "experion_tools:frosted_steel_ingot"
+  }
+}

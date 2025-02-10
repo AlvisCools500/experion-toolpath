@@ -1,6 +1,6 @@
 package com.github.experion.tools.lib;
 
-import com.github.experion.tools.items.ToolIdList;
+import com.github.experion.tools.item.ToolIdList;
 import net.minecraft.item.Item;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;

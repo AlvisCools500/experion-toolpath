@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_steel_ingot_frosted": {
+      "conditions": {
+        "items": [
+          {
+            "items": "experion_tools:steel_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "experion_tools:frosted_steel_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_steel_ingot_frosted"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "experion_tools:frosted_steel_ingot"
+    ]
+  }
+}

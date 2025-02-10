@@ -1,9 +1,10 @@
 package com.github.experion.tools.client.datagens;
 
+import com.github.experion.tools.initializer.ModItems;
 import com.github.experion.tools.initializer.ModTags;
 import com.github.experion.tools.initializer.TaggingList;
-import com.github.experion.tools.items.tool_lambdas.GetLambdas;
-import com.github.experion.tools.items.tool_lambdas.ToolLambdas;
+import com.github.experion.tools.item.tool_lambdas.GetLambdas;
+import com.github.experion.tools.item.tool_lambdas.ToolLambdas;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.item.Item;
@@ -135,6 +136,13 @@ public class ItemTagsDataGen extends FabricTagProvider<Item> {
         for (Item v : TaggingList.DURABLE_ABILITY) {
             getOrCreateTagBuilder(ModTags.Misc.DURABLE_ABILITY).add(v);
         }
+
+        getOrCreateTagBuilder(ModTags.Materials.AZALEA).add(Items.AZALEA, Items.AZALEA_LEAVES, Items.FLOWERING_AZALEA, Items.FLOWERING_AZALEA);
+        getOrCreateTagBuilder(ModTags.Materials.COPPER).add(Items.COPPER_INGOT);
+        getOrCreateTagBuilder(ModTags.Materials.FLINT).add(Items.FLINT);
+        getOrCreateTagBuilder(ModTags.Materials.VAMPIRE_STEEL).add(ModItems.VAMPIRE_STEEL_INGOT);
+        getOrCreateTagBuilder(ModTags.Materials.FROSTED_STEEL).add(ModItems.FROSTED_STEEL_INGOT);
+        getOrCreateTagBuilder(ModTags.Materials.ICE_BLOCKS).add(Items.ICE,Items.PACKED_ICE,Items.BLUE_ICE);
 
     }
 

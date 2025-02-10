@@ -50,11 +50,18 @@ public class ModItemGroups {
                 g.add(ModTools.VAMPIRE_STEEL_SHOVEL);
                 g.add(ModTools.VAMPIRE_STEEL_HOE);
 
-                g.add(ModItems.AZALEA_PICKER);
-                g.add(ModItems.AZALEA_CLIPPINGS);
+                g.add(ModTools.FROSTED_STEEL_SWORD);
+                g.add(ModTools.FROSTED_STEEL_AXE);
+                g.add(ModTools.FROSTED_STEEL_PICKAXE);
+                g.add(ModTools.FROSTED_STEEL_SHOVEL);
+                g.add(ModTools.FROSTED_STEEL_HOE);
 
+                g.add(ModItems.AZALEA_PICKER);
+                g.add(ModItems.ICE_PICKER);
+                g.add(ModItems.AZALEA_CLIPPINGS);
                 g.add(ModItems.STEEL_INGOT);
                 g.add(ModItems.VAMPIRE_STEEL_INGOT);
+                g.add(ModItems.FROSTED_STEEL_INGOT);
             })
             .build()
     );
