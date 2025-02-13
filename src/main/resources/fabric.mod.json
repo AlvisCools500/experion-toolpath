@@ -7,13 +7,13 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.github.experion.tools.ModInit"
+      "io.github.experion.tools.ModInit"
     ],
     "client": [
-      "com.github.experion.tools.client.ModInitClient"
+      "io.github.experion.tools.client.ModInitClient"
     ],
     "fabric-datagen": [
-      "com.github.experion.tools.client.ModDataGenerator"
+      "io.github.experion.tools.client.ModDataGenerator"
     ]
   },
   "mixins": [
