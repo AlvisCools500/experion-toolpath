@@ -1,6 +1,5 @@
 package io.github.experion.tools;
 
-import com.github.experion.tools.initializer.*;
 import io.github.experion.tools.initializer.*;
 import io.github.experion.tools.item.CustomLambdas;
 import io.github.experion.tools.misc.ServerMessage;

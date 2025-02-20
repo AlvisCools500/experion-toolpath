@@ -4,7 +4,6 @@ import io.github.experion.tools.ModInit;
 import io.github.experion.tools.initializer.ModEnchantments;
 import io.github.experion.tools.initializer.TaggingList;
 import io.github.experion.tools.item.tool_lambdas.ToolLambdas;
-import com.github.experion.tools.item.tools.*;
 import io.github.experion.tools.item.tools.*;
 import io.github.experion.tools.lib.Experion.ExperionRegistery;
 import net.minecraft.enchantment.Enchantment;

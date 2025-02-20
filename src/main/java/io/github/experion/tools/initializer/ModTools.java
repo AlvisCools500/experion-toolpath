@@ -1,7 +1,5 @@
 package io.github.experion.tools.initializer;
 
-import com.github.experion.tools.item.*;
-import com.github.experion.tools.item.tool_lambdas.*;
 import io.github.experion.tools.item.CustomLambdas;
 import io.github.experion.tools.item.ModToolMaterials;
 import io.github.experion.tools.item.tool_lambdas.RecipeLambda;

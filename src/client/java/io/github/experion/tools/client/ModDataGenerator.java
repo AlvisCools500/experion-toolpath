@@ -1,6 +1,5 @@
 package io.github.experion.tools.client;
 
-import com.github.experion.tools.client.datagens.*;
 import io.github.experion.tools.client.datagens.*;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;

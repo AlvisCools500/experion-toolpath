@@ -1,6 +1,5 @@
 package io.github.experion.tools.item.tools;
 
-import com.github.experion.tools.item.tool_lambdas.*;
 import io.github.experion.tools.item.tool_lambdas.GetLambdas;
 import io.github.experion.tools.item.tool_lambdas.ToolLambdas;
 import io.github.experion.tools.item.tool_lambdas.ToolStaticTrigger;

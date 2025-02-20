@@ -60,8 +60,6 @@
     - Stronger than iron
     - Every tool type is a weapon (including hoe)
   - Cons
-    - Weaker when sun is up
-    - 2x durability use when sun is up
     - Lifestealing might be random choice either for the player or it's own tool (durability)
 - ~~Frosted Steel~~
   - Pros
@@ -72,6 +70,43 @@
   - Cons
     - If you use these in nether, It will use 4x Durability and the tool probably 2x weaker
     - Vampire Steel is easier to craft than this because you must find ice first.
+- Jack Iron
+  - Pros
+    - Jack of all trades
+    - More Coal and Iron!!! (aka Fortune to those ores only)
+    - (Sword) 10% more damage every armor equiped (4 Max ofc)
+    - (Sword) Has a chance to break the shield like axe
+    - Has a chance to not consume durability (triggers cosmetic effect)
+    - (Hoe) Farming has a chance to drop more (Fortune)
+  - Mids
+    - (Pickaxe) Can mining above mining level and it's faster but 5x durability use
+  - Cons
+    - When fortuned, It will guaranteed consume durability
+    - (Sword) Decreases 1% damage for every missing armor (bad idea for easy difficulty)
+    - (Sword) when break shield, It will consume durability
+    - Yeah everything you do with this tool will consume durability itself, That's why I called it Jack of all trades
+- Aquamond
+  - Pros
+    - I CAN MINING IN UNDERWATER YEAAA-
+    - More damage if the player is in/on water
+    - Has Cosmetic Effect + Sounds too
+    - Chance to trigger bubbles effect
+    - If it triggers bubbles effect, It means adds BUBBLES to the tool
+    - Right click the tool while max BUBBLES will trigger it's own ability
+    - (Efficiency Ability) Mining Faster
+    - (Sword Ability) Pushes all mobs around attacker including other player too
+  - Cons
+    - If you're not mining in underwater, It will consume 2x durability. Durable Blessing wont save your tools
+- Dungeoneer Tools
+  - Pros
+    - Attacks has customized attack combo (Better Combat)
+    - Combo attacks are slightly better than normal swords
+  - Mids
+    - Every tool is supposed to be weapon, NOT TOOLS. YEAH EVEN HOE AND PICKAXE IS A WEAPON
+    - Recommend to use Better Combat mod for this
+    - Hold on, They look familiar?
+  - Cons
+    - If you don't use Better Combat well... These weapons will look useless to you
 
 ### Nether Tools
 - Obsidian
@@ -80,7 +115,7 @@
     - Immune to fire/lava
     - Stronger Knockback
     - If you try swing the sword, It will impact the Area of Damage.
-    - When item breaks, It wont dissapear but instead it will became cracked tool
+    - When item breaks, It wont disappear but instead it will became cracked tool
   - Cons
     - EXTREMELY HEAVY AKA SLOWER
     - Cannot be enchanted with Unbreaking and Mending
@@ -103,17 +138,37 @@
     - Set the enemy on fire when hit
     - Good for mining netherite
   - Cons
-    - if you carry these to overworld, It will become basalt looking tool and don't use it or else it will break instantly
+    - if you carry these to overworld, It will become basalt looking tool and don't use it or else it will break instantly. Durable blessing wont save the tool lol rip.
+- Dipper Tools (NAME NOT FINAL)
+  - Pros
+    - Dip it on to the lava as "my cheese is drippy bruh" to boost the tool
+    - (Dipped) Increases Efficiency
+    - (Dipped) Increases Damage (Sword only)
+    - (Dipped Sword) Has a chance to small fiery explosion (damage stacks with sharpness)
+  - Cons
+    - (Dipped) when you used it too much while dipped, It will creates cooldown and consume durability. Of course it's weaker when you going to use it.
+    - Dipped is only for 1 minute
+    - 2 stacks of durability is the maximum of use
+    - Before dipped, The tool is weaker than vanilla one
 
 ### End Tools
 - Void Touch
   - Pros
-    - Mining and Killing increases VOID (Stacks)
+    - Mining increases VOID to the tool (Stacks)
+    - Hitting increases VOID to the entity (
     - Higher Void, Higher damage & efficiency
+    - Max Stack is higher than netherite 
+  - Mids
+    - Inspiration from Minecraft Dungeons weapons
+    - Exclusive Status Effects (VOID)
+    - Each level are amount of how many stacked
+    - Max stack is 10
+    - Mining Level is netherite dont worry, Oh wait, You need to max the VOID or else it's diamond
+    - Every VOID stacks last 30 second
   - Cons
-    - Below netherite
+    - Without voids, It's below netherite wait no it's below diamond.
 
-### Overpowered edition (Seperate mod)
+### Overpowered/End-Game tools
 - Combo Tool (Axe & Pickaxe only)
   - Pros
     - It is faster than netherite
@@ -161,42 +216,19 @@
   - Cons
     - If you hold these tool for too long, You're getting anxious effect. Stop holding them or else you'll get possesed
     - Drop only from 1 exclusive mob. Corrupted Zombie
-
-### Modified Tools
-- Iron
+- Phantom
   - Pros
-    - Jack of all trades
-    - More Coal and Iron!!! (aka Fortune to those ores only)
-    - (Sword) 10% more damage every armor equiped (4 Max ofc)
-    - (Sword) Has a chance to break the shield like axe
-    - Has a chance to not consume durability (triggers cosmetic effect)
-    - (Hoe) Farming has a chance to drop more (Fortune)
+    - Night time will increases Efficiency & Damage
+    - Hit Mobs will receive floating effect to them
   - Mids
-    - (Pickaxe) Can mining above mining level and it's faster but 5x durability use
+    - Phantom mob related
+    - Sword, Axe, Pickaxe only
   - Cons
-    - When fortuned, It will guaranteed consume durability
-    - (Sword) Decreases 1% damage for every missing armor (bad idea for easy difficulty)
-    - (Sword) when break shield, It will consume durability
-    - Yeah everything you do with this tool will consume durability itself, That's why I called it Jack of all trades
-- Diamond
+    - DO NOT HOLD THESE TOO LONG OR ELSE WAIT NO IM FLOATING- HeLP mE!!!
+    - Requires phantom membrane to craft. Yes you need to kill phantoms, Don't sleep
+- Terrarian
   - Pros
-    - I CAN MINING IN UNDERWATER YEAAA-
-    - (Sword) 15% more damage for armor equiped
-    - Block that has lower tier mining has a chance to not consume durability
-    - Has Cosmetic Effect
-  - Cons
-    - Mining in underwater consume 2x durability (If there's no aqua affinity).
-- Netherite
-  - Pros
-    - Dip it on to the lava as "my cheese is drippy bruh" to boost the tool
-    - (Dipped) Increases Effeciency
-    - (Dipped) Increases Damage (Sword only)
-    - (Dipped Sword) Has a chance to small fiery explosion (damage stacks with sharpness)
-  - Cons
-    - (Dipped) when you used it too much while dipped, It will creates cooldown and consume durability. Of course it's weaker when you going to use it.
-    - Dipped is only for 1 minute
-    - 2 stacks of durability is the maximum of use
-    - Before dipped, The tool is weaker than vanilla one
+    -
 
 ### Enchants
 - ~~Durable Blessing~~
