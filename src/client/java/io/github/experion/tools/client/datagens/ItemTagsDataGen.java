@@ -143,6 +143,20 @@ public class ItemTagsDataGen extends FabricTagProvider<Item> {
         getOrCreateTagBuilder(ModTags.Materials.VAMPIRE_STEEL).add(ModItems.VAMPIRE_STEEL_INGOT);
         getOrCreateTagBuilder(ModTags.Materials.FROSTED_STEEL).add(ModItems.FROSTED_STEEL_INGOT);
         getOrCreateTagBuilder(ModTags.Materials.ICE_BLOCKS).add(Items.ICE,Items.PACKED_ICE,Items.BLUE_ICE);
+        getOrCreateTagBuilder(ModTags.Materials.OBSIDIAN).add(Items.OBSIDIAN);
+
+        getOrCreateTagBuilder(ModTags.Misc.CORAL_MATERIAL)
+                .add(Items.TUBE_CORAL)
+                .add(Items.TUBE_CORAL_FAN)
+                .add(Items.BRAIN_CORAL)
+                .add(Items.BRAIN_CORAL_FAN)
+                .add(Items.BUBBLE_CORAL)
+                .add(Items.BUBBLE_CORAL_FAN)
+                .add(Items.FIRE_CORAL)
+                .add(Items.FIRE_CORAL_FAN)
+                .add(Items.HORN_CORAL)
+                .add(Items.HORN_CORAL_FAN)
+        ;
 
     }
 

@@ -73,7 +73,7 @@ public class ExperionSwordItem extends SwordItem implements GetLambdas {
 
     @Override
     public float getBonusAttackDamage(Entity target, float baseAttackDamage, DamageSource damageSource) {
-        float res = ToolStaticTrigger.getDamage(toolLamb,target,baseAttackDamage,damageSource,super.getBonusAttackDamage(target, baseAttackDamage, damageSource));
+        float res = ToolStaticTrigger.getDamage(toolLamb, target, baseAttackDamage, damageSource, super.getBonusAttackDamage(target, baseAttackDamage, damageSource));
         return res;
     }
 
@@ -95,6 +95,5 @@ public class ExperionSwordItem extends SwordItem implements GetLambdas {
     public ActionResult useOnBlock(ItemUsageContext context) {
         return ToolStaticTrigger.OnUseBlock(this.toolLamb,context,super.useOnBlock(context));
     }
-
 
 }

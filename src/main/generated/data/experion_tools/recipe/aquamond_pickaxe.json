@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "minecraft:diamond_pickaxe",
+    "A": "#experion_tools:misc/coral_material"
+  },
+  "pattern": [
+    "AAA",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "experion_tools:aquamond_pickaxe"
+  }
+}

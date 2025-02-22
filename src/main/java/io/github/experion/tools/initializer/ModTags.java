@@ -21,6 +21,11 @@ public class ModTags {
         public static final TagKey<Item> GILDED_IRON_TOOLS = getToolKey( "gilded_tools");
         public static final TagKey<Item> VAMPIRE_STEEL_TOOLS = getToolKey("vampire_steel_tools");
         public static final TagKey<Item> FROSTED_STEEL_TOOLS = getToolKey("frosted_steel_tools");
+        public static final TagKey<Item> AQUAMOND_TOOLS = getToolKey("aquamond_tools");
+        public static final TagKey<Item> JACK_IRON_TOOLS = getToolKey("jack_iron_tools");
+        public static final TagKey<Item> OBSIDIAN_TOOLS = getToolKey("obsidian_tools");
+        public static final TagKey<Item> SOUL_STEEL_TOOLS = getToolKey("soul_steel_tools");
+        public static final TagKey<Item> BLAZING_MAGMA_TOOLS = getToolKey("blazing_magma_tools");
 
         public static final TagKey<Item> WOODEN_TOOLS = getToolKey("wooden_tools");
         public static final TagKey<Item> STONE_TOOLS = getToolKey("stone_tools");
@@ -43,6 +48,7 @@ public class ModTags {
         public static final TagKey<Item> VAMPIRE_STEEL = getMatsKey("vampire_steel");
         public static final TagKey<Item> FROSTED_STEEL = getMatsKey("frosted_steel");
         public static final TagKey<Item> ICE_BLOCKS = getMatsKey("ice_blocks");
+        public static final TagKey<Item> OBSIDIAN = getMatsKey("obsidian");
 
         private static TagKey<Item> getMatsKey(String path) {
             return getItemKey("materials/" + path + "_tool_materials");
@@ -54,7 +60,7 @@ public class ModTags {
         public static final TagKey<EntityType<?>> PIGLINS = getEntityKey("piglins");
         public static final TagKey<Block> ICE_PICKER_MINEABLE = getBlockKey("misc/ice_picker_mineable");
         public static final TagKey<Block> GILDED_FORTUNE = getBlockKey("misc/gilded_fortune");
-        public static final TagKey<Biome> FROSTED_STEEL_BIOME = getBiomeKey("frosted_steel_biome");
+        public static final TagKey<Item> CORAL_MATERIAL = getItemKey("misc/coral_material");
     }
 
     public static TagKey<Block> getBlockKey(String path) {

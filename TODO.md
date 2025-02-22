@@ -85,7 +85,7 @@
     - (Sword) Decreases 1% damage for every missing armor (bad idea for easy difficulty)
     - (Sword) when break shield, It will consume durability
     - Yeah everything you do with this tool will consume durability itself, That's why I called it Jack of all trades
-- Aquamond
+- ~~Aquamond~~
   - Pros
     - I CAN MINING IN UNDERWATER YEAAA-
     - More damage if the player is in/on water
@@ -226,9 +226,6 @@
   - Cons
     - DO NOT HOLD THESE TOO LONG OR ELSE WAIT NO IM FLOATING- HeLP mE!!!
     - Requires phantom membrane to craft. Yes you need to kill phantoms, Don't sleep
-- Terrarian
-  - Pros
-    -
 
 ### Enchants
 - ~~Durable Blessing~~
@@ -239,3 +236,5 @@
 - Polish Copper Tool
   - ~~Copper Thundered Animation~~
   - Copper Thundered Chain Effect
+- Polish Aquamond
+- Polish Obsidian

@@ -64,6 +64,8 @@ public class RecipeDataGen extends FabricRecipeProvider {
                         .criterion("has_steel_ingot_frosted",conditionsFromItem(ModItems.STEEL_INGOT))
                         .offerTo(recipeExporter);
 
+
+
             }
 
             private void autogen(RecipeLambda recipeLambda, Item v) {

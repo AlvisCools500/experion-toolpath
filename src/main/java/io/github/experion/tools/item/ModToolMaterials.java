@@ -15,4 +15,5 @@ public class ModToolMaterials {
     public static final ToolMaterial STEEL = new ToolMaterial(BlockTags.INCORRECT_FOR_IRON_TOOL, 628, 8.0f, 4.5f, 12, ModTags.Materials.STEEL);
     public static final ToolMaterial VAMPIRE_STEEL = new ToolMaterial(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 1690, 8.5f, 4.5f, 15, ModTags.Materials.VAMPIRE_STEEL);
     public static final ToolMaterial FROSTED_STEEL = new ToolMaterial(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 1777, 9.5f, 5f, 30, ModTags.Materials.FROSTED_STEEL);
+    public static final ToolMaterial OBSIDIAN = new ToolMaterial(BlockTags.INCORRECT_FOR_DIAMOND_TOOL,2345, 8.5f, 5.0f, 20, ModTags.Materials.OBSIDIAN);
 }

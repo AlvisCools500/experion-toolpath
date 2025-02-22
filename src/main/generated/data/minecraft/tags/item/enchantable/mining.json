@@ -7,6 +7,8 @@
     "experion_tools:vampire_steel_axe",
     "experion_tools:gilded_iron_axe",
     "experion_tools:frosted_steel_axe",
+    "experion_tools:aquamond_axe",
+    "experion_tools:obsidian_axe",
     "experion_tools:flint_pickaxe",
     "experion_tools:azalea_pickaxe",
     "experion_tools:copper_pickaxe",
@@ -14,6 +16,8 @@
     "experion_tools:vampire_steel_pickaxe",
     "experion_tools:gilded_iron_pickaxe",
     "experion_tools:frosted_steel_pickaxe",
+    "experion_tools:aquamond_pickaxe",
+    "experion_tools:obsidian_pickaxe",
     "experion_tools:flint_hoe",
     "experion_tools:azalea_hoe",
     "experion_tools:copper_hoe",
@@ -27,6 +31,8 @@
     "experion_tools:steel_shovel",
     "experion_tools:vampire_steel_shovel",
     "experion_tools:gilded_iron_shovel",
-    "experion_tools:frosted_steel_shovel"
+    "experion_tools:frosted_steel_shovel",
+    "experion_tools:aquamond_shovel",
+    "experion_tools:obsidian_shovel"
   ]
 }

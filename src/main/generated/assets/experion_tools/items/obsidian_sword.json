@@ -1,0 +1,14 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "experion_tools:item/obsidian_sword"
+    },
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "experion_tools:item/obsidian_sword_broken"
+    },
+    "property": "experion_tools:tool_boolean_first"
+  }
+}

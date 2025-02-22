@@ -1,0 +1,14 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "experion_tools:item/obsidian_shovel"
+    },
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "experion_tools:item/obsidian_shovel_broken"
+    },
+    "property": "experion_tools:tool_boolean_first"
+  }
+}

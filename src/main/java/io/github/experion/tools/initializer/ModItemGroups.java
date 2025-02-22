@@ -44,6 +44,11 @@ public class ModItemGroups {
                 g.add(ModTools.STEEL_SHOVEL);
                 g.add(ModTools.STEEL_HOE);
 
+                g.add(ModTools.OBSIDIAN_SWORD);
+                g.add(ModTools.OBSIDIAN_AXE);
+                g.add(ModTools.OBSIDIAN_PICKAXE);
+                g.add(ModTools.OBSIDIAN_SHOVEL);
+
                 g.add(ModTools.VAMPIRE_STEEL_SWORD);
                 g.add(ModTools.VAMPIRE_STEEL_AXE);
                 g.add(ModTools.VAMPIRE_STEEL_PICKAXE);
@@ -55,6 +60,11 @@ public class ModItemGroups {
                 g.add(ModTools.FROSTED_STEEL_PICKAXE);
                 g.add(ModTools.FROSTED_STEEL_SHOVEL);
                 g.add(ModTools.FROSTED_STEEL_HOE);
+
+                g.add(ModTools.AQUAMOND_SWORD);
+                g.add(ModTools.AQUAMOND_AXE);
+                g.add(ModTools.AQUAMOND_PICKAXE);
+                g.add(ModTools.AQUAMOND_SHOVEL);
 
                 g.add(ModItems.AZALEA_PICKER);
                 g.add(ModItems.ICE_PICKER);

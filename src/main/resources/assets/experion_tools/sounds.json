@@ -1,0 +1,10 @@
+{
+  "aquamond_bubbles": {
+    "subtitle": "sound.experion_tools.aquamond_bubbles",
+    "sounds": [
+      "experion_tools:aquamond_bubbles1",
+      "experion_tools:aquamond_bubbles2",
+      "experion_tools:aquamond_bubbles3"
+    ]
+  }
+}

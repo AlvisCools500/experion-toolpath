@@ -1,5 +1,6 @@
 package io.github.experion.tools.client.datagens;
 
+import io.github.experion.tools.client.item.properties.ToolBooleanFirstProperty;
 import io.github.experion.tools.client.item.properties.ToolStatusProperty;
 import io.github.experion.tools.initializer.ModItems;
 import io.github.experion.tools.initializer.ModTools;
@@ -37,24 +38,31 @@ public class ModelDataGen extends FabricModelProvider {
         itemModelGenerator.register(ModItems.FROSTED_STEEL_INGOT, Models.GENERATED);
 
         for (Item v : List.of(ModTools.COPPER_SWORD,ModTools.COPPER_SHOVEL,ModTools.COPPER_AXE,ModTools.COPPER_PICKAXE,ModTools.COPPER_HOE)) {
-            copper_generate(itemModelGenerator,v);
+            ItemModel.Unbaked normalbaked = ItemModels.basic(itemModelGenerator.upload(v,Models.HANDHELD));
+            ItemModel.Unbaked oxidizedbaked = ItemModels.basic(itemModelGenerator.registerSubModel(v,"_oxidized",Models.HANDHELD));
+            ItemModel.Unbaked thunderedbaked = ItemModels.basic(itemModelGenerator.registerSubModel(v,"_thundered", Models.HANDHELD));
+
+            itemModelGenerator.output.accept(v, ItemModels.rangeDispatch(
+                            new ToolStatusProperty(),
+                            List.of(
+                                    ItemModels.rangeDispatchEntry(normalbaked, 1.0f),
+                                    ItemModels.rangeDispatchEntry(oxidizedbaked, 2.0f),
+                                    ItemModels.rangeDispatchEntry(thunderedbaked,3.0f)
+                            )
+                    )
+            );
+        }
+
+        for (Item v : List.of(ModTools.OBSIDIAN_SWORD,ModTools.OBSIDIAN_AXE,ModTools.OBSIDIAN_PICKAXE,ModTools.OBSIDIAN_SHOVEL)) {
+            ItemModel.Unbaked normalbaked = ItemModels.basic(itemModelGenerator.upload(v,Models.HANDHELD));
+            ItemModel.Unbaked brokenbaked = ItemModels.basic(itemModelGenerator.registerSubModel(v, "_broken",Models.HANDHELD));
+
+            itemModelGenerator.output.accept(v, ItemModels.condition(new ToolBooleanFirstProperty(), brokenbaked, normalbaked));
         }
     }
 
     private void copper_generate(ItemModelGenerator generator, Item item) {
-        ItemModel.Unbaked normalbaked = ItemModels.basic(generator.upload(item,Models.HANDHELD));
-        ItemModel.Unbaked oxidizedbaked = ItemModels.basic(generator.registerSubModel(item,"_oxidized",Models.HANDHELD));
-        ItemModel.Unbaked thunderedbaked = ItemModels.basic(generator.registerSubModel(item,"_thundered", Models.HANDHELD));
 
-        generator.output.accept(item, ItemModels.rangeDispatch(
-                        new ToolStatusProperty(),
-                List.of(
-                        ItemModels.rangeDispatchEntry(normalbaked, 1.0f),
-                        ItemModels.rangeDispatchEntry(oxidizedbaked, 2.0f),
-                        ItemModels.rangeDispatchEntry(thunderedbaked,3.0f)
-                )
-                )
-        );
     }
 
 

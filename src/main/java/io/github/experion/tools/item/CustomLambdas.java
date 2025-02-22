@@ -12,6 +12,8 @@ public class CustomLambdas {
     public static final TriggerLambdas GILDED_IRON_LAMBDAS = new GildedIronLambdas();
     public static final TriggerLambdas VAMPIRE_STEEL_LAMBDAS = new VampireSteelLambdas();
     public static final TriggerLambdas FROSTED_STEEL_LAMBDAS = new FrostedSteelLambdas();
+    public static final TriggerLambdas AQUAMOND_LAMBDAS = new AquamondLambdas();
+    public static final TriggerLambdas OBSIDIAN_LAMBDAS = new ObsidianLambdas();
 
     public static final TriggerLambdas REDSTONE_LAMBDAS = new RedstoneLambdas();
 

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "minecraft:diamond_sword",
+    "A": "#experion_tools:misc/coral_material"
+  },
+  "pattern": [
+    " A ",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "experion_tools:aquamond_shovel"
+  }
+}

@@ -85,6 +85,8 @@ public class ExperionPickaxeItem extends PickaxeItem implements GetLambdas {
         return ToolStaticTrigger.getMiningSpeed(this.toolLamb,stack,state,super.getMiningSpeed(stack,state));
     }
 
+
+
     @Override
     public boolean postMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner) {
         boolean bool = super.postMine(stack,world,state,pos,miner);

@@ -24,6 +24,8 @@ public class ModInit implements ModInitializer {
     ModTools.init();
     ModStatusEffects.init();
 
+    ModSoundEvents.init();
+
     ModItemGroups.init();
 
     ModParticles.register();
