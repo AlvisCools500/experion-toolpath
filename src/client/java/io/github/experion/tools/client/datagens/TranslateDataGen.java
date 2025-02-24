@@ -26,7 +26,11 @@ public class TranslateDataGen extends FabricLanguageProvider {
         expe.translateItem(ModItems.STEEL_INGOT, "Steel Ingot");
         expe.translateItem(ModItems.VAMPIRE_STEEL_INGOT, "Vampire Steel Ingot");
         expe.translateItem(ModItems.FROSTED_STEEL_INGOT, "Frosted Steel Ingot");
+        expe.translateItem(ModItems.SOUL_STEEL_INGOT, "Soul Steel Ingot");
         expe.translateItem(ModItems.ICE_PICKER,"Ice Picker");
+        expe.translateItem(ModItems.SOUL_JAR, "?");
+        expe.translateItem(ModItems.EMPTY_SOUL_JAR, "?");
+        expe.translateItem(ModItems.SOUL_FETCHER, "?");
         translationBuilder.add("enchantment.experion_tool_path.durable_blessing", "Durable Blessing");
     }
 

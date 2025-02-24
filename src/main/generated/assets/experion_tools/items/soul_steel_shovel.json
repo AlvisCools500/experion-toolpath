@@ -1,0 +1,14 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "experion_tools:item/soul_steel_shovel"
+    },
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "experion_tools:item/soul_steel_shovel_active"
+    },
+    "property": "experion_tools:has_amount"
+  }
+}

@@ -144,6 +144,7 @@ public class ItemTagsDataGen extends FabricTagProvider<Item> {
         getOrCreateTagBuilder(ModTags.Materials.FROSTED_STEEL).add(ModItems.FROSTED_STEEL_INGOT);
         getOrCreateTagBuilder(ModTags.Materials.ICE_BLOCKS).add(Items.ICE,Items.PACKED_ICE,Items.BLUE_ICE);
         getOrCreateTagBuilder(ModTags.Materials.OBSIDIAN).add(Items.OBSIDIAN);
+        getOrCreateTagBuilder(ModTags.Materials.SOUL_STEEL).add(ModItems.SOUL_STEEL_INGOT);
 
         getOrCreateTagBuilder(ModTags.Misc.CORAL_MATERIAL)
                 .add(Items.TUBE_CORAL)

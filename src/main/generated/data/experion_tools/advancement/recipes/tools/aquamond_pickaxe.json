@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "": {
+    "has_diamond_pickaxe": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:air"
+            "items": "minecraft:diamond_pickaxe"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      ""
+      "has_diamond_pickaxe"
     ]
   ],
   "rewards": {

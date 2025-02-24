@@ -238,3 +238,4 @@
   - Copper Thundered Chain Effect
 - Polish Aquamond
 - Polish Obsidian
+- Polish Soul Steel

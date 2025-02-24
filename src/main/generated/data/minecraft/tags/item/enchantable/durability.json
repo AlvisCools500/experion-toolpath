@@ -42,6 +42,10 @@
     "experion_tools:obsidian_sword",
     "experion_tools:obsidian_axe",
     "experion_tools:obsidian_pickaxe",
-    "experion_tools:obsidian_shovel"
+    "experion_tools:obsidian_shovel",
+    "experion_tools:soul_steel_sword",
+    "experion_tools:soul_steel_axe",
+    "experion_tools:soul_steel_pickaxe",
+    "experion_tools:soul_steel_shovel"
   ]
 }

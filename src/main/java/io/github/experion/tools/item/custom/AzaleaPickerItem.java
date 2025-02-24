@@ -1,4 +1,4 @@
-package io.github.experion.tools.item;
+package io.github.experion.tools.item.custom;
 
 import io.github.experion.tools.initializer.ModItems;
 import io.github.experion.tools.lib.ToolLib;

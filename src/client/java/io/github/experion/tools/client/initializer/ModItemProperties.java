@@ -1,6 +1,7 @@
 package io.github.experion.tools.client.initializer;
 
 import io.github.experion.tools.client.item.properties.FlintCriticalProperty;
+import io.github.experion.tools.client.item.properties.HasAmountProperty;
 import io.github.experion.tools.client.item.properties.ToolBooleanFirstProperty;
 import io.github.experion.tools.client.item.properties.ToolStatusProperty;
 import io.github.experion.tools.lib.Experion.ExperionRegistery;
@@ -12,5 +13,6 @@ public class ModItemProperties {
         NumericProperties.ID_MAPPER.put(ExperionRegistery.newId("tool_status"), ToolStatusProperty.CODEC);
         BooleanProperties.ID_MAPPER.put(ExperionRegistery.newId("flint_critical"), FlintCriticalProperty.CODEC);
         BooleanProperties.ID_MAPPER.put(ExperionRegistery.newId("tool_boolean_first"), ToolBooleanFirstProperty.CODEC);
+        BooleanProperties.ID_MAPPER.put(ExperionRegistery.newId("has_amount"), HasAmountProperty.CODEC);
     }
 }

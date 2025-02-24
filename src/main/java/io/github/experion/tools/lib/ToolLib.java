@@ -6,6 +6,7 @@ import io.github.experion.tools.initializer.TaggingList;
 import io.github.experion.tools.item.tool_lambdas.ToolLambdas;
 import io.github.experion.tools.item.tools.*;
 import io.github.experion.tools.lib.Experion.ExperionRegistery;
+import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EquipmentSlot;
@@ -13,6 +14,7 @@ import net.minecraft.entity.ItemEntity;
 import net.minecraft.item.*;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.MutableText;
@@ -173,6 +175,10 @@ public class ToolLib {
         }else {
             LOGGER.info("BLESSED");
         }
+    }
+
+    public static ToolMaterial newToolMats(TagKey<Block> inverseTag, int itemDurability, float miningSpeed, float attackDamage, int enchantability, TagKey<Item> RepairTag) {
+        return new ToolMaterial(inverseTag,itemDurability,miningSpeed,attackDamage,enchantability,RepairTag);
     }
 
 }

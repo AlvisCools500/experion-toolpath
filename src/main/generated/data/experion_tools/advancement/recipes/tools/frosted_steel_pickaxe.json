@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "": {
+    "has_frosted_steel_ingot": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:air"
+            "items": "experion_tools:frosted_steel_ingot"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      ""
+      "has_frosted_steel_ingot"
     ]
   ],
   "rewards": {

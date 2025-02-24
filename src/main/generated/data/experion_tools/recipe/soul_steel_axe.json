@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "minecraft:iron_ingot",
+    "A": "experion_tools:soul_steel_ingot"
+  },
+  "pattern": [
+    "AA ",
+    "A# ",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "experion_tools:soul_steel_axe"
+  }
+}

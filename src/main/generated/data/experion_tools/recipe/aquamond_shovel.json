@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "#": "minecraft:diamond_sword",
+    "#": "minecraft:diamond_shovel",
     "A": "#experion_tools:misc/coral_material"
   },
   "pattern": [

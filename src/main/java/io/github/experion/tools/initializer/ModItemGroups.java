@@ -66,12 +66,22 @@ public class ModItemGroups {
                 g.add(ModTools.AQUAMOND_PICKAXE);
                 g.add(ModTools.AQUAMOND_SHOVEL);
 
+                g.add(ModTools.SOUL_STEEL_SWORD);
+                g.add(ModTools.SOUL_STEEL_AXE);
+                g.add(ModTools.SOUL_STEEL_PICKAXE);
+                g.add(ModTools.SOUL_STEEL_SHOVEL);
+
                 g.add(ModItems.AZALEA_PICKER);
                 g.add(ModItems.ICE_PICKER);
+                g.add(ModItems.SOUL_FETCHER);
+
                 g.add(ModItems.AZALEA_CLIPPINGS);
                 g.add(ModItems.STEEL_INGOT);
                 g.add(ModItems.VAMPIRE_STEEL_INGOT);
                 g.add(ModItems.FROSTED_STEEL_INGOT);
+                g.add(ModItems.SOUL_STEEL_INGOT);
+                g.add(ModItems.EMPTY_SOUL_JAR);
+                g.add(ModItems.SOUL_JAR);
             })
             .build()
     );
